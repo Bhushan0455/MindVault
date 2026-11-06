@@ -1,0 +1,22 @@
+{
+  "evidence_source": "user-pasted four-stage diagnostic terminal output",
+  "model": "gemini-3.6-flash",
+  "plain_text_connection": "verified",
+  "knowledge_extraction": "verified_for_fixture",
+  "knowledge_method": "ai",
+  "content_review": "verified_for_fixture",
+  "retained_ai_content_findings": 1,
+  "clarity_audit": "verified_for_fixture",
+  "retained_ai_clarity_proposals": 1,
+  "schema_adjustment_live_retested": true,
+  "integrated_api_live_ai_verified": true,
+  "role_b_milestone_estimate_percent": 98,
+  "knowledge_validated_pending_candidates": 5,
+  "knowledge_validation_issues": 0,
+  "integrated_api_evidence_file": "live-api-ai.json",
+  "agent_exercised_live_ai_via_local_api": true,
+  "agent_read_provider_key": false,
+  "agent_sent_direct_provider_requests": false,
+  "initial_knowledge_provider_detail": "Request contains an invalid argument.",
+  "initial_knowledge_candidates_from_fallback": 5
+}

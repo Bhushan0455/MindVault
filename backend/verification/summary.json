@@ -1,0 +1,132 @@
+{
+  "date": "2026-11-06",
+  "python": "3.12.14",
+  "additional_tested_python": "3.14.8",
+  "role_b_estimate_percent": 98,
+  "original_role_b_tests": 318,
+  "integration_tests": 51,
+  "new_extraction_regression_tests": 1,
+  "additional_unittest_subtests": 63,
+  "live_ai_tested": true,
+  "live_ai_test_scope": "fictional fixtures through configured local API",
+  "actual_frontend_browser_tested": false,
+  "docker_executed": false,
+  "configuration_helper_tested": true,
+  "test_suites": {
+    "postgres-tests.xml": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "433",
+      "time": "32.233",
+      "timestamp": "2026-11-06T19:50:31.209445+05:30"
+    },
+    "sqlite-tests.xml": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "3",
+      "tests": "433",
+      "time": "26.619",
+      "timestamp": "2026-11-06T19:50:31.209445+05:30"
+    },
+    "python314-tests.xml": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "3",
+      "tests": "433",
+      "time": "23.450",
+      "timestamp": "2026-11-06T19:50:22.385962+05:30"
+    }
+  },
+  "http-smoke.json": {
+    "passed": true,
+    "transport": "real loopback HTTP",
+    "database": "isolated PostgreSQL 16.15 schema",
+    "ai_live_tested": false,
+    "journey": [
+      "login",
+      "review",
+      "source lookup",
+      "decisions",
+      "safe fixes",
+      "recheck",
+      "submit",
+      "reviewer queue",
+      "exact revision/hash approval"
+    ],
+    "api_paths": 41
+  },
+  "frontend-helper.json": {
+    "passed": true,
+    "typescript": "5.9.3",
+    "strict_compilation": true,
+    "runtime_checks": [
+      "Unicode offsets",
+      "insertion",
+      "stale quote",
+      "demo login",
+      "token header",
+      "review polling",
+      "API error"
+    ],
+    "actual_frontend_browser_tested": false
+  },
+  "user_reported_live_ai": {
+    "evidence_source": "user-pasted four-stage diagnostic terminal output",
+    "model": "gemini-3.6-flash",
+    "plain_text_connection": "verified",
+    "knowledge_extraction": "verified_for_fixture",
+    "knowledge_method": "ai",
+    "content_review": "verified_for_fixture",
+    "retained_ai_content_findings": 1,
+    "clarity_audit": "verified_for_fixture",
+    "retained_ai_clarity_proposals": 1,
+    "schema_adjustment_live_retested": true,
+    "integrated_api_live_ai_verified": true,
+    "role_b_milestone_estimate_percent": 98,
+    "knowledge_validated_pending_candidates": 5,
+    "knowledge_validation_issues": 0,
+    "integrated_api_evidence_file": "live-api-ai.json",
+    "agent_exercised_live_ai_via_local_api": true,
+    "agent_read_provider_key": false,
+    "agent_sent_direct_provider_requests": false,
+    "initial_knowledge_provider_detail": "Request contains an invalid argument.",
+    "initial_knowledge_candidates_from_fallback": 5
+  },
+  "live_api_ai": {
+    "timestamp_utc": "2026-11-06T14:17:38.412373+00:00",
+    "fixture_brand_id": "dda04439-08c2-469b-a0ab-bbb81df6c215",
+    "evidence_source": "real HTTP requests to configured local demo API",
+    "checks": {
+      "knowledge_extraction": {
+        "verified": true,
+        "status": "done",
+        "method": "ai",
+        "pending_candidates": 7,
+        "job_id": "75ed59af-4042-4475-804f-5a17200b0e5d"
+      },
+      "content_review": {
+        "verified": true,
+        "status": "done",
+        "ai_used": true,
+        "ai_status": "completed",
+        "retained_ai_findings": 1,
+        "exact_spans_and_sources": true,
+        "deterministic_price_retained": true,
+        "run_id": "1be5b54a-fc4c-4098-8a68-17893a423b82"
+      },
+      "clarity_audit": {
+        "verified": true,
+        "ai_used": true,
+        "ai_status": "completed",
+        "retained_ai_proposals": 2,
+        "source_validated_pending_proposals": true,
+        "job_id": "d1b13c99-f558-4f48-9c3f-70aa9f5b72ff"
+      }
+    },
+    "all_services_verified": true
+  }
+}

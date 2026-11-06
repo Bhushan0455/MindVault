@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "typescript": "5.9.3",
+  "strict_compilation": true,
+  "runtime_checks": [
+    "Unicode offsets",
+    "insertion",
+    "stale quote",
+    "demo login",
+    "token header",
+    "review polling",
+    "API error"
+  ],
+  "actual_frontend_browser_tested": false
+}

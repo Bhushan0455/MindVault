@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "transport": "real loopback HTTP",
+  "database": "isolated PostgreSQL 16.15 schema",
+  "ai_live_tested": false,
+  "journey": [
+    "login",
+    "review",
+    "source lookup",
+    "decisions",
+    "safe fixes",
+    "recheck",
+    "submit",
+    "reviewer queue",
+    "exact revision/hash approval"
+  ],
+  "api_paths": 41
+}
