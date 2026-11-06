@@ -1,0 +1,635 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#ffffff","primary-fixed-dim":"#b7c4ff","on-surface":"#131b2e","surface":"#faf8ff","error-container":"#ffdad6","inverse-surface":"#283044","secondary":"#515f74","surface-tint":"#2151da","surface-variant":"#dae2fd","primary-container":"#1d4ed8","on-tertiary-container":"#76eab6","on-primary-fixed":"#001551","surface-bright":"#faf8ff","outline":"#747686","secondary-fixed-dim":"#b9c7df","inverse-primary":"#b7c4ff","inverse-on-surface":"#eef0ff","on-primary":"#ffffff","primary-fixed":"#dce1ff","on-secondary-container":"#57657a","secondary-container":"#d5e3fc","on-error-container":"#93000a","outline-variant":"#c4c5d7","on-error":"#ffffff","primary":"#0037b0","surface-container-high":"#e2e7ff","tertiary":"#004f35","surface-container-low":"#f2f3ff","on-tertiary":"#ffffff","surface-container":"#eaedff","on-secondary-fixed":"#0d1c2e","on-surface-variant":"#434655","surface-container-highest":"#dae2fd","error":"#ba1a1a","surface-container-lowest":"#ffffff","tertiary-fixed":"#85f8c4","on-tertiary-fixed-variant":"#005137","on-secondary-fixed-variant":"#3a485b","on-tertiary-fixed":"#002114","on-background":"#131b2e","secondary-fixed":"#d5e3fc","tertiary-fixed-dim":"#68dba9","background":"#faf8ff","on-primary-fixed-variant":"#0039b5","surface-dim":"#d2d9f4","tertiary-container":"#006948","on-primary-container":"#cad3ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"1.5rem","gutter-desktop":"1.5rem","gutter":"1rem","space-xs":"0.25rem","space-xl":"1.5rem","space-md":"0.75rem","margin":"1rem","space-sm":"0.5rem","space-lg":"1rem"},"fontFamily":{"body-sm":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"headline-xl":["Inter"],"code-md":["JetBrains Mono"],"headline-sm":["Inter"],"label-sm":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"code-sm":["JetBrains Mono"],"body-md":["Inter"]},"fontSize":{"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-xl":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"code-md":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-sm":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"24px","fontWeight":"400"}],"code-sm":["11px",{"lineHeight":"16px","fontWeight":"400"}],"body-md":["13px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low border-r border-outline-variant/30 z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-14 px-space-md border-b border-outline-variant/30 flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0"><div class="w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center font-code-md text-code-md font-semibold shrink-0">M</div><div class="flex flex-col min-w-0 leading-tight"><span class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">MindVault AI</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Acme Consumer Tech</span></div></div><button aria-label="Switch workspace" class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">unfold_more</span></button></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Auditing</span></div><nav class="px-space-xs space-y-0.5" data-active-classes="bg-surface-container text-on-surface font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[16px]">dashboard</span><span class="">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="brand-knowledge" href="#"><span class="material-symbols-outlined text-[16px]">menu_book</span><span class="">Brand Knowledge</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="content-checks" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[16px]">fact_check</span><span class="">Content Checks</span></div><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors bg-surface-container text-on-surface font-semibold" data-path="approvals" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[16px]">verified</span><span class="">Approvals</span></div><span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-code-sm text-code-sm border border-outline-variant/40">3</span></a></nav><div class="px-space-md pt-space-lg pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Governance</span></div><nav class="px-space-xs space-y-0.5" data-active-classes="bg-surface-container text-on-surface font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[16px]">history</span><span class="">Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="compliance-rules" href="#"><span class="material-symbols-outlined text-[16px]">gavel</span><span class="">Compliance Rules</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[16px]">settings</span><span class="">Settings</span></a></nav></div><div class="p-space-sm border-t border-outline-variant/30 flex items-center justify-between bg-surface-container-lowest/50"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-code-sm text-code-sm text-on-surface-variant">Engine v4.12 Online</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">terminal</span></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-sm shrink-0"><div class="flex items-center gap-1.5"></div><div class="h-4 w-px bg-outline-variant/40 mx-1"></div><button aria-label="Notifications" class="relative text-on-surface-variant hover:text-on-surface p-1.5 rounded hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-error"></span></button><div class="flex items-center gap-space-xs pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida/AEtjO1VhAtuM_yfZmWjXIEsB5HMDQGiaZtrTt6V3-ANgbsO55J-hKc5iPh_bJSi-dd4SAQJf01eidKG58oWUbU8u43EmoEzZ5Eao5rJ0-j3rHcS4VH9SkLE_9FEmoB7vLgz2NVPsN2AS8hZzAUHJ0Zhd-9qeRWpOlO8Z-_jgWNxA1RFHUnet11XG1DEKhoTofg6CMAaqVEpq1rsvulvZRx-Zf3aqnHhvpG23AwxXvFS1B7k4"><div class="hidden 2xl:flex flex-col leading-tight"><span class="font-label-md text-label-md text-on-surface font-medium truncate">Jane Doe</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Marketing Lead</span></div></div></div></header><main class="relative pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<script>
+    (function syncShellSidebar() {
+      try {
+        const approvalsLink = document.querySelector('aside a[data-path="approvals"]');
+        if (approvalsLink) {
+          document.querySelectorAll('aside nav a').forEach(el => {
+            el.classList.remove('bg-surface-container', 'text-on-surface', 'font-semibold');
+            el.classList.add('text-on-surface-variant');
+          });
+          approvalsLink.classList.add('bg-surface-container', 'text-on-surface', 'font-semibold');
+          approvalsLink.classList.remove('text-on-surface-variant');
+        }
+      } catch (e) {}
+    })();
+  </script>
+<div class="px-space-lg py-space-md border-b border-outline-variant/30 bg-surface-container-lowest">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5 min-w-0">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Approvals</h1>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-code-sm text-code-sm font-medium border border-primary/20">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+            Queue Active
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">
+          Review and approve submitted marketing collateral across active brand campaigns
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="h-8 px-space-sm rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">tune</span>
+<span class="">Queue Settings</span>
+</button>
+<button class="h-8 px-space-sm rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">download</span>
+<span class="">Export Audit Log</span>
+</button>
+</div>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mt-space-md pt-space-md border-t border-outline-variant/20">
+<div class="flex items-center gap-space-sm p-space-sm rounded bg-surface-container-low/60 border border-outline-variant/30">
+<div class="w-8 h-8 rounded bg-error-container/60 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Pending Review</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">3</span>
+<span class="font-code-sm text-code-sm text-error">1 urgent</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded bg-surface-container-low/60 border border-outline-variant/30">
+<div class="w-8 h-8 rounded bg-secondary-container/70 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">rule_folder</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Changes Requested</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">2</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">In creator loop</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded bg-surface-container-low/60 border border-outline-variant/30">
+<div class="w-8 h-8 rounded bg-tertiary-fixed text-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Approved Today</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">14</span>
+<span class="font-code-sm text-code-sm text-tertiary font-medium">+4 vs yesterday</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded bg-surface-container-low/60 border border-outline-variant/30">
+<div class="w-8 h-8 rounded bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">dataset</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Reviewed</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">89</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">This sprint</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter & Tab Navigation Bar -->
+<div class="px-space-lg py-space-sm bg-surface-container-lowest border-b border-outline-variant/30 flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<!-- Segmented Tabs -->
+<div class="inline-flex items-center p-0.5 bg-surface-container-low rounded border border-outline-variant/30">
+<button class="flex items-center gap-1.5 px-3 py-1 rounded bg-surface-container-lowest text-on-surface shadow-sm font-label-md text-label-md font-semibold transition-all">
+<span class="">Pending</span>
+<span class="px-1.5 py-0.2 rounded-full bg-error-container text-on-error-container font-code-sm text-[10px] font-bold">3</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all">
+<span class="">Changes Requested</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-code-sm text-[10px]">2</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all">
+<span class="">Approved</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-code-sm text-[10px]">14</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all">
+<span class="">All Submissions</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-code-sm text-[10px]">19</span>
+</button>
+</div>
+<!-- Right Utility / Bulk trigger -->
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+          Auto-eval Engine v4.12
+        </span>
+<span class="text-outline-variant">|</span>
+<span class="font-code-sm text-code-sm">SLA: 4h avg response</span>
+</div>
+</div>
+<!-- Inputs & Granular Filters -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-0.5">
+<div class="flex items-center gap-space-sm flex-1 min-w-[300px] max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[17px] text-on-surface-variant">search</span>
+<input class="w-full h-8 pl-8 pr-12 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface placeholder:text-on-surface-variant/70 font-body-sm text-body-sm focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="Search by content title, reference ID, or submitter..." type="text">
+<kbd class="absolute right-2 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container border border-outline-variant/40 text-on-surface-variant font-code-sm text-[10px] pointer-events-none">⌘K</kbd>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Brand Filter -->
+<div class="relative">
+<button class="h-8 px-2.5 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="text-on-surface-variant font-normal">Brand:</span>
+<span class="font-medium">All Brands</span>
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">expand_more</span>
+</button>
+</div>
+<!-- Channel Filter -->
+<div class="relative">
+<button class="h-8 px-2.5 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="text-on-surface-variant font-normal">Channel:</span>
+<span class="font-medium">All Channels</span>
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">expand_more</span>
+</button>
+</div>
+<!-- Conflict Severity Filter -->
+<div class="relative">
+<button class="h-8 px-2.5 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="text-on-surface-variant font-normal">Severity:</span>
+<span class="font-medium">All Conflict Levels</span>
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">expand_more</span>
+</button>
+</div>
+<div class="h-4 w-px bg-outline-variant/40 mx-0.5"></div>
+<!-- Sort Control -->
+<div class="relative">
+<button class="h-8 px-2.5 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">sort</span>
+<span class="">Newest First</span>
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant">expand_more</span>
+</button>
+</div>
+<button aria-label="Reset all filters" class="h-8 w-8 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors" title="Reset Filters" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Review Table Container -->
+<div class="px-space-lg py-space-md">
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full border-collapse text-left">
+<thead>
+<tr class="bg-surface-container-low/70 border-b border-outline-variant/30 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="w-10 px-3 py-2.5" scope="col">
+<input aria-label="Select all submissions" class="w-3.5 h-3.5 rounded border-outline-variant text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</th>
+<th class="px-3 py-2.5 min-w-[280px]" scope="col">Content Asset &amp; ID</th>
+<th class="px-3 py-2.5 min-w-[120px]" scope="col">Brand</th>
+<th class="px-3 py-2.5 min-w-[170px]" scope="col">Submitted By</th>
+<th class="px-3 py-2.5 min-w-[160px]" scope="col">Channel &amp; Region</th>
+<th class="px-3 py-2.5 min-w-[110px]" scope="col">Submitted</th>
+<th class="px-3 py-2.5 min-w-[220px]" scope="col">Verification Status</th>
+<th class="px-3 py-2.5 text-right min-w-[130px]" scope="col">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Needs Review (1 Blocker) - Priority -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group bg-error-container/5">
+<td class="px-3 py-3 align-top">
+<input aria-label="Select REV-2024-884" class="w-3.5 h-3.5 rounded border-outline-variant text-primary-container focus:ring-0 cursor-pointer mt-0.5" type="checkbox">
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded bg-error-container text-on-error-container shrink-0" title="Flagged Blocker">
+<span class="material-symbols-outlined text-[13px]">priority_high</span>
+</span>
+<a class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container font-semibold truncate hover:underline leading-tight" href="#">
+                      Wireless Headphones Launch — Instagram Feed Post
+                    </a>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface-variant">
+<span class="font-medium text-primary-container">REV-2024-884</span>
+<span class="text-outline-variant">•</span>
+<span class="">Aura Sound ANC Launch</span>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center gap-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[12px]">collections</span>
+                      3 Assets
+                    </span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Aura Audio</span>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-label-sm text-label-sm font-semibold shrink-0">
+                    RM
+                  </div>
+<div class="flex flex-col min-w-0 leading-tight">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Rohan Mehta</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant truncate">Growth Mktg</span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col min-w-0 leading-tight">
+<span class="font-label-md text-label-md text-on-surface truncate">Instagram Carousel</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">flag</span>
+                    India (INR)
+                  </span>
+</div>
+</td>
+<td class="px-3 py-3 align-top whitespace-nowrap">
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md text-on-surface font-medium">12 mins ago</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">10:42 AM</span>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded border border-error/30 bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span class="">Needs Review (1 Blocker)</span>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-error leading-tight">
+<span class="material-symbols-outlined text-[13px] shrink-0">price_change</span>
+<span class="truncate">MAP Conflict: ₹799 vs ₹999 Truth</span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top text-right whitespace-nowrap">
+<button class="h-7 px-3 rounded bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-medium transition-colors inline-flex items-center gap-1 shadow-sm" type="button">
+<span class="">Review &amp; Fix</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Pending with Warnings -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-3 py-3 align-top">
+<input aria-label="Select REV-2024-885" class="w-3.5 h-3.5 rounded border-outline-variant text-primary-container focus:ring-0 cursor-pointer mt-0.5" type="checkbox">
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded bg-secondary-container text-on-secondary-fixed shrink-0" title="Warnings Found">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+</span>
+<a class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container font-semibold truncate hover:underline leading-tight" href="#">
+                      Monsoon Soundfest Influencer Brief &amp; Reel Script
+                    </a>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface-variant">
+<span class="font-medium text-primary-container">REV-2024-885</span>
+<span class="text-outline-variant">•</span>
+<span class="">Creator Partner Series</span>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center gap-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[12px]">description</span>
+                      Script v2
+                    </span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Aura Audio</span>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-sm text-label-sm font-semibold shrink-0">
+                    AC
+                  </div>
+<div class="flex flex-col min-w-0 leading-tight">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Alex Chen</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant truncate">Social &amp; Influencer</span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col min-w-0 leading-tight">
+<span class="font-label-md text-label-md text-on-surface truncate">TikTok &amp; Reels</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">flag</span>
+                    India (INR)
+                  </span>
+</div>
+</td>
+<td class="px-3 py-3 align-top whitespace-nowrap">
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md text-on-surface font-medium">45 mins ago</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">10:09 AM</span>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded border border-outline-variant bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">Needs Review (2 Warnings)</span>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-on-surface-variant leading-tight">
+<span class="material-symbols-outlined text-[13px] shrink-0">gavel</span>
+<span class="truncate">ASCI tag unverified on reel end-frame</span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top text-right whitespace-nowrap">
+<button class="h-7 px-3 rounded bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-medium transition-colors inline-flex items-center gap-1 shadow-sm" type="button">
+<span class="">Review Draft</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Changes Requested -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-3 py-3 align-top">
+<input aria-label="Select REV-2024-879" class="w-3.5 h-3.5 rounded border-outline-variant text-primary-container focus:ring-0 cursor-pointer mt-0.5" type="checkbox">
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded bg-surface-container-high text-on-surface-variant shrink-0" title="Pending Creator Revisions">
+<span class="material-symbols-outlined text-[13px]">history_edu</span>
+</span>
+<a class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container font-semibold truncate hover:underline leading-tight" href="#">
+                      Winter Sale Email — Tier-1 Flash Drop Newsletter
+                    </a>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface-variant">
+<span class="font-medium text-primary-container">REV-2024-879</span>
+<span class="text-outline-variant">•</span>
+<span class="">Segment: High LTV Buyers</span>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center gap-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[12px]">mail</span>
+                      HTML Email
+                    </span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Aura Audio</span>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center font-label-sm text-label-sm font-semibold shrink-0">
+                    PR
+                  </div>
+<div class="flex flex-col min-w-0 leading-tight">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Priyanshi Roy</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant truncate">CRM Marketing</span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col min-w-0 leading-tight">
+<span class="font-label-md text-label-md text-on-surface truncate">Email Campaign</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">public</span>
+                    Global (EN)
+                  </span>
+</div>
+</td>
+<td class="px-3 py-3 align-top whitespace-nowrap">
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md text-on-surface font-medium">2 hours ago</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">08:50 AM</span>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded border border-outline-variant/60 bg-surface-container text-on-surface font-label-sm text-label-sm font-medium w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">Changes Requested</span>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-on-surface-variant leading-tight">
+<span class="material-symbols-outlined text-[13px] shrink-0">rate_review</span>
+<span class="truncate">Unsub disclaimer missing ASCI footnote</span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top text-right whitespace-nowrap">
+<button class="h-7 px-3 rounded bg-surface-container-lowest border border-outline-variant/50 text-on-surface hover:bg-surface-container font-label-md text-label-md font-medium transition-colors inline-flex items-center gap-1" type="button">
+<span class="">View Feedback</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Approved / Clean Passed -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-3 py-3 align-top">
+<input aria-label="Select REV-2024-872" class="w-3.5 h-3.5 rounded border-outline-variant text-primary-container focus:ring-0 cursor-pointer mt-0.5" type="checkbox">
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded bg-tertiary-fixed text-tertiary-container shrink-0" title="Approved">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+</span>
+<a class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container font-semibold truncate hover:underline leading-tight" href="#">
+                      Product Announcement — Titanium Diaphragm Press Release
+                    </a>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface-variant">
+<span class="font-medium text-primary-container">REV-2024-872</span>
+<span class="text-outline-variant">•</span>
+<span class="">Editorial Wire</span>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center gap-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[12px]">newspaper</span>
+                      Wire syndication
+                    </span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Solace Home</span>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex items-center gap-2">
+<img alt="Jane Doe" class="w-7 h-7 rounded-full object-cover border border-outline-variant/40 shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VhAtuM_yfZmWjXIEsB5HMDQGiaZtrTt6V3-ANgbsO55J-hKc5iPh_bJSi-dd4SAQJf01eidKG58oWUbU8u43EmoEzZ5Eao5rJ0-j3rHcS4VH9SkLE_9FEmoB7vLgz2NVPsN2AS8hZzAUHJ0Zhd-9qeRWpOlO8Z-_jgWNxA1RFHUnet11XG1DEKhoTofg6CMAaqVEpq1rsvulvZRx-Zf3aqnHhvpG23AwxXvFS1B7k4">
+<div class="flex flex-col min-w-0 leading-tight">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Jane Doe</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant truncate">Communications</span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col min-w-0 leading-tight">
+<span class="font-label-md text-label-md text-on-surface truncate">PR / Press Wire</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">flag</span>
+                    US / CA
+                  </span>
+</div>
+</td>
+<td class="px-3 py-3 align-top whitespace-nowrap">
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md text-on-surface font-medium">Yesterday</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">4:15 PM</span>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded border border-tertiary/20 bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold w-fit">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+<span class="">Approved</span>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-tertiary leading-tight">
+<span class="">3/3 Truth Verifications Passed</span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top text-right whitespace-nowrap">
+<button class="h-7 px-2.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors inline-flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="">Certificate</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Approved (Claims Verified) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-3 py-3 align-top">
+<input aria-label="Select REV-2024-869" class="w-3.5 h-3.5 rounded border-outline-variant text-primary-container focus:ring-0 cursor-pointer mt-0.5" type="checkbox">
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded bg-tertiary-fixed text-tertiary-container shrink-0" title="Approved">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+</span>
+<a class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary-container font-semibold truncate hover:underline leading-tight" href="#">
+                      Q3 Loyalty Rewards Retargeting Banner Set
+                    </a>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface-variant">
+<span class="font-medium text-primary-container">REV-2024-869</span>
+<span class="text-outline-variant">•</span>
+<span class="">Display Retargeting 300x250</span>
+<span class="text-outline-variant">•</span>
+<span class="inline-flex items-center gap-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[12px]">image</span>
+                      8 Creatives
+                    </span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary shrink-0"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Lumina Skincare</span>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-sm text-label-sm font-semibold shrink-0">
+                    MP
+                  </div>
+<div class="flex flex-col min-w-0 leading-tight">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Maya Patel</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant truncate">Performance Mktg</span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col min-w-0 leading-tight">
+<span class="font-label-md text-label-md text-on-surface truncate">Google Display</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">public</span>
+                    Tier 1 Markets
+                  </span>
+</div>
+</td>
+<td class="px-3 py-3 align-top whitespace-nowrap">
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md text-on-surface font-medium">2 days ago</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Jun 14, 11:20 AM</span>
+</div>
+</td>
+<td class="px-3 py-3 align-top">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded border border-tertiary/20 bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold w-fit">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+<span class="">Approved</span>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-tertiary leading-tight">
+<span class="font-mono">Claims Hash 89a4... Verified</span>
+</div>
+</div>
+</td>
+<td class="px-3 py-3 align-top text-right whitespace-nowrap">
+<button class="h-7 px-2.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors inline-flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">receipt_long</span>
+<span class="">View Report</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Batch Bar & Pagination Footer -->
+<div class="px-space-md py-space-sm bg-surface-container-low/70 border-t border-outline-variant/30 flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Live verification feed connected • Engine v4.12 Online</span>
+</div>
+<span class="hidden md:inline text-outline-variant">•</span>
+<span class="hidden md:inline font-body-sm text-body-sm text-on-surface-variant">Showing <strong class="text-on-surface font-semibold">1-5</strong> of <strong class="text-on-surface font-semibold">19</strong> submissions</span>
+</div>
+<div class="flex items-center gap-space-xs self-end sm:self-auto">
+<button class="h-7 px-2 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant disabled:opacity-40 font-label-md text-label-md hover:bg-surface-container flex items-center transition-colors" disabled="" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span class="pr-1">Prev</span>
+</button>
+<button class="h-7 w-7 rounded bg-primary-container text-on-primary font-code-sm text-code-sm font-semibold flex items-center justify-center shadow-sm" type="button">1</button>
+<button class="h-7 w-7 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:bg-surface-container font-code-sm text-code-sm flex items-center justify-center transition-colors" type="button">2</button>
+<button class="h-7 w-7 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:bg-surface-container font-code-sm text-code-sm flex items-center justify-center transition-colors" type="button">3</button>
+<button class="h-7 px-2 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface font-label-md text-label-md hover:bg-surface-container flex items-center transition-colors" type="button">
+<span class="pl-1">Next</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Workspace Verification Details Callout / Operational Guidance -->
+<div class="px-space-lg pb-space-lg pt-space-xs">
+<div class="rounded border border-outline-variant/30 bg-surface-container-low/40 p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded bg-surface-container-highest text-on-surface flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Need to override a high-risk MAP or ASCI blocker?</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Content items flagged with blockers require dual-signature authorization from Legal Compliance and Marketing Director before publishing credentials are released.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 w-full sm:w-auto">
+<button class="h-8 px-space-md rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors flex items-center gap-1.5 w-full sm:w-auto justify-center" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">shield</span>
+<span class="">View Dual-Sign Policy</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div>
+
+</body></html>

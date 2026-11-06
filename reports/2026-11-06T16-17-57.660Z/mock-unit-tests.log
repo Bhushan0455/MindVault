@@ -1,0 +1,127 @@
+
+ RUN  v3.2.7 C:/Users/HP/Downloads/MindVaultFrontend
+
+ ✓ src/features/reviewer-queue/queue-query.test.ts (6 tests) 20ms
+ ✓ src/services/mock-reviewer-queue-service.test.ts (3 tests) 46ms
+ ✓ src/services/mock-reviewer-detail-service.test.ts (7 tests) 141ms
+ ✓ src/services/mock-content-check-service.test.ts (4 tests) 2802ms
+   ✓ mock content check workflow (no real services) > returns independent fixture copies and a true empty state  1103ms
+   ✓ mock content check workflow (no real services) > keeps service failure as an error, never a compliance verdict  1685ms
+ ❯ src/features/reviewer-detail/ReviewerDetailPage.test.tsx (7 tests | 1 failed) 6991ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > opens the matching route from the queue and inspects revision-specific source evidence  945ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > requires confirmation, approves the captured revision and updates queue status  1818ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > rejects empty comments, then requests changes and stores the relevant comment  1732ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > preserves the approved earlier revision while a changed revision awaits a new decision  311ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > preserves a reviewer comment on save failure and allows retrying the decision  1325ms
+   × Reviewer Detail interactions (local mock/DOM validation) > discards an open confirmation when a newer submitted revision arrives 332ms
+     → expected <dialog …(3)>…(2)</dialog> to be null
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > supports loading, empty and error previews without changing the stored revision  525ms
+ ✓ src/features/reviewer-queue/ReviewerQueuePage.test.tsx (5 tests) 11085ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > loads, searches, combines filters, resets, sorts and paginates  2857ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > preserves the legacy snapshot preview without losing filters  309ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > selects the current page, exports selected rows and applies queue settings  1971ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > shows empty and error states without deleting the session queue  581ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > hands a corrected Creator submission to the queue and reuses existing Findings & Evidence  5364ms
+
+ Test Files  1 failed | 5 passed (6)
+      Tests  1 failed | 31 passed (32)
+   Start at  21:48:09
+   Duration  15.75s (transform 802ms, setup 0ms, collect 3.87s, tests 21.08s, environment 4.47s, prepare 2.86s)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/features/reviewer-detail/ReviewerDetailPage.test.tsx > Reviewer Detail interactions (local mock/DOM validation) > discards an open confirmation when a newer submitted revision arrives
+AssertionError: expected <dialog …(3)>…(2)</dialog> to be null
+
+- Expected: 
+null
+
++ Received: 
+<dialog
+  aria-labelledby="_r_12_"
+  class="queue-dialog "
+  open=""
+>
+  <div
+    class="queue-dialog-heading"
+  >
+    <h2
+      id="_r_12_"
+    >
+      Confirm revision approval
+    </h2>
+    <button
+      aria-label="Close confirm revision approval"
+      class="button button-ghost "
+      type="button"
+    >
+      <svg
+        class="lucide lucide-x"
+        fill="none"
+        height="18"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="18"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18 6 6 18"
+        />
+        <path
+          d="m6 6 12 12"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    class="queue-dialog-body"
+  >
+    <p>
+      Approve 
+      <strong>
+        revision v
+        2
+      </strong>
+       of 
+      <strong>
+        Submitted reviewer snapshot
+      </strong>
+      ?
+    </p>
+    <p>
+      This records a demo approval for snapshot 
+      <code>
+        REV-2024-884:r2
+      </code>
+       only. Future revisions require their own review.
+    </p>
+    <button
+      class="button button-secondary "
+      type="button"
+    >
+      Cancel
+    </button>
+    <button
+      class="button button-primary "
+      disabled=""
+      type="button"
+    >
+      Confirm approval
+    </button>
+  </div>
+</dialog>
+
+ ❯ src/features/reviewer-detail/ReviewerDetailPage.test.tsx:133:81
+    131|     act(() => { store.recordSubmission({ ...store.getCreatorDraft(mock…
+    132|     await screen.findByRole('heading', { name: 'Replacement revision n…
+    133|     expect(screen.queryByRole('dialog', { name: 'Confirm revision appr…
+       |                                                                                 ^
+    134|     const review = store.getReview('REV-2024-884')!;
+    135|     expect(review.revisions.every((revision) => !revision.decision)).t…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

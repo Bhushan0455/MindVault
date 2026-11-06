@@ -1,0 +1,36 @@
+
+ RUN  v3.2.7 C:/Users/HP/Downloads/MindVaultFrontend
+
+ ✓ src/features/reviewer-queue/queue-query.test.ts (6 tests) 19ms
+ ✓ src/services/mock-reviewer-queue-service.test.ts (3 tests) 43ms
+ ✓ src/features/revision-journey/journey-model.test.ts (4 tests) 25ms
+ ✓ src/services/mock-reviewer-detail-service.test.ts (7 tests) 106ms
+ ✓ src/services/mock-content-check-service.test.ts (4 tests) 2794ms
+   ✓ mock content check workflow (no real services) > returns independent fixture copies and a true empty state  1104ms
+   ✓ mock content check workflow (no real services) > keeps service failure as an error, never a compliance verdict  1676ms
+ ✓ src/features/revision-journey/RevisionJourneyPage.test.tsx (6 tests) 4130ms
+   ✓ Revision Journey interactions > selects milestones, inspects the approved revision and compares V1 with V2 without mutating history  746ms
+   ✓ Revision Journey interactions > keeps earlier approval distinct from a newer pending revision and compares targeting edits  338ms
+   ✓ Revision Journey interactions > recovers from unavailable versions and events without substituting unrelated data  499ms
+   ✓ Revision Journey interactions > handles a single preserved version and a missing content ID  345ms
+   ✓ Revision Journey interactions > handles empty histories and service errors while retaining the shared snapshots  460ms
+   ✓ Revision Journey interactions > navigates from Reviewer Detail and Content Check into the shared history  1740ms
+ ✓ src/features/reviewer-detail/ReviewerDetailPage.test.tsx (7 tests) 6806ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > opens the matching route from the queue and inspects revision-specific source evidence  1077ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > requires confirmation, approves the captured revision and updates queue status  1667ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > rejects empty comments, then requests changes and stores the relevant comment  1764ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > preserves the approved earlier revision while a changed revision awaits a new decision  315ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > preserves a reviewer comment on save failure and allows retrying the decision  1190ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > discards an open confirmation when a newer submitted revision arrives  311ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > supports loading, empty and error previews without changing the stored revision  479ms
+ ✓ src/features/reviewer-queue/ReviewerQueuePage.test.tsx (5 tests) 11899ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > loads, searches, combines filters, resets, sorts and paginates  2907ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > selects the current page, exports selected rows and applies queue settings  2115ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > shows empty and error states without deleting the session queue  572ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > hands a corrected Creator submission to the queue and reuses existing Findings & Evidence  6025ms
+
+ Test Files  8 passed (8)
+      Tests  42 passed (42)
+   Start at  22:08:33
+   Duration  17.47s (transform 1.21s, setup 0ms, collect 7.15s, tests 25.82s, environment 8.09s, prepare 3.48s)
+

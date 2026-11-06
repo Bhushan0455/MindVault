@@ -1,0 +1,65 @@
+{
+  "runId": "2026-11-06T16-13-29.754Z",
+  "scope": "Shared shell, Content Check, Reviewer Queue and Reviewer Detail; frontend-only mock/DOM validation",
+  "runtime": "v22.13.1",
+  "dependencyLockSha256": "7054858f046af56975a27711f5657c34170bc4c15c855e3134952c1297926955",
+  "costs": {
+    "externalServiceUsd": 0,
+    "agentCost": null,
+    "note": "Agent billing is not exposed by this environment."
+  },
+  "callCounts": {
+    "backend": 0,
+    "ai": 0,
+    "database": 0
+  },
+  "cache": {
+    "npm": "Project .npm-cache; warm after dependency installation",
+    "application": "In-memory shared mock session; resets on full reload; no persistent cache"
+  },
+  "liveValidation": {
+    "marker": "*.live.test.ts",
+    "status": "NOT_RUN",
+    "reason": "Frontend-only scope prohibits calling real services."
+  },
+  "checks": [
+    {
+      "name": "TypeScript",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "node_modules/typescript/bin/tsc",
+        "-b",
+        "--pretty",
+        "false"
+      ],
+      "exitCode": 1,
+      "durationMs": 5876,
+      "status": "FAIL",
+      "log": "typescript.log"
+    },
+    {
+      "name": "Production build",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "node_modules/vite/bin/vite.js",
+        "build"
+      ],
+      "exitCode": 0,
+      "durationMs": 7502,
+      "status": "PASS",
+      "log": "production-build.log"
+    },
+    {
+      "name": "Mock unit tests",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "node_modules/vitest/vitest.mjs",
+        "run"
+      ],
+      "exitCode": 1,
+      "durationMs": 18462,
+      "status": "FAIL",
+      "log": "mock-unit-tests.log"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "scope": "Reviewer Detail only, plus necessary shared state/routing and regression updates. No Revision Journey implemented.",
+  "route": "/approvals/:submissionId",
+  "verificationStatus": "Automated checks passed; feature is NOT fully verified.",
+  "fullyVerified": false,
+  "references": [
+    {
+      "path": "design_reference/html/reviewerdetail.html",
+      "sha256": "2a0be0ad07680e5187bb3a16addcb1f4030ba42eb0bcb2de909792f307f7a85b"
+    },
+    {
+      "path": "design_reference/screenshots/reviewerdetail.png",
+      "sha256": "8aaf0508fe91c97b55c5b681ecd71321cdecc16ffb9625c8b5d6c74e205a2fce"
+    }
+  ],
+  "changedFiles": [
+    {
+      "path": "src/types/reviewer-detail.ts",
+      "change": "added",
+      "sha256": "9829c650a15cf6f0112fcae518d1e6639e27ccc7beb44f84cdf0ba9f294d4f3e"
+    },
+    {
+      "path": "src/mocks/reviewer-detail.ts",
+      "change": "added",
+      "sha256": "cfb5cb1150b25b74fc2a8f700fedec38f0536673652010b0c848376f0fa89aa2"
+    },
+    {
+      "path": "src/components/SourceEvidence.tsx",
+      "change": "added",
+      "sha256": "e0ae7aeb0d036901371dcaf599dda6d85377f46967a2226746efe394552d68b2"
+    },
+    {
+      "path": "src/services/mock-reviewer-detail-service.ts",
+      "change": "added",
+      "sha256": "28e6c29553c74daefbf85f133c1d408cdf1045c6b8d3c596e698d326d40478c4"
+    },
+    {
+      "path": "src/services/mock-reviewer-detail-service.test.ts",
+      "change": "added",
+      "sha256": "f1ef9aac9b29f65c9698025718e41d6241368cf8f5c2725ca752a9768ab37efe"
+    },
+    {
+      "path": "src/features/reviewer-detail/EvidenceDrawer.tsx",
+      "change": "added",
+      "sha256": "bf0ad7769da292119f80db3cf68a002ff9ac61219378181234c8fbdf97e8e61e"
+    },
+    {
+      "path": "src/features/reviewer-detail/reviewer-detail.css",
+      "change": "added",
+      "sha256": "bc62a7e48e22e34f622fd2f902bd2005a9cc49f1dc67ce70097e226a6abaf984"
+    },
+    {
+      "path": "src/features/reviewer-detail/ReviewerDetailPage.test.tsx",
+      "change": "added",
+      "sha256": "1184b288c4435d9b8b234bc635554ff786c881b324791878c463a886ed051a3a"
+    },
+    {
+      "path": "src/features/reviewer-detail/ReviewerDetailPage.tsx",
+      "change": "added",
+      "sha256": "269105e7edbafbc0f15efea55ebf05d2d0e38750a040c4e8fc8b5345782208df"
+    },
+    {
+      "path": "src/features/reviewer-detail/RevisionCopy.tsx",
+      "change": "added",
+      "sha256": "bec5ce0bffd4cbc4e212b0e44c9a9275e0aa630e1302bdbdb28e1a3973beba30"
+    },
+    {
+      "path": "src/features/reviewer-detail/useReviewerDetail.ts",
+      "change": "added",
+      "sha256": "8825e53227cad1e40e2331b04c97354c3a2512ab9c56ce0718339b6973960286"
+    },
+    {
+      "path": "src/types/reviewer-queue.ts",
+      "change": "modified",
+      "sha256": "542d957f89b80bc3feae50ad2dde1f72c223b3cc938ecd445bfdf7dbcaf33e53"
+    },
+    {
+      "path": "src/services/mock-session-store.ts",
+      "change": "modified",
+      "sha256": "d201cf3578e79765e6e812d86ebfd200f0083b3f8394e1d489c65f878890e68f"
+    },
+    {
+      "path": "src/components/Modal.tsx",
+      "change": "modified",
+      "sha256": "786c45dc75811370cec584005b6ad2155f9a27c6d88c107f906d2691f555df95"
+    },
+    {
+      "path": "src/features/content-check/Inspector.tsx",
+      "change": "modified",
+      "sha256": "c032b1703f3e5c6cf2d8fe7f3ff7d7c314e62166b46e16c0d1f1971fffbc34da"
+    },
+    {
+      "path": "src/App.tsx",
+      "change": "modified",
+      "sha256": "ca98a3dfaceedda8656322b37948d4e57c70638df5e9f3a6f94dca7ce10d4348"
+    },
+    {
+      "path": "src/components/ApplicationShell.tsx",
+      "change": "modified",
+      "sha256": "0e8c475f8bd25f2f05ec91079fbee231acb26a48ec75e24fa74bd78939c506d8"
+    },
+    {
+      "path": "src/features/reviewer-queue/ReviewerQueuePage.tsx",
+      "change": "modified",
+      "sha256": "528be37afbb45fbd5e246b60d71c7747db09527e76a7e6a5c601790de7549e97"
+    },
+    {
+      "path": "src/features/reviewer-queue/SubmissionPreview.tsx",
+      "change": "modified",
+      "sha256": "53e33edeed1cdcefd610765a997b80ef3de417207f5a3511f7b148d82e734854"
+    },
+    {
+      "path": "src/features/reviewer-queue/ReviewerQueuePage.test.tsx",
+      "change": "modified",
+      "sha256": "ac7cf4b46c16f5004ecc4091132b6c3daf357143775276a55f581a01ae0e5249"
+    },
+    {
+      "path": "scripts/verify.mjs",
+      "change": "modified",
+      "sha256": "4a3941a2ceba4dd9d1546d03446adf6b96d690ec8ac3d8c702dda03171144d55"
+    },
+    {
+      "path": "README.md",
+      "change": "modified",
+      "sha256": "353e3228568e9370d9b52056c443b37c504a3e7fb103185c4b28320f882ab5d7"
+    }
+  ],
+  "preservedOriginalFiles": {
+    "src/types/content-check.ts": true,
+    "src/services/mock-content-check-service.test.ts": true,
+    "src/features/content-check/useContentCheck.ts": true
+  },
+  "functionalFeatures": [
+    "Queue primary links navigate to the matching Reviewer Detail; return links preserve queue filters.",
+    "Read-only exact submitted copy and revision-owned creator/brand/targeting/timestamps.",
+    "Simulated findings, severity, explanations, rule/source excerpts and evidence drawer.",
+    "Shared SourceEvidence component reused by Content Check and Reviewer Detail.",
+    "Approval requires confirmation capturing the displayed revision ID and optional comment.",
+    "Request Changes requires a trimmed nonempty reviewer comment.",
+    "Completed, superseded and noncurrent revisions cannot receive repeated decisions.",
+    "Sample blockers prevent approval.",
+    "Shared queue status, summary, approved timestamp and sidebar pending count update after decisions.",
+    "Approved content/evidence/metadata and comments are preserved; edited resubmission creates a new pending revision.",
+    "Submission and decision history events are stored for future Revision Journey work.",
+    "Earlier snapshots can be viewed read-only.",
+    "Loading, empty, success, error, retry and stale-confirmation handling."
+  ],
+  "stateSemantics": {
+    "storage": "In-memory only; full reload/tab separation resets the demo.",
+    "immutability": "Internal records are deeply frozen; service loads return isolated copies with readonly revision contracts. Creator working-copy changes cannot mutate stored approved revisions.",
+    "newRevisions": "Changed resubmission appends a revision to the same submission. Identical pending submissions are idempotent; unchanged completed submissions cannot reopen a review.",
+    "concurrency": "Mock decisions atomically validate expected current revision ID and pending status after asynchronous delay.",
+    "history": "Decision events include submission/revision IDs, revision number, actor, timestamp and stored comment."
+  },
+  "validation": {
+    "typescript": "PASS",
+    "productionBuild": "PASS",
+    "testFiles": 6,
+    "tests": 32,
+    "existingTestsRetained": 18,
+    "newReviewerTests": 14,
+    "note": "Two existing queue opening expectations were adapted to the required detail route; legacy preview coverage retained.",
+    "runs": [
+      {
+        "manifest": "reports/2026-11-06T16-13-29.754Z/manifest.json",
+        "checks": [
+          {
+            "name": "TypeScript",
+            "status": "FAIL"
+          },
+          {
+            "name": "Production build",
+            "status": "PASS"
+          },
+          {
+            "name": "Mock unit tests",
+            "status": "FAIL"
+          }
+        ]
+      },
+      {
+        "manifest": "reports/2026-11-06T16-15-10.409Z/manifest.json",
+        "checks": [
+          {
+            "name": "TypeScript",
+            "status": "PASS"
+          },
+          {
+            "name": "Production build",
+            "status": "PASS"
+          },
+          {
+            "name": "Mock unit tests",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "manifest": "reports/2026-11-06T16-17-57.660Z/manifest.json",
+        "checks": [
+          {
+            "name": "TypeScript",
+            "status": "PASS"
+          },
+          {
+            "name": "Production build",
+            "status": "PASS"
+          },
+          {
+            "name": "Mock unit tests",
+            "status": "FAIL"
+          }
+        ]
+      },
+      {
+        "manifest": "reports/2026-11-06T16-20-16.793Z/manifest.json",
+        "checks": [
+          {
+            "name": "TypeScript",
+            "status": "PASS"
+          },
+          {
+            "name": "Production build",
+            "status": "PASS"
+          },
+          {
+            "name": "Mock unit tests",
+            "status": "PASS"
+          }
+        ]
+      }
+    ]
+  },
+  "liveValidation": {
+    "marker": "*.live.test.ts",
+    "status": "NOT_RUN",
+    "reason": "Frontend-only mock scope; no backend, database, authentication or AI service integration."
+  },
+  "uiVerification": {
+    "browserVisual": "DEFERRED_BY_USER",
+    "endToEnd": "DEFERRED_BY_USER",
+    "integration": "DEFERRED_BY_USER",
+    "unverified": [
+      "Pixel-level visual fidelity and responsive rendering",
+      "Native dialog focus trapping/restoration and keyboard behavior in actual browsers",
+      "Remote asset/image loading and actual downloads",
+      "Real API authorization, concurrency and persistence"
+    ]
+  },
+  "integrationAssumptions": [
+    "Implement ReviewerDetailService separately from UI; use authoritative revision-specific snapshots.",
+    "Backend must atomically reject stale/completed decisions, enforce reviewer identity/permissions and require change-request comments.",
+    "Backend must retain immutable text, evidence and asset versions plus decision history.",
+    "After a successful decision, adapters must invalidate/notify the queue snapshot as the shared mock session does."
+  ],
+  "limitations": [
+    "Remote creative files referenced in Stitch are not supplied locally; cards show unavailable-file placeholders.",
+    "Title-only queue fixtures receive explicitly fictional copy at session initialization. Creator submissions retain their actual submitted text.",
+    "Compare Diff, Reject Campaign and dual-sign dispatch remain disabled/outside scope.",
+    "No cryptographic verification or regulatory compliance guarantee is claimed."
+  ],
+  "costs": {
+    "externalServiceUsd": 0,
+    "agentCost": null,
+    "note": "Agent billing is not exposed by this environment."
+  },
+  "callCounts": {
+    "backend": 0,
+    "ai": 0,
+    "database": 0,
+    "authentication": 0,
+    "mockServiceCalls": null,
+    "note": "Mock invocation counts are not instrumented. All automated service/DOM tests run locally."
+  },
+  "cache": {
+    "dependencies": "Existing node_modules and workspace npm cache reused; no dependencies installed in this step",
+    "typescript": "Existing incremental cache reused",
+    "application": "Shared in-memory session, no persistent cache/database"
+  }
+}

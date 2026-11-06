@@ -1,0 +1,2008 @@
+
+ RUN  v3.2.7 C:/Users/HP/Downloads/MindVaultFrontend
+
+ ✓ src/features/reviewer-queue/queue-query.test.ts (6 tests) 13ms
+ ✓ src/services/mock-reviewer-queue-service.test.ts (3 tests) 21ms
+ ✓ src/services/mock-content-check-service.test.ts (4 tests) 2818ms
+   ✓ mock content check workflow (no real services) > returns independent fixture copies and a true empty state  1127ms
+   ✓ mock content check workflow (no real services) > keeps service failure as an error, never a compliance verdict  1683ms
+ ❯ src/features/reviewer-queue/ReviewerQueuePage.test.tsx (5 tests | 5 failed) 4654ms
+   × Reviewer Queue interactions (local DOM with mock services) > loads, searches, combines filters, resets, sorts and paginates 258ms
+     → Unable to find an accessible element with the role "heading" and name "Loading Reviewer Queue"
+
+Here are the accessible roles:
+
+  heading:
+
+  Name "Something went wrong":
+  [36m<h1 />[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Try again":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+   × Reviewer Queue interactions (local DOM with mock services) > opens an individual snapshot and closes it without losing filters 1085ms
+     → Unable to find role="table"
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+   × Reviewer Queue interactions (local DOM with mock services) > selects the current page, exports selected rows and applies queue settings 1104ms
+     → Unable to find role="table"
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+   × Reviewer Queue interactions (local DOM with mock services) > shows empty and error states without deleting the session queue 1103ms
+     → Unable to find role="table"
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+   × Reviewer Queue interactions (local DOM with mock services) > hands a corrected Creator submission to the queue and reuses existing Findings & Evidence 1101ms
+     → Unable to find role="heading" and name "Silence the noise. Elevate your everyday rhythm."
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"app-shell "[39m
+    [36m>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"skip-link"[39m
+        [33mhref[39m=[32m"#main-content"[39m
+      [36m>[39m
+        [0mSkip to content[0m
+      [36m</a>[39m
+      [36m<aside[39m
+        [33mclass[39m=[32m"desktop-sidebar"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"workspace-brand"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [0mM[0m
+          [36m</span>[39m
+          [36m<div>[39m
+            [36m<strong>[39m
+              [0mMindVault AI[0m
+            [36m</strong>[39m
+            [36m<span>[39m
+              [0mAcme Consumer Tech[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<details[39m
+            [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+          [36m>[39m
+            [36m<summary[39m
+              [33maria-label[39m=[32m"Workspace details"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"lucide lucide-chevrons-up-down"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"18"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"18"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 15 5 5 5-5"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 9 5-5 5 5"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+            [36m</summary>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"shell-popover-content"[39m
+            [36m>[39m
+              [36m<strong>[39m
+                [0mAcme Consumer Tech[0m
+              [36m</strong>[39m
+              [36m<p>[39m
+                [0mThis demo contains one sample workspace.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</details>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-groups"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"nav-label"[39m
+            [36m>[39m
+              [0mAuditing[0m
+            [36m</p>[39m
+            [36m<nav[39m
+              [33maria-label[39m=[32m"Auditing"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/overview"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-layout-dashboard"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"12"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"16"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mOverview[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/brand-knowledge"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-book-open"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M12 7v14"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mBrand Knowledge[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33maria-current[39m=[32m"page"[39m
+                [33mclass[39m=[32m"nav-link active"[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/content-checks"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-clipboard-check"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33...
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"app-shell "[39m
+    [36m>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"skip-link"[39m
+        [33mhref[39m=[32m"#main-content"[39m
+      [36m>[39m
+        [0mSkip to content[0m
+      [36m</a>[39m
+      [36m<aside[39m
+        [33mclass[39m=[32m"desktop-sidebar"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"workspace-brand"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [0mM[0m
+          [36m</span>[39m
+          [36m<div>[39m
+            [36m<strong>[39m
+              [0mMindVault AI[0m
+            [36m</strong>[39m
+            [36m<span>[39m
+              [0mAcme Consumer Tech[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<details[39m
+            [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+          [36m>[39m
+            [36m<summary[39m
+              [33maria-label[39m=[32m"Workspace details"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"lucide lucide-chevrons-up-down"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"18"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"18"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 15 5 5 5-5"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 9 5-5 5 5"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+            [36m</summary>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"shell-popover-content"[39m
+            [36m>[39m
+              [36m<strong>[39m
+                [0mAcme Consumer Tech[0m
+              [36m</strong>[39m
+              [36m<p>[39m
+                [0mThis demo contains one sample workspace.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</details>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-groups"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"nav-label"[39m
+            [36m>[39m
+              [0mAuditing[0m
+            [36m</p>[39m
+            [36m<nav[39m
+              [33maria-label[39m=[32m"Auditing"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/overview"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-layout-dashboard"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"12"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"16"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mOverview[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/brand-knowledge"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-book-open"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M12 7v14"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mBrand Knowledge[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33maria-current[39m=[32m"page"[39m
+                [33mclass[39m=[32m"nav-link active"[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/content-checks"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-clipboard-check"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33...
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  5 failed | 13 passed (18)
+   Start at  21:21:34
+   Duration  8.59s (transform 488ms, setup 0ms, collect 1.66s, tests 7.51s, environment 1.88s, prepare 1.13s)
+
+stderr | src/features/reviewer-queue/ReviewerQueuePage.test.tsx > Reviewer Queue interactions (local DOM with mock services) > loads, searches, combines filters, resets, sorts and paginates
+Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Metric`.
+    at createFiberFromTypeAndProps (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:5330:28)
+    at createFiberFromElement (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:5344:14)
+    at reconcileChildFibersImpl (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:7286:31)
+    at C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:7456:33
+    at reconcileChildren (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:10096:13)
+    at beginWork (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:12468:13)
+    at runWithFiberInDEV (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:1048:13)
+    at performUnitOfWork (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:19176:22)
+    at workLoopSync (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:19004:41)
+    at renderRootSync (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:18985:11) {
+  [stack]: [Getter/Setter],
+  [message]: "Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.\n" +
+    '\n' +
+    'Check the render method of `Metric`.'
+}
+
+The above error occurred in the <span> component.
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+
+stderr | src/features/reviewer-queue/ReviewerQueuePage.test.tsx > Reviewer Queue interactions (local DOM with mock services) > opens an individual snapshot and closes it without losing filters
+Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Metric`.
+    at createFiberFromTypeAndProps (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:5330:28)
+    at createFiberFromElement (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:5344:14)
+    at reconcileChildFibersImpl (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:7286:31)
+    at C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:7456:33
+    at reconcileChildren (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:10096:13)
+    at beginWork (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:12468:13)
+    at runWithFiberInDEV (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:1048:13)
+    at performUnitOfWork (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:19176:22)
+    at workLoopSync (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:19004:41)
+    at renderRootSync (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:18985:11) {
+  [stack]: [Getter/Setter],
+  [message]: "Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.\n" +
+    '\n' +
+    'Check the render method of `Metric`.'
+}
+
+The above error occurred in the <span> component.
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+
+stderr | src/features/reviewer-queue/ReviewerQueuePage.test.tsx > Reviewer Queue interactions (local DOM with mock services) > selects the current page, exports selected rows and applies queue settings
+Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Metric`.
+    at createFiberFromTypeAndProps (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:5330:28)
+    at createFiberFromElement (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:5344:14)
+    at reconcileChildFibersImpl (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:7286:31)
+    at C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:7456:33
+    at reconcileChildren (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:10096:13)
+    at beginWork (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:12468:13)
+    at runWithFiberInDEV (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:1048:13)
+    at performUnitOfWork (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:19176:22)
+    at workLoopSync (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:19004:41)
+    at renderRootSync (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:18985:11) {
+  [stack]: [Getter/Setter],
+  [message]: "Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.\n" +
+    '\n' +
+    'Check the render method of `Metric`.'
+}
+
+The above error occurred in the <span> component.
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+
+stderr | src/features/reviewer-queue/ReviewerQueuePage.test.tsx > Reviewer Queue interactions (local DOM with mock services) > shows empty and error states without deleting the session queue
+Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Metric`.
+    at createFiberFromTypeAndProps (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:5330:28)
+    at createFiberFromElement (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:5344:14)
+    at reconcileChildFibersImpl (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:7286:31)
+    at C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:7456:33
+    at reconcileChildren (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:10096:13)
+    at beginWork (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:12468:13)
+    at runWithFiberInDEV (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:1048:13)
+    at performUnitOfWork (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:19176:22)
+    at workLoopSync (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:19004:41)
+    at renderRootSync (C:\Users\HP\Downloads\MindVaultFrontend\node_modules\react-dom\cjs\react-dom-client.development.js:18985:11) {
+  [stack]: [Getter/Setter],
+  [message]: "Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.\n" +
+    '\n' +
+    'Check the render method of `Metric`.'
+}
+
+The above error occurred in the <span> component.
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/features/reviewer-queue/ReviewerQueuePage.test.tsx > Reviewer Queue interactions (local DOM with mock services) > loads, searches, combines filters, resets, sorts and paginates
+TestingLibraryElementError: Unable to find an accessible element with the role "heading" and name "Loading Reviewer Queue"
+
+Here are the accessible roles:
+
+  heading:
+
+  Name "Something went wrong":
+  [36m<h1 />[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Try again":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/features/reviewer-queue/ReviewerQueuePage.test.tsx:30:19
+     28|   it('loads, searches, combines filters, resets, sorts and paginates',…
+     29|     const { user } = setup();
+     30|     expect(screen.getByRole('heading', { name: 'Loading Reviewer Queue…
+       |                   ^
+     31|     await screen.findByRole('table');
+     32|     expect(within(screen.getByRole('table')).getAllByRole('row')).toHa…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  src/features/reviewer-queue/ReviewerQueuePage.test.tsx > Reviewer Queue interactions (local DOM with mock services) > opens an individual snapshot and closes it without losing filters
+TestingLibraryElementError: Unable to find role="table"
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+ ❯ waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ src/features/reviewer-queue/ReviewerQueuePage.test.tsx:56:18
+     54|   it('opens an individual snapshot and closes it without losing filter…
+     55|     const { user } = setup('/approvals?status=pending&q=CHK-9042');
+     56|     await screen.findByRole('table');
+       |                  ^
+     57|     await user.click(screen.getByRole('link', { name: 'Wireless Headph…
+     58|     const preview = screen.getByRole('dialog', { name: 'Submission pre…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  src/features/reviewer-queue/ReviewerQueuePage.test.tsx > Reviewer Queue interactions (local DOM with mock services) > selects the current page, exports selected rows and applies queue settings
+TestingLibraryElementError: Unable to find role="table"
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+ ❯ waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ src/features/reviewer-queue/ReviewerQueuePage.test.tsx:69:18
+     67|   it('selects the current page, exports selected rows and applies queu…
+     68|     const { user } = setup();
+     69|     await screen.findByRole('table');
+       |                  ^
+     70|     await user.click(screen.getByRole('checkbox', { name: 'Select all …
+     71|     expect(screen.getByText(/5 selected/)).toBeTruthy();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+ FAIL  src/features/reviewer-queue/ReviewerQueuePage.test.tsx > Reviewer Queue interactions (local DOM with mock services) > shows empty and error states without deleting the session queue
+TestingLibraryElementError: Unable to find role="table"
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<section[39m
+      [33maria-live[39m=[32m"polite"[39m
+      [33mclass[39m=[32m"state-panel"[39m
+    [36m>[39m
+      [36m<svg[39m
+        [33mclass[39m=[32m"lucide lucide-circle-alert"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"26"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"26"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<circle[39m
+          [33mcx[39m=[32m"12"[39m
+          [33mcy[39m=[32m"12"[39m
+          [33mr[39m=[32m"10"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12"[39m
+          [33my1[39m=[32m"8"[39m
+          [33my2[39m=[32m"12"[39m
+        [36m/>[39m
+        [36m<line[39m
+          [33mx1[39m=[32m"12"[39m
+          [33mx2[39m=[32m"12.01"[39m
+          [33my1[39m=[32m"16"[39m
+          [33my2[39m=[32m"16"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+      [36m<h1>[39m
+        [0mSomething went wrong[0m
+      [36m</h1>[39m
+      [36m<div>[39m
+        [0mReload the demo to start again. Session edits will be cleared.[0m
+      [36m</div>[39m
+      [36m<button[39m
+        [33mclass[39m=[32m"button button-secondary "[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [36m<svg[39m
+          [33mclass[39m=[32m"lucide lucide-refresh-cw"[39m
+          [33mfill[39m=[32m"none"[39m
+          [33mheight[39m=[32m"14"[39m
+          [33mstroke[39m=[32m"currentColor"[39m
+          [33mstroke-linecap[39m=[32m"round"[39m
+          [33mstroke-linejoin[39m=[32m"round"[39m
+          [33mstroke-width[39m=[32m"2"[39m
+          [33mviewBox[39m=[32m"0 0 24 24"[39m
+          [33mwidth[39m=[32m"14"[39m
+          [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+        [36m>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 3v5h-5"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"[39m
+          [36m/>[39m
+          [36m<path[39m
+            [33md[39m=[32m"M8 16H3v5"[39m
+          [36m/>[39m
+        [36m</svg>[39m
+        [0mTry again[0m
+      [36m</button>[39m
+    [36m</section>[39m
+  [36m</div>[39m
+[36m</body>[39m
+ ❯ waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ src/features/reviewer-queue/ReviewerQueuePage.test.tsx:87:18
+     85|   it('shows empty and error states without deleting the session queue'…
+     86|     const { user, store } = setup();
+     87|     await screen.findByRole('table');
+       |                  ^
+     88|     await user.click(screen.getByLabelText('Profile and demo controls'…
+     89|     await user.selectOptions(screen.getByRole('combobox', { name: 'Pre…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/5]⎯
+
+ FAIL  src/features/reviewer-queue/ReviewerQueuePage.test.tsx > Reviewer Queue interactions (local DOM with mock services) > hands a corrected Creator submission to the queue and reuses existing Findings & Evidence
+TestingLibraryElementError: Unable to find role="heading" and name "Silence the noise. Elevate your everyday rhythm."
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"app-shell "[39m
+    [36m>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"skip-link"[39m
+        [33mhref[39m=[32m"#main-content"[39m
+      [36m>[39m
+        [0mSkip to content[0m
+      [36m</a>[39m
+      [36m<aside[39m
+        [33mclass[39m=[32m"desktop-sidebar"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"workspace-brand"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [0mM[0m
+          [36m</span>[39m
+          [36m<div>[39m
+            [36m<strong>[39m
+              [0mMindVault AI[0m
+            [36m</strong>[39m
+            [36m<span>[39m
+              [0mAcme Consumer Tech[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<details[39m
+            [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+          [36m>[39m
+            [36m<summary[39m
+              [33maria-label[39m=[32m"Workspace details"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"lucide lucide-chevrons-up-down"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"18"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"18"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 15 5 5 5-5"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 9 5-5 5 5"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+            [36m</summary>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"shell-popover-content"[39m
+            [36m>[39m
+              [36m<strong>[39m
+                [0mAcme Consumer Tech[0m
+              [36m</strong>[39m
+              [36m<p>[39m
+                [0mThis demo contains one sample workspace.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</details>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-groups"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"nav-label"[39m
+            [36m>[39m
+              [0mAuditing[0m
+            [36m</p>[39m
+            [36m<nav[39m
+              [33maria-label[39m=[32m"Auditing"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/overview"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-layout-dashboard"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"12"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"16"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mOverview[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/brand-knowledge"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-book-open"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M12 7v14"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mBrand Knowledge[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33maria-current[39m=[32m"page"[39m
+                [33mclass[39m=[32m"nav-link active"[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/content-checks"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-clipboard-check"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33...
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"app-shell "[39m
+    [36m>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"skip-link"[39m
+        [33mhref[39m=[32m"#main-content"[39m
+      [36m>[39m
+        [0mSkip to content[0m
+      [36m</a>[39m
+      [36m<aside[39m
+        [33mclass[39m=[32m"desktop-sidebar"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"workspace-brand"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [0mM[0m
+          [36m</span>[39m
+          [36m<div>[39m
+            [36m<strong>[39m
+              [0mMindVault AI[0m
+            [36m</strong>[39m
+            [36m<span>[39m
+              [0mAcme Consumer Tech[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<details[39m
+            [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+          [36m>[39m
+            [36m<summary[39m
+              [33maria-label[39m=[32m"Workspace details"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"lucide lucide-chevrons-up-down"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"18"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"18"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 15 5 5 5-5"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 9 5-5 5 5"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+            [36m</summary>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"shell-popover-content"[39m
+            [36m>[39m
+              [36m<strong>[39m
+                [0mAcme Consumer Tech[0m
+              [36m</strong>[39m
+              [36m<p>[39m
+                [0mThis demo contains one sample workspace.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</details>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-groups"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"nav-label"[39m
+            [36m>[39m
+              [0mAuditing[0m
+            [36m</p>[39m
+            [36m<nav[39m
+              [33maria-label[39m=[32m"Auditing"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/overview"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-layout-dashboard"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"12"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"16"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mOverview[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/brand-knowledge"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-book-open"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M12 7v14"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mBrand Knowledge[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33maria-current[39m=[32m"page"[39m
+                [33mclass[39m=[32m"nav-link active"[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/content-checks"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-clipboard-check"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33...
+ ❯ waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:86:33
+ ❯ src/features/reviewer-queue/ReviewerQueuePage.test.tsx:101:18
+     99|   it('hands a corrected Creator submission to the queue and reuses exi…
+    100|     const { user } = setup('/content-checks');
+    101|     await screen.findByRole('heading', { name: 'Silence the noise. Ele…
+       |                  ^
+    102|     expect((screen.getAllByRole('button', { name: 'Submit for Approval…
+    103|     await user.click(screen.getByRole('button', { name: /Quick Fix \(A…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/5]⎯
+

@@ -1,0 +1,116 @@
+{
+  "scope": "Reconcile shared shell and Content Check with final approved Stitch references",
+  "referenceDirectory": "design_reference",
+  "referenceInventory": [
+    {
+      "path": "design_reference/html/contentcheck.html",
+      "sha256": "99777312e1b7ac6684b6f3a2fb7fe11702f2451b807a898d2d9520e1bab1a523"
+    },
+    {
+      "path": "design_reference/html/login.html",
+      "sha256": "121f4552de83d78ff2875c162940b0e388237937ba10ec13b6e9fcf0332f1dd6"
+    },
+    {
+      "path": "design_reference/html/reiviewerapprovalpage.html",
+      "sha256": "144038b41e15acfcd466f5e4ae60f917b9a88cbf47608fda9a9d9ace7f34cbcb"
+    },
+    {
+      "path": "design_reference/html/reviewerdetail.html",
+      "sha256": "2a0be0ad07680e5187bb3a16addcb1f4030ba42eb0bcb2de909792f307f7a85b"
+    },
+    {
+      "path": "design_reference/html/revisionhistory.html",
+      "sha256": "ae8e959533dca458f83d1964eeb586c611bead2c1eeb96731c7b6cffeb7ef87d"
+    },
+    {
+      "path": "design_reference/screenshots/contentcheck.png",
+      "sha256": "994a8b6bae6341fb2e2f9e434559b103bcfd24e1e578c75fb58f3765715abbe6"
+    },
+    {
+      "path": "design_reference/screenshots/login.png",
+      "sha256": "d696ff79de3a9df33a4928a50c634eb6222c657ad616af888cfebdf8f1052b2a"
+    },
+    {
+      "path": "design_reference/screenshots/reviewerdetail.png",
+      "sha256": "8aaf0508fe91c97b55c5b681ecd71321cdecc16ffb9625c8b5d6c74e205a2fce"
+    },
+    {
+      "path": "design_reference/screenshots/revishionhistory.png",
+      "sha256": "8742bf8c56dd17d2da6af84befd1a7254a8777f27b9f9753b436025315668d10"
+    },
+    {
+      "path": "design_reference/screenshots/reviwerqueue.png",
+      "sha256": "146825a184f38ce8de718ccc1af7fbc2e3ebb7fd50914258d8fb442cf603249f"
+    }
+  ],
+  "designDocumentation": "No separate design-system documentation present; shared tokens inspected in HTML exports.",
+  "correctedDifferences": [
+    "Removed extra demo/action rows; routed page controls into the 56px shared header.",
+    "Restored 24px brand mark, sidebar spacing/active typography, workspace chevrons and mock approval count.",
+    "Added local notifications disclosure and profile menu; retained demo controls in the profile disclosure.",
+    "Matched metadata truncation and compact targeting controls.",
+    "Restored 384px desktop inspector, 64px editor gutters, 48px canvas padding and reference line heights.",
+    "Restored product emphasis, underlined sample claims, price badge and inspector finding-card styling.",
+    "Matched inspector footer and bottom action bar; Guidelines opens the existing source excerpt."
+  ],
+  "preservedFiles": {
+    "src/types/content-check.ts": "2ed205286e75554d7c3cfc4ecf9325a18505fe1f7fba76c4939426c350b398f6",
+    "src/services/mock-content-check-service.ts": "810b3e31e91580d16f35c8e7a76f8184b30b8b35cb4a832dfa4a27419abbe53b",
+    "src/services/mock-content-check-service.test.ts": "53e8294a42ce697488a7888d1ebc8bb8b27d8357e15a024d56eac48901c5e14d",
+    "src/features/content-check/useContentCheck.ts": "872e4688107a094eba72612260914156c05d24c65e3c0824e91fbf7af98d94a7",
+    "src/App.tsx": "d71dd8c41dd9b1cde86aa11684077cdfe4dc975fff8d1eda23a9edd1035793f5",
+    "package.json": "2b05c375cc5b1466f9ecefe7592d17833bf1c5b3c6fa2394588c63d757804307",
+    "package-lock.json": "cdc0906c44a6551439b99a6e6e4578ea6992a3d4660772f0e53801cc17f756a8"
+  },
+  "validationRuns": [
+    {
+      "command": "npm run typecheck",
+      "status": "PASS",
+      "kind": "preflight"
+    },
+    {
+      "command": "npm run verify",
+      "manifest": "../2026-11-06T15-33-34.896Z/manifest.json",
+      "status": "PASS",
+      "note": "Before final mobile CSS correction"
+    },
+    {
+      "command": "npm run verify",
+      "manifest": "manifest.json",
+      "status": "PASS",
+      "note": "Final source; TypeScript, production build and 4 existing mock tests passed"
+    }
+  ],
+  "serviceCalls": {
+    "backend": 0,
+    "ai": 0,
+    "database": 0,
+    "asyncMockServiceCallsPerUnitSuite": 5,
+    "unitSuiteRuns": 2
+  },
+  "cost": {
+    "externalServiceUsd": 0,
+    "agentCost": null,
+    "note": "Agent billing unavailable."
+  },
+  "cache": {
+    "dependencies": "Existing node_modules reused; no installs in reconciliation",
+    "application": "No persistent cache",
+    "verification": "Existing TypeScript incremental cache; production builds regenerated"
+  },
+  "liveValidation": {
+    "marker": "*.live.test.ts",
+    "status": "NOT_RUN",
+    "reason": "Frontend-only scope; real service calls prohibited."
+  },
+  "browserValidation": {
+    "status": "NOT_RUN",
+    "note": "Prior Computer Use attempt was blocked by Windows browser URL-policy enforcement. No browser or pixel-diff verification claimed in this reconciliation."
+  },
+  "limitations": [
+    "Lucide equivalents and local initials avatar replace Material Symbols and unavailable remote profile image.",
+    "Session-only/demo labels and guarded submission deliberately preserve honest mock behavior.",
+    "No source PDF supplied; source excerpt remains explicitly simulated.",
+    "Mobile layout is adapted from HTML; no mobile reference screenshots supplied."
+  ]
+}

@@ -1,0 +1,29 @@
+
+ RUN  v3.2.7 C:/Users/HP/Downloads/MindVaultFrontend
+
+ ✓ src/features/reviewer-queue/queue-query.test.ts (6 tests) 20ms
+ ✓ src/services/mock-reviewer-queue-service.test.ts (3 tests) 43ms
+ ✓ src/services/mock-reviewer-detail-service.test.ts (7 tests) 142ms
+ ✓ src/services/mock-content-check-service.test.ts (4 tests) 2810ms
+   ✓ mock content check workflow (no real services) > returns independent fixture copies and a true empty state  1121ms
+   ✓ mock content check workflow (no real services) > keeps service failure as an error, never a compliance verdict  1673ms
+ ✓ src/features/reviewer-detail/ReviewerDetailPage.test.tsx (7 tests) 8593ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > opens the matching route from the queue and inspects revision-specific source evidence  1103ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > requires confirmation, approves the captured revision and updates queue status  1780ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > rejects empty comments, then requests changes and stores the relevant comment  2660ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > preserves the approved earlier revision while a changed revision awaits a new decision  423ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > preserves a reviewer comment on save failure and allows retrying the decision  1360ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > discards an open confirmation when a newer submitted revision arrives  592ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > supports loading, empty and error previews without changing the stored revision  671ms
+ ✓ src/features/reviewer-queue/ReviewerQueuePage.test.tsx (5 tests) 13258ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > loads, searches, combines filters, resets, sorts and paginates  3377ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > preserves the legacy snapshot preview without losing filters  571ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > selects the current page, exports selected rows and applies queue settings  2586ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > shows empty and error states without deleting the session queue  643ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > hands a corrected Creator submission to the queue and reuses existing Findings & Evidence  6078ms
+
+ Test Files  6 passed (6)
+      Tests  32 passed (32)
+   Start at  21:50:29
+   Duration  18.36s (transform 865ms, setup 0ms, collect 4.16s, tests 24.87s, environment 5.00s, prepare 2.71s)
+

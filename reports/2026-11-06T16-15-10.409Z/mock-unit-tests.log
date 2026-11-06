@@ -1,0 +1,27 @@
+
+ RUN  v3.2.7 C:/Users/HP/Downloads/MindVaultFrontend
+
+ ✓ src/features/reviewer-queue/queue-query.test.ts (6 tests) 21ms
+ ✓ src/services/mock-reviewer-queue-service.test.ts (3 tests) 36ms
+ ✓ src/services/mock-reviewer-detail-service.test.ts (7 tests) 167ms
+ ✓ src/services/mock-content-check-service.test.ts (4 tests) 2797ms
+   ✓ mock content check workflow (no real services) > returns independent fixture copies and a true empty state  1117ms
+   ✓ mock content check workflow (no real services) > keeps service failure as an error, never a compliance verdict  1667ms
+ ✓ src/features/reviewer-detail/ReviewerDetailPage.test.tsx (6 tests) 6525ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > opens the matching route from the queue and inspects revision-specific source evidence  1075ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > requires confirmation, approves the captured revision and updates queue status  1634ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > rejects empty comments, then requests changes and stores the relevant comment  1567ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > preserves the approved earlier revision while a changed revision awaits a new decision  348ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > preserves a reviewer comment on save failure and allows retrying the decision  1312ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > supports loading, empty and error previews without changing the stored revision  587ms
+ ✓ src/features/reviewer-queue/ReviewerQueuePage.test.tsx (5 tests) 11326ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > loads, searches, combines filters, resets, sorts and paginates  2777ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > selects the current page, exports selected rows and applies queue settings  1777ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > shows empty and error states without deleting the session queue  673ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > hands a corrected Creator submission to the queue and reuses existing Findings & Evidence  5838ms
+
+ Test Files  6 passed (6)
+      Tests  31 passed (31)
+   Start at  21:45:24
+   Duration  17.32s (transform 940ms, setup 0ms, collect 4.78s, tests 20.87s, environment 6.34s, prepare 2.71s)
+

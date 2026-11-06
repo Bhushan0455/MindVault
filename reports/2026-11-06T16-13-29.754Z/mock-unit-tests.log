@@ -1,0 +1,3327 @@
+
+ RUN  v3.2.7 C:/Users/HP/Downloads/MindVaultFrontend
+
+ ✓ src/features/reviewer-queue/queue-query.test.ts (6 tests) 16ms
+ ✓ src/services/mock-reviewer-queue-service.test.ts (3 tests) 41ms
+ ✓ src/services/mock-reviewer-detail-service.test.ts (7 tests) 198ms
+ ✓ src/services/mock-content-check-service.test.ts (4 tests) 2810ms
+   ✓ mock content check workflow (no real services) > returns independent fixture copies and a true empty state  1116ms
+   ✓ mock content check workflow (no real services) > keeps service failure as an error, never a compliance verdict  1681ms
+ ✓ src/features/reviewer-detail/ReviewerDetailPage.test.tsx (6 tests) 6031ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > opens the matching route from the queue and inspects revision-specific source evidence  868ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > requires confirmation, approves the captured revision and updates queue status  1604ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > rejects empty comments, then requests changes and stores the relevant comment  1648ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > preserves the approved earlier revision while a changed revision awaits a new decision  326ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > preserves a reviewer comment on save failure and allows retrying the decision  1160ms
+   ✓ Reviewer Detail interactions (local mock/DOM validation) > supports loading, empty and error previews without changing the stored revision  423ms
+ ❯ src/features/reviewer-queue/ReviewerQueuePage.test.tsx (5 tests | 2 failed) 12010ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > loads, searches, combines filters, resets, sorts and paginates  2622ms
+   × Reviewer Queue interactions (local DOM with mock services) > preserves the legacy snapshot preview without losing filters 1138ms
+     → Unable to find an accessible element with the role "dialog" and name "Submission preview"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "Skip to content":
+  [36m<a[39m
+    [33mclass[39m=[32m"skip-link"[39m
+    [33mhref[39m=[32m"#main-content"[39m
+  [36m/>[39m
+
+  Name "Overview":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/overview"[39m
+  [36m/>[39m
+
+  Name "Brand Knowledge":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/brand-knowledge"[39m
+  [36m/>[39m
+
+  Name "Content Checks":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/content-checks"[39m
+  [36m/>[39m
+
+  Name "Approvals 3 sample approvals":
+  [36m<a[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mclass[39m=[32m"nav-link active"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals"[39m
+  [36m/>[39m
+
+  Name "Audit Logs":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/audit-logs"[39m
+  [36m/>[39m
+
+  Name "Compliance Rules":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/compliance-rules"[39m
+  [36m/>[39m
+
+  Name "Settings":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/settings"[39m
+  [36m/>[39m
+
+  Name "Approvals":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?status=pending&q=CHK-9042"[39m
+  [36m/>[39m
+
+  Name "Audit Logs":
+  [36m<a[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mhref[39m=[32m"#review-events"[39m
+  [36m/>[39m
+
+  Name "Open existing Findings & Evidence":
+  [36m<a[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/content-checks"[39m
+    [33mtitle[39m=[32m"Opens the current Creator working copy, which may differ from this submitted snapshot."[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  complementary:
+
+  Name "":
+  [36m<aside[39m
+    [33mclass[39m=[32m"desktop-sidebar"[39m
+  [36m/>[39m
+
+  Name "Audit ledger and revision decision":
+  [36m<aside[39m
+    [33maria-label[39m=[32m"Audit ledger and revision decision"[39m
+    [33mclass[39m=[32m"review-rail"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  --------------------------------------------------
+  group:
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"shell-popover notifications-menu"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"shell-popover profile-menu"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details />[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"nav-label"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"nav-label"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-ledger-summary"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-demo-caption"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-snapshot-notice"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-comment-hint"[39m
+    [33mid[39m=[32m"_r_6_-hint"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-validation"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  navigation:
+
+  Name "Auditing":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Auditing"[39m
+  [36m/>[39m
+
+  Name "Governance":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Governance"[39m
+  [36m/>[39m
+
+  Name "Review breadcrumb":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Review breadcrumb"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  banner:
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"app-header"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"review-context"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<header />[39m
+
+  Name "":
+  [36m<header />[39m
+
+  Name "":
+  [36m<header />[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Open navigation":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Open navigation"[39m
+    [33mclass[39m=[32m"button button-ghost menu-toggle"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Audit Ledger 2/3":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Compare Diff":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtitle[39m=[32m"Version comparison is outside this implementation step."[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inspect evidence for titanium diaphragm drivers":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Inspect evidence for titanium diaphragm drivers"[39m
+    [33mclass[39m=[32m"review-inline-claim "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inspect evidence for 40-hour hybrid battery life":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Inspect evidence for 40-hour hybrid battery life"[39m
+    [33mclass[39m=[32m"review-inline-claim "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inspect evidence for ₹799":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Inspect evidence for ₹799"[39m
+    [33mclass[39m=[32m"review-inline-claim blocker"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Preview Aura_ANC_KeyArt_1080x1080.png":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Preview Aura_ANC_KeyArt_1080x1080.png"[39m
+    [33mclass[39m=[32m"button button-ghost "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Preview Aura_PriceDrop_Card.png":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Preview Aura_PriceDrop_Card.png"[39m
+    [33mclass[39m=[32m"button button-ghost "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "#MAP-IN blocker":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "#SPEC-BATTERY-04 Sample match":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "#SPEC-AUDIO-04 Sample match":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Open Detailed Audit Ledger Panel":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approve Revision v1":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-primary "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtitle[39m=[32m"Request a corrected revision for the sample blocker before approval."[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Request Changes":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reject Campaign":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-ghost "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtitle[39m=[32m"Campaign rejection is outside this implementation step."[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Request Changes":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approve Revision v1":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-primary "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtitle[39m=[32m"Request a corrected revision for the sample blocker before approval."[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  region:
+
+  Name "Review demo controls":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Review demo controls"[39m
+    [33mclass[39m=[32m"demo-toolbar"[39m
+  [36m/>[39m
+
+  Name "Exact submitted copy":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Exact submitted copy"[39m
+    [33mclass[39m=[32m"review-submitted-copy"[39m
+  [36m/>[39m
+
+  Name "Audit Thread & Exchange":
+  [36m<section[39m
+    [33maria-labelledby[39m=[32m"review-events-heading"[39m
+    [33mclass[39m=[32m"review-events"[39m
+    [33mid[39m=[32m"review-events"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  combobox:
+
+  Name "Preview state":
+  [36m<select />[39m
+
+  Name "Submitted revision":
+  [36m<select[39m
+    [33maria-label[39m=[32m"Submitted revision"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  option:
+
+  Name "Default":
+  [36m<option[39m
+    [33mvalue[39m=[32m"default"[39m
+  [36m/>[39m
+
+  Name "Empty":
+  [36m<option[39m
+    [33mvalue[39m=[32m"empty"[39m
+  [36m/>[39m
+
+  Name "Error":
+  [36m<option[39m
+    [33mvalue[39m=[32m"error"[39m
+  [36m/>[39m
+
+  Name "Revision v1 · pending":
+  [36m<option[39m
+    [33mvalue[39m=[32m"REV-2024-884:r1"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  [36m<main[39m
+    [33mid[39m=[32m"main-content"[39m
+    [33mtabindex[39m=[32m"-1"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  code:
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code[39m
+    [33mclass[39m=[32m"review-version"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<code[39m
+    [33mclass[39m=[32m"review-version"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  --------------------------------------------------
+  status:
+
+  Name "":
+  [36m<div[39m
+    [33maria-live[39m=[32m"polite"[39m
+    [33mclass[39m=[32m"review-feedback"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  article:
+
+  Name "Submitted content revision":
+  [36m<article[39m
+    [33maria-label[39m=[32m"Submitted content revision"[39m
+    [33mclass[39m=[32m"review-paper"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<article />[39m
+
+  Name "":
+  [36m<article />[39m
+
+  Name "":
+  [36m<article />[39m
+
+  --------------------------------------------------
+  term:
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  --------------------------------------------------
+  definition:
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  --------------------------------------------------
+  time:
+
+  Name "":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T16:01:51.890Z"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T16:01:51.890Z"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Campaign Lead & Hook":
+  [36m<h2 />[39m
+
+  Name "Silence the noise. Elevate your everyday rhythm.":
+  [36m<h1 />[39m
+
+  Name "Submitted Marketing Copy":
+  [36m<h2 />[39m
+
+  Name "Review Collateral & Creative Assets":
+  [36m<h2 />[39m
+
+  Name "Audit Thread & Exchange":
+  [36m<h2[39m
+    [33mid[39m=[32m"review-events-heading"[39m
+  [36m/>[39m
+
+  Name "Audit Ledger":
+  [36m<h2 />[39m
+
+  Name "Revision Decision":
+  [36m<h2 />[39m
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Reviewer comment":
+  [36m<textarea[39m
+    [33maria-describedby[39m=[32m"_r_6_-hint"[39m
+    [33maria-invalid[39m=[32m"false"[39m
+    [33maria-label[39m=[32m"Reviewer comment"[39m
+    [33mid[39m=[32m"_r_6_"[39m
+    [33mplaceholder[39m=[32m"Required when requesting changes or adding review notes…"[39m
+    [33mrows[39m=[32m"5"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  checkbox:
+
+  Name "Dual sign-off dispatch is not connected in this demo":
+  [36m<input[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  contentinfo:
+
+  Name "":
+  [36m<footer[39m
+    [33mclass[39m=[32m"review-decision-footer"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"app-shell reviewer-queue-shell reviewer-detail-shell"[39m
+    [36m>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"skip-link"[39m
+        [33mhref[39m=[32m"#main-content"[39m
+      [36m>[39m
+        [0mSkip to content[0m
+      [36m</a>[39m
+      [36m<aside[39m
+        [33mclass[39m=[32m"desktop-sidebar"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"workspace-brand"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [0mM[0m
+          [36m</span>[39m
+          [36m<div>[39m
+            [36m<strong>[39m
+              [0mMindVault AI[0m
+            [36m</strong>[39m
+            [36m<span>[39m
+              [0mAcme Consumer Tech[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<details[39m
+            [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+          [36m>[39m
+            [36m<summary[39m
+              [33maria-label[39m=[32m"Workspace details"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"lucide lucide-chevrons-up-down"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"18"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"18"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 15 5 5 5-5"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 9 5-5 5 5"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+            [36m</summary>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"shell-popover-content"[39m
+            [36m>[39m
+              [36m<strong>[39m
+                [0mAcme Consumer Tech[0m
+              [36m</strong>[39m
+              [36m<p>[39m
+                [0mThis demo contains one sample workspace.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</details>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-groups"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"nav-label"[39m
+            [36m>[39m
+              [0mAuditing[0m
+            [36m</p>[39m
+            [36m<nav[39m
+              [33maria-label[39m=[32m"Auditing"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/overview"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-layout-dashboard"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"12"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"16"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mOverview[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/brand-knowledge"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-book-open"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M12 7v14"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mBrand Knowledge[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/content-checks"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-clipboard-check"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"1...
+   ✓ Reviewer Queue interactions (local DOM with mock services) > selects the current page, exports selected rows and applies queue settings  1931ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > shows empty and error states without deleting the session queue  630ms
+   × Reviewer Queue interactions (local DOM with mock services) > hands a corrected Creator submission to the queue and reuses existing Findings & Evidence 5687ms
+     → Unable to find an accessible element with the role "dialog" and name "Submission preview"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "Skip to content":
+  [36m<a[39m
+    [33mclass[39m=[32m"skip-link"[39m
+    [33mhref[39m=[32m"#main-content"[39m
+  [36m/>[39m
+
+  Name "Overview":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/overview"[39m
+  [36m/>[39m
+
+  Name "Brand Knowledge":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/brand-knowledge"[39m
+  [36m/>[39m
+
+  Name "Content Checks":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/content-checks"[39m
+  [36m/>[39m
+
+  Name "Approvals 3 sample approvals":
+  [36m<a[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mclass[39m=[32m"nav-link active"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals"[39m
+  [36m/>[39m
+
+  Name "Audit Logs":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/audit-logs"[39m
+  [36m/>[39m
+
+  Name "Compliance Rules":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/compliance-rules"[39m
+  [36m/>[39m
+
+  Name "Settings":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/settings"[39m
+  [36m/>[39m
+
+  Name "Approvals":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?status=pending&q=CHK-9042"[39m
+  [36m/>[39m
+
+  Name "Audit Logs":
+  [36m<a[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mhref[39m=[32m"#review-events"[39m
+  [36m/>[39m
+
+  Name "Open existing Findings & Evidence":
+  [36m<a[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/content-checks"[39m
+    [33mtitle[39m=[32m"Opens the current Creator working copy, which may differ from this submitted snapshot."[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  complementary:
+
+  Name "":
+  [36m<aside[39m
+    [33mclass[39m=[32m"desktop-sidebar"[39m
+  [36m/>[39m
+
+  Name "Audit ledger and revision decision":
+  [36m<aside[39m
+    [33maria-label[39m=[32m"Audit ledger and revision decision"[39m
+    [33mclass[39m=[32m"review-rail"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  --------------------------------------------------
+  group:
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"shell-popover notifications-menu"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"shell-popover profile-menu"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details />[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"nav-label"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"nav-label"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-ledger-summary"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-demo-caption"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-snapshot-notice"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-comment-hint"[39m
+    [33mid[39m=[32m"_r_j_-hint"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  navigation:
+
+  Name "Auditing":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Auditing"[39m
+  [36m/>[39m
+
+  Name "Governance":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Governance"[39m
+  [36m/>[39m
+
+  Name "Review breadcrumb":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Review breadcrumb"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  banner:
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"app-header"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"review-context"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<header />[39m
+
+  Name "":
+  [36m<header />[39m
+
+  Name "":
+  [36m<header />[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Open navigation":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Open navigation"[39m
+    [33mclass[39m=[32m"button button-ghost menu-toggle"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Audit Ledger 3/3":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Compare Diff":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtitle[39m=[32m"Version comparison is outside this implementation step."[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inspect evidence for titanium diaphragm drivers":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Inspect evidence for titanium diaphragm drivers"[39m
+    [33mclass[39m=[32m"review-inline-claim "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inspect evidence for 40-hour hybrid battery life":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Inspect evidence for 40-hour hybrid battery life"[39m
+    [33mclass[39m=[32m"review-inline-claim "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inspect evidence for ₹999":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Inspect evidence for ₹999"[39m
+    [33mclass[39m=[32m"review-inline-claim price"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Preview Aura_ANC_KeyArt_1080x1080.png":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Preview Aura_ANC_KeyArt_1080x1080.png"[39m
+    [33mclass[39m=[32m"button button-ghost "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Preview Aura_PriceDrop_Card.png":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Preview Aura_PriceDrop_Card.png"[39m
+    [33mclass[39m=[32m"button button-ghost "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "#MAP-IN Sample match":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "#SPEC-BATTERY-04 Sample match":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "#SPEC-AUDIO-04 Sample match":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Open Detailed Audit Ledger Panel":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approve Revision v2":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-primary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Request Changes":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reject Campaign":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-ghost "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtitle[39m=[32m"Campaign rejection is outside this implementation step."[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Request Changes":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approve Revision v2":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-primary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  region:
+
+  Name "Review demo controls":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Review demo controls"[39m
+    [33mclass[39m=[32m"demo-toolbar"[39m
+  [36m/>[39m
+
+  Name "Exact submitted copy":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Exact submitted copy"[39m
+    [33mclass[39m=[32m"review-submitted-copy"[39m
+  [36m/>[39m
+
+  Name "Audit Thread & Exchange":
+  [36m<section[39m
+    [33maria-labelledby[39m=[32m"review-events-heading"[39m
+    [33mclass[39m=[32m"review-events"[39m
+    [33mid[39m=[32m"review-events"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  combobox:
+
+  Name "Preview state":
+  [36m<select />[39m
+
+  Name "Submitted revision":
+  [36m<select[39m
+    [33maria-label[39m=[32m"Submitted revision"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  option:
+
+  Name "Default":
+  [36m<option[39m
+    [33mvalue[39m=[32m"default"[39m
+  [36m/>[39m
+
+  Name "Empty":
+  [36m<option[39m
+    [33mvalue[39m=[32m"empty"[39m
+  [36m/>[39m
+
+  Name "Error":
+  [36m<option[39m
+    [33mvalue[39m=[32m"error"[39m
+  [36m/>[39m
+
+  Name "Revision v1 · superseded":
+  [36m<option[39m
+    [33mvalue[39m=[32m"REV-2024-884:r1"[39m
+  [36m/>[39m
+
+  Name "Revision v2 · pending":
+  [36m<option[39m
+    [33mvalue[39m=[32m"REV-2024-884:r2"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  [36m<main[39m
+    [33mid[39m=[32m"main-content"[39m
+    [33mtabindex[39m=[32m"-1"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  code:
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code[39m
+    [33mclass[39m=[32m"review-version"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<code[39m
+    [33mclass[39m=[32m"review-version"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  --------------------------------------------------
+  status:
+
+  Name "":
+  [36m<div[39m
+    [33maria-live[39m=[32m"polite"[39m
+    [33mclass[39m=[32m"review-feedback"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  article:
+
+  Name "Submitted content revision":
+  [36m<article[39m
+    [33maria-label[39m=[32m"Submitted content revision"[39m
+    [33mclass[39m=[32m"review-paper"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<article />[39m
+
+  Name "":
+  [36m<article />[39m
+
+  Name "":
+  [36m<article />[39m
+
+  Name "":
+  [36m<article />[39m
+
+  --------------------------------------------------
+  term:
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  --------------------------------------------------
+  definition:
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  --------------------------------------------------
+  time:
+
+  Name "":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T16:13:59.732Z"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T16:01:55.589Z"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T16:13:59.732Z"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Campaign Lead & Hook":
+  [36m<h2 />[39m
+
+  Name "Creator launch edited in this session":
+  [36m<h1 />[39m
+
+  Name "Submitted Marketing Copy":
+  [36m<h2 />[39m
+
+  Name "Review Collateral & Creative Assets":
+  [36m<h2 />[39m
+
+  Name "Audit Thread & Exchange":
+  [36m<h2[39m
+    [33mid[39m=[32m"review-events-heading"[39m
+  [36m/>[39m
+
+  Name "Audit Ledger":
+  [36m<h2 />[39m
+
+  Name "Revision Decision":
+  [36m<h2 />[39m
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Reviewer comment":
+  [36m<textarea[39m
+    [33maria-describedby[39m=[32m"_r_j_-hint"[39m
+    [33maria-invalid[39m=[32m"false"[39m
+    [33maria-label[39m=[32m"Reviewer comment"[39m
+    [33mid[39m=[32m"_r_j_"[39m
+    [33mplaceholder[39m=[32m"Required when requesting changes or adding review notes…"[39m
+    [33mrows[39m=[32m"5"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  checkbox:
+
+  Name "Dual sign-off dispatch is not connected in this demo":
+  [36m<input[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  contentinfo:
+
+  Name "":
+  [36m<footer[39m
+    [33mclass[39m=[32m"review-decision-footer"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"app-shell reviewer-queue-shell reviewer-detail-shell"[39m
+    [36m>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"skip-link"[39m
+        [33mhref[39m=[32m"#main-content"[39m
+      [36m>[39m
+        [0mSkip to content[0m
+      [36m</a>[39m
+      [36m<aside[39m
+        [33mclass[39m=[32m"desktop-sidebar"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"workspace-brand"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [0mM[0m
+          [36m</span>[39m
+          [36m<div>[39m
+            [36m<strong>[39m
+              [0mMindVault AI[0m
+            [36m</strong>[39m
+            [36m<span>[39m
+              [0mAcme Consumer Tech[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<details[39m
+            [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+          [36m>[39m
+            [36m<summary[39m
+              [33maria-label[39m=[32m"Workspace details"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"lucide lucide-chevrons-up-down"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"18"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"18"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 15 5 5 5-5"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 9 5-5 5 5"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+            [36m</summary>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"shell-popover-content"[39m
+            [36m>[39m
+              [36m<strong>[39m
+                [0mAcme Consumer Tech[0m
+              [36m</strong>[39m
+              [36m<p>[39m
+                [0mThis demo contains one sample workspace.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</details>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-groups"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"nav-label"[39m
+            [36m>[39m
+              [0mAuditing[0m
+            [36m</p>[39m
+            [36m<nav[39m
+              [33maria-label[39m=[32m"Auditing"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/overview"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-layout-dashboard"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"12"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"16"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mOverview[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/brand-knowledge"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-book-open"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M12 7v14"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mBrand Knowledge[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/content-checks"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-clipboard-check"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"1...
+
+ Test Files  1 failed | 5 passed (6)
+      Tests  2 failed | 29 passed (31)
+   Start at  21:43:43
+   Duration  17.35s (transform 902ms, setup 0ms, collect 4.25s, tests 21.11s, environment 5.48s, prepare 2.33s)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/features/reviewer-queue/ReviewerQueuePage.test.tsx > Reviewer Queue interactions (local DOM with mock services) > preserves the legacy snapshot preview without losing filters
+TestingLibraryElementError: Unable to find an accessible element with the role "dialog" and name "Submission preview"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "Skip to content":
+  [36m<a[39m
+    [33mclass[39m=[32m"skip-link"[39m
+    [33mhref[39m=[32m"#main-content"[39m
+  [36m/>[39m
+
+  Name "Overview":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/overview"[39m
+  [36m/>[39m
+
+  Name "Brand Knowledge":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/brand-knowledge"[39m
+  [36m/>[39m
+
+  Name "Content Checks":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/content-checks"[39m
+  [36m/>[39m
+
+  Name "Approvals 3 sample approvals":
+  [36m<a[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mclass[39m=[32m"nav-link active"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals"[39m
+  [36m/>[39m
+
+  Name "Audit Logs":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/audit-logs"[39m
+  [36m/>[39m
+
+  Name "Compliance Rules":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/compliance-rules"[39m
+  [36m/>[39m
+
+  Name "Settings":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/settings"[39m
+  [36m/>[39m
+
+  Name "Approvals":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?status=pending&q=CHK-9042"[39m
+  [36m/>[39m
+
+  Name "Audit Logs":
+  [36m<a[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mhref[39m=[32m"#review-events"[39m
+  [36m/>[39m
+
+  Name "Open existing Findings & Evidence":
+  [36m<a[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/content-checks"[39m
+    [33mtitle[39m=[32m"Opens the current Creator working copy, which may differ from this submitted snapshot."[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  complementary:
+
+  Name "":
+  [36m<aside[39m
+    [33mclass[39m=[32m"desktop-sidebar"[39m
+  [36m/>[39m
+
+  Name "Audit ledger and revision decision":
+  [36m<aside[39m
+    [33maria-label[39m=[32m"Audit ledger and revision decision"[39m
+    [33mclass[39m=[32m"review-rail"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  --------------------------------------------------
+  group:
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"shell-popover notifications-menu"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"shell-popover profile-menu"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details />[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"nav-label"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"nav-label"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-ledger-summary"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-demo-caption"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-snapshot-notice"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-comment-hint"[39m
+    [33mid[39m=[32m"_r_6_-hint"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-validation"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  navigation:
+
+  Name "Auditing":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Auditing"[39m
+  [36m/>[39m
+
+  Name "Governance":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Governance"[39m
+  [36m/>[39m
+
+  Name "Review breadcrumb":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Review breadcrumb"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  banner:
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"app-header"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"review-context"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<header />[39m
+
+  Name "":
+  [36m<header />[39m
+
+  Name "":
+  [36m<header />[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Open navigation":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Open navigation"[39m
+    [33mclass[39m=[32m"button button-ghost menu-toggle"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Audit Ledger 2/3":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Compare Diff":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtitle[39m=[32m"Version comparison is outside this implementation step."[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inspect evidence for titanium diaphragm drivers":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Inspect evidence for titanium diaphragm drivers"[39m
+    [33mclass[39m=[32m"review-inline-claim "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inspect evidence for 40-hour hybrid battery life":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Inspect evidence for 40-hour hybrid battery life"[39m
+    [33mclass[39m=[32m"review-inline-claim "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inspect evidence for ₹799":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Inspect evidence for ₹799"[39m
+    [33mclass[39m=[32m"review-inline-claim blocker"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Preview Aura_ANC_KeyArt_1080x1080.png":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Preview Aura_ANC_KeyArt_1080x1080.png"[39m
+    [33mclass[39m=[32m"button button-ghost "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Preview Aura_PriceDrop_Card.png":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Preview Aura_PriceDrop_Card.png"[39m
+    [33mclass[39m=[32m"button button-ghost "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "#MAP-IN blocker":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "#SPEC-BATTERY-04 Sample match":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "#SPEC-AUDIO-04 Sample match":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Open Detailed Audit Ledger Panel":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approve Revision v1":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-primary "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtitle[39m=[32m"Request a corrected revision for the sample blocker before approval."[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Request Changes":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reject Campaign":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-ghost "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtitle[39m=[32m"Campaign rejection is outside this implementation step."[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Request Changes":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approve Revision v1":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-primary "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtitle[39m=[32m"Request a corrected revision for the sample blocker before approval."[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  region:
+
+  Name "Review demo controls":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Review demo controls"[39m
+    [33mclass[39m=[32m"demo-toolbar"[39m
+  [36m/>[39m
+
+  Name "Exact submitted copy":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Exact submitted copy"[39m
+    [33mclass[39m=[32m"review-submitted-copy"[39m
+  [36m/>[39m
+
+  Name "Audit Thread & Exchange":
+  [36m<section[39m
+    [33maria-labelledby[39m=[32m"review-events-heading"[39m
+    [33mclass[39m=[32m"review-events"[39m
+    [33mid[39m=[32m"review-events"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  combobox:
+
+  Name "Preview state":
+  [36m<select />[39m
+
+  Name "Submitted revision":
+  [36m<select[39m
+    [33maria-label[39m=[32m"Submitted revision"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  option:
+
+  Name "Default":
+  [36m<option[39m
+    [33mvalue[39m=[32m"default"[39m
+  [36m/>[39m
+
+  Name "Empty":
+  [36m<option[39m
+    [33mvalue[39m=[32m"empty"[39m
+  [36m/>[39m
+
+  Name "Error":
+  [36m<option[39m
+    [33mvalue[39m=[32m"error"[39m
+  [36m/>[39m
+
+  Name "Revision v1 · pending":
+  [36m<option[39m
+    [33mvalue[39m=[32m"REV-2024-884:r1"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  [36m<main[39m
+    [33mid[39m=[32m"main-content"[39m
+    [33mtabindex[39m=[32m"-1"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  code:
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code[39m
+    [33mclass[39m=[32m"review-version"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<code[39m
+    [33mclass[39m=[32m"review-version"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  --------------------------------------------------
+  status:
+
+  Name "":
+  [36m<div[39m
+    [33maria-live[39m=[32m"polite"[39m
+    [33mclass[39m=[32m"review-feedback"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  article:
+
+  Name "Submitted content revision":
+  [36m<article[39m
+    [33maria-label[39m=[32m"Submitted content revision"[39m
+    [33mclass[39m=[32m"review-paper"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<article />[39m
+
+  Name "":
+  [36m<article />[39m
+
+  Name "":
+  [36m<article />[39m
+
+  --------------------------------------------------
+  term:
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  --------------------------------------------------
+  definition:
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  --------------------------------------------------
+  time:
+
+  Name "":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T16:01:51.890Z"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T16:01:51.890Z"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Campaign Lead & Hook":
+  [36m<h2 />[39m
+
+  Name "Silence the noise. Elevate your everyday rhythm.":
+  [36m<h1 />[39m
+
+  Name "Submitted Marketing Copy":
+  [36m<h2 />[39m
+
+  Name "Review Collateral & Creative Assets":
+  [36m<h2 />[39m
+
+  Name "Audit Thread & Exchange":
+  [36m<h2[39m
+    [33mid[39m=[32m"review-events-heading"[39m
+  [36m/>[39m
+
+  Name "Audit Ledger":
+  [36m<h2 />[39m
+
+  Name "Revision Decision":
+  [36m<h2 />[39m
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Reviewer comment":
+  [36m<textarea[39m
+    [33maria-describedby[39m=[32m"_r_6_-hint"[39m
+    [33maria-invalid[39m=[32m"false"[39m
+    [33maria-label[39m=[32m"Reviewer comment"[39m
+    [33mid[39m=[32m"_r_6_"[39m
+    [33mplaceholder[39m=[32m"Required when requesting changes or adding review notes…"[39m
+    [33mrows[39m=[32m"5"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  checkbox:
+
+  Name "Dual sign-off dispatch is not connected in this demo":
+  [36m<input[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  contentinfo:
+
+  Name "":
+  [36m<footer[39m
+    [33mclass[39m=[32m"review-decision-footer"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"app-shell reviewer-queue-shell reviewer-detail-shell"[39m
+    [36m>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"skip-link"[39m
+        [33mhref[39m=[32m"#main-content"[39m
+      [36m>[39m
+        [0mSkip to content[0m
+      [36m</a>[39m
+      [36m<aside[39m
+        [33mclass[39m=[32m"desktop-sidebar"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"workspace-brand"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [0mM[0m
+          [36m</span>[39m
+          [36m<div>[39m
+            [36m<strong>[39m
+              [0mMindVault AI[0m
+            [36m</strong>[39m
+            [36m<span>[39m
+              [0mAcme Consumer Tech[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<details[39m
+            [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+          [36m>[39m
+            [36m<summary[39m
+              [33maria-label[39m=[32m"Workspace details"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"lucide lucide-chevrons-up-down"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"18"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"18"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 15 5 5 5-5"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 9 5-5 5 5"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+            [36m</summary>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"shell-popover-content"[39m
+            [36m>[39m
+              [36m<strong>[39m
+                [0mAcme Consumer Tech[0m
+              [36m</strong>[39m
+              [36m<p>[39m
+                [0mThis demo contains one sample workspace.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</details>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-groups"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"nav-label"[39m
+            [36m>[39m
+              [0mAuditing[0m
+            [36m</p>[39m
+            [36m<nav[39m
+              [33maria-label[39m=[32m"Auditing"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/overview"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-layout-dashboard"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"12"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"16"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mOverview[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/brand-knowledge"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-book-open"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M12 7v14"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mBrand Knowledge[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/content-checks"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-clipboard-check"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"1...
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/features/reviewer-queue/ReviewerQueuePage.test.tsx:62:28
+     60|     await screen.findByRole('table');
+     61|     await user.click(screen.getByRole('link', { name: 'Wireless Headph…
+     62|     const preview = screen.getByRole('dialog', { name: 'Submission pre…
+       |                            ^
+     63|     expect(within(preview).getByRole('region', { name: 'Submitted copy…
+     64|     expect(within(preview).getByRole('link', { name: 'Open existing Fi…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/features/reviewer-queue/ReviewerQueuePage.test.tsx > Reviewer Queue interactions (local DOM with mock services) > hands a corrected Creator submission to the queue and reuses existing Findings & Evidence
+TestingLibraryElementError: Unable to find an accessible element with the role "dialog" and name "Submission preview"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "Skip to content":
+  [36m<a[39m
+    [33mclass[39m=[32m"skip-link"[39m
+    [33mhref[39m=[32m"#main-content"[39m
+  [36m/>[39m
+
+  Name "Overview":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/overview"[39m
+  [36m/>[39m
+
+  Name "Brand Knowledge":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/brand-knowledge"[39m
+  [36m/>[39m
+
+  Name "Content Checks":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/content-checks"[39m
+  [36m/>[39m
+
+  Name "Approvals 3 sample approvals":
+  [36m<a[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mclass[39m=[32m"nav-link active"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals"[39m
+  [36m/>[39m
+
+  Name "Audit Logs":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/audit-logs"[39m
+  [36m/>[39m
+
+  Name "Compliance Rules":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/compliance-rules"[39m
+  [36m/>[39m
+
+  Name "Settings":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/settings"[39m
+  [36m/>[39m
+
+  Name "Approvals":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?status=pending&q=CHK-9042"[39m
+  [36m/>[39m
+
+  Name "Audit Logs":
+  [36m<a[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mhref[39m=[32m"#review-events"[39m
+  [36m/>[39m
+
+  Name "Open existing Findings & Evidence":
+  [36m<a[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/content-checks"[39m
+    [33mtitle[39m=[32m"Opens the current Creator working copy, which may differ from this submitted snapshot."[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  complementary:
+
+  Name "":
+  [36m<aside[39m
+    [33mclass[39m=[32m"desktop-sidebar"[39m
+  [36m/>[39m
+
+  Name "Audit ledger and revision decision":
+  [36m<aside[39m
+    [33maria-label[39m=[32m"Audit ledger and revision decision"[39m
+    [33mclass[39m=[32m"review-rail"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  --------------------------------------------------
+  group:
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"shell-popover notifications-menu"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"shell-popover profile-menu"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details />[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"nav-label"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"nav-label"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-ledger-summary"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-demo-caption"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-snapshot-notice"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"review-comment-hint"[39m
+    [33mid[39m=[32m"_r_j_-hint"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  navigation:
+
+  Name "Auditing":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Auditing"[39m
+  [36m/>[39m
+
+  Name "Governance":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Governance"[39m
+  [36m/>[39m
+
+  Name "Review breadcrumb":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Review breadcrumb"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  banner:
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"app-header"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"review-context"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<header />[39m
+
+  Name "":
+  [36m<header />[39m
+
+  Name "":
+  [36m<header />[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Open navigation":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Open navigation"[39m
+    [33mclass[39m=[32m"button button-ghost menu-toggle"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Audit Ledger 3/3":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Compare Diff":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtitle[39m=[32m"Version comparison is outside this implementation step."[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inspect evidence for titanium diaphragm drivers":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Inspect evidence for titanium diaphragm drivers"[39m
+    [33mclass[39m=[32m"review-inline-claim "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inspect evidence for 40-hour hybrid battery life":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Inspect evidence for 40-hour hybrid battery life"[39m
+    [33mclass[39m=[32m"review-inline-claim "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inspect evidence for ₹999":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Inspect evidence for ₹999"[39m
+    [33mclass[39m=[32m"review-inline-claim price"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Preview Aura_ANC_KeyArt_1080x1080.png":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Preview Aura_ANC_KeyArt_1080x1080.png"[39m
+    [33mclass[39m=[32m"button button-ghost "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Preview Aura_PriceDrop_Card.png":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Preview Aura_PriceDrop_Card.png"[39m
+    [33mclass[39m=[32m"button button-ghost "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "#MAP-IN Sample match":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "#SPEC-BATTERY-04 Sample match":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "#SPEC-AUDIO-04 Sample match":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Open Detailed Audit Ledger Panel":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approve Revision v2":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-primary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Request Changes":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reject Campaign":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-ghost "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtitle[39m=[32m"Campaign rejection is outside this implementation step."[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Request Changes":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approve Revision v2":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-primary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  region:
+
+  Name "Review demo controls":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Review demo controls"[39m
+    [33mclass[39m=[32m"demo-toolbar"[39m
+  [36m/>[39m
+
+  Name "Exact submitted copy":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Exact submitted copy"[39m
+    [33mclass[39m=[32m"review-submitted-copy"[39m
+  [36m/>[39m
+
+  Name "Audit Thread & Exchange":
+  [36m<section[39m
+    [33maria-labelledby[39m=[32m"review-events-heading"[39m
+    [33mclass[39m=[32m"review-events"[39m
+    [33mid[39m=[32m"review-events"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  combobox:
+
+  Name "Preview state":
+  [36m<select />[39m
+
+  Name "Submitted revision":
+  [36m<select[39m
+    [33maria-label[39m=[32m"Submitted revision"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  option:
+
+  Name "Default":
+  [36m<option[39m
+    [33mvalue[39m=[32m"default"[39m
+  [36m/>[39m
+
+  Name "Empty":
+  [36m<option[39m
+    [33mvalue[39m=[32m"empty"[39m
+  [36m/>[39m
+
+  Name "Error":
+  [36m<option[39m
+    [33mvalue[39m=[32m"error"[39m
+  [36m/>[39m
+
+  Name "Revision v1 · superseded":
+  [36m<option[39m
+    [33mvalue[39m=[32m"REV-2024-884:r1"[39m
+  [36m/>[39m
+
+  Name "Revision v2 · pending":
+  [36m<option[39m
+    [33mvalue[39m=[32m"REV-2024-884:r2"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  [36m<main[39m
+    [33mid[39m=[32m"main-content"[39m
+    [33mtabindex[39m=[32m"-1"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  code:
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code[39m
+    [33mclass[39m=[32m"review-version"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<code[39m
+    [33mclass[39m=[32m"review-version"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  --------------------------------------------------
+  status:
+
+  Name "":
+  [36m<div[39m
+    [33maria-live[39m=[32m"polite"[39m
+    [33mclass[39m=[32m"review-feedback"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  article:
+
+  Name "Submitted content revision":
+  [36m<article[39m
+    [33maria-label[39m=[32m"Submitted content revision"[39m
+    [33mclass[39m=[32m"review-paper"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<article />[39m
+
+  Name "":
+  [36m<article />[39m
+
+  Name "":
+  [36m<article />[39m
+
+  Name "":
+  [36m<article />[39m
+
+  --------------------------------------------------
+  term:
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  Name "":
+  [36m<dt />[39m
+
+  --------------------------------------------------
+  definition:
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  Name "":
+  [36m<dd />[39m
+
+  --------------------------------------------------
+  time:
+
+  Name "":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T16:13:59.732Z"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T16:01:55.589Z"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T16:13:59.732Z"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Campaign Lead & Hook":
+  [36m<h2 />[39m
+
+  Name "Creator launch edited in this session":
+  [36m<h1 />[39m
+
+  Name "Submitted Marketing Copy":
+  [36m<h2 />[39m
+
+  Name "Review Collateral & Creative Assets":
+  [36m<h2 />[39m
+
+  Name "Audit Thread & Exchange":
+  [36m<h2[39m
+    [33mid[39m=[32m"review-events-heading"[39m
+  [36m/>[39m
+
+  Name "Audit Ledger":
+  [36m<h2 />[39m
+
+  Name "Revision Decision":
+  [36m<h2 />[39m
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Reviewer comment":
+  [36m<textarea[39m
+    [33maria-describedby[39m=[32m"_r_j_-hint"[39m
+    [33maria-invalid[39m=[32m"false"[39m
+    [33maria-label[39m=[32m"Reviewer comment"[39m
+    [33mid[39m=[32m"_r_j_"[39m
+    [33mplaceholder[39m=[32m"Required when requesting changes or adding review notes…"[39m
+    [33mrows[39m=[32m"5"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  checkbox:
+
+  Name "Dual sign-off dispatch is not connected in this demo":
+  [36m<input[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  contentinfo:
+
+  Name "":
+  [36m<footer[39m
+    [33mclass[39m=[32m"review-decision-footer"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"app-shell reviewer-queue-shell reviewer-detail-shell"[39m
+    [36m>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"skip-link"[39m
+        [33mhref[39m=[32m"#main-content"[39m
+      [36m>[39m
+        [0mSkip to content[0m
+      [36m</a>[39m
+      [36m<aside[39m
+        [33mclass[39m=[32m"desktop-sidebar"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"workspace-brand"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [0mM[0m
+          [36m</span>[39m
+          [36m<div>[39m
+            [36m<strong>[39m
+              [0mMindVault AI[0m
+            [36m</strong>[39m
+            [36m<span>[39m
+              [0mAcme Consumer Tech[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<details[39m
+            [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+          [36m>[39m
+            [36m<summary[39m
+              [33maria-label[39m=[32m"Workspace details"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"lucide lucide-chevrons-up-down"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"18"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"18"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 15 5 5 5-5"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 9 5-5 5 5"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+            [36m</summary>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"shell-popover-content"[39m
+            [36m>[39m
+              [36m<strong>[39m
+                [0mAcme Consumer Tech[0m
+              [36m</strong>[39m
+              [36m<p>[39m
+                [0mThis demo contains one sample workspace.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</details>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-groups"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"nav-label"[39m
+            [36m>[39m
+              [0mAuditing[0m
+            [36m</p>[39m
+            [36m<nav[39m
+              [33maria-label[39m=[32m"Auditing"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/overview"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-layout-dashboard"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"12"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"16"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mOverview[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/brand-knowledge"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-book-open"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M12 7v14"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mBrand Knowledge[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/content-checks"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-clipboard-check"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"1...
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/features/reviewer-queue/ReviewerQueuePage.test.tsx:124:28
+    122|     await user.click(await screen.findByRole('link', { name: 'View Rev…
+    123|     await user.click(await screen.findByRole('link', { name: 'Creator …
+    124|     const preview = screen.getByRole('dialog', { name: 'Submission pre…
+       |                            ^
+    125|     expect(preview.textContent).toContain('Ready for Review');
+    126|     expect(preview.textContent).toContain('Instagram Story');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+

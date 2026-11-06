@@ -1,0 +1,515 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>MindVault AI - Reviewer Detail (Audit Ledger Layout)</title><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#ffffff","primary-fixed-dim":"#b7c4ff","on-surface":"#131b2e","surface":"#faf8ff","error-container":"#ffdad6","inverse-surface":"#283044","secondary":"#515f74","surface-tint":"#2151da","surface-variant":"#dae2fd","primary-container":"#1d4ed8","on-tertiary-container":"#76eab6","on-primary-fixed":"#001551","surface-bright":"#faf8ff","outline":"#747686","secondary-fixed-dim":"#b9c7df","inverse-primary":"#b7c4ff","inverse-on-surface":"#eef0ff","on-primary":"#ffffff","primary-fixed":"#dce1ff","on-secondary-container":"#57657a","secondary-container":"#d5e3fc","on-error-container":"#93000a","outline-variant":"#c4c5d7","on-error":"#ffffff","primary":"#0037b0","surface-container-high":"#e2e7ff","tertiary":"#004f35","surface-container-low":"#f2f3ff","on-tertiary":"#ffffff","surface-container":"#eaedff","on-secondary-fixed":"#0d1c2e","on-surface-variant":"#434655","surface-container-highest":"#dae2fd","error":"#ba1a1a","surface-container-lowest":"#ffffff","tertiary-fixed":"#85f8c4","on-tertiary-fixed-variant":"#005137","on-secondary-fixed-variant":"#3a485b","on-tertiary-fixed":"#002114","on-background":"#131b2e","secondary-fixed":"#d5e3fc","tertiary-fixed-dim":"#68dba9","background":"#faf8ff","on-primary-fixed-variant":"#0039b5","surface-dim":"#d2d9f4","tertiary-container":"#006948","on-primary-container":"#cad3ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"1.5rem","gutter-desktop":"1.5rem","gutter":"1rem","space-xs":"0.25rem","space-xl":"1.5rem","space-md":"0.75rem","margin":"1rem","space-sm":"0.5rem","space-lg":"1rem"},"fontFamily":{"body-sm":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"headline-xl":["Inter"],"code-md":["JetBrains Mono"],"headline-sm":["Inter"],"label-sm":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"code-sm":["JetBrains Mono"],"body-md":["Inter"]},"fontSize":{"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-xl":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"code-md":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-sm":["15px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"24px","fontWeight":"400"}],"code-sm":["11px",{"lineHeight":"16px","fontWeight":"400"}],"body-md":["13px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low border-r border-outline-variant/30 z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-14 px-space-md border-b border-outline-variant/30 flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0"><div class="w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center font-code-md text-code-md font-semibold shrink-0">M</div><div class="flex flex-col min-w-0 leading-tight"><span class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">MindVault AI</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Acme Consumer Tech</span></div></div><button aria-label="Switch workspace" class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">unfold_more</span></button></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Auditing</span></div><nav class="px-space-xs space-y-0.5" data-active-classes="bg-surface-container text-on-surface font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[16px]">dashboard</span><span class="">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="brand-knowledge" href="#"><span class="material-symbols-outlined text-[16px]">menu_book</span><span class="">Brand Knowledge</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="content-checks" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[16px]">fact_check</span><span class="">Content Checks</span></div><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors bg-surface-container text-on-surface font-semibold" data-path="approvals" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[16px]">verified</span><span class="">Approvals</span></div><span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-code-sm text-code-sm border border-outline-variant/40">3</span></a></nav><div class="px-space-md pt-space-lg pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Governance</span></div><nav class="px-space-xs space-y-0.5" data-active-classes="bg-surface-container text-on-surface font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[16px]">history</span><span class="">Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="compliance-rules" href="#"><span class="material-symbols-outlined text-[16px]">gavel</span><span class="">Compliance Rules</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[16px]">settings</span><span class="">Settings</span></a></nav></div><div class="p-space-sm border-t border-outline-variant/30 flex items-center justify-between bg-surface-container-lowest/50"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span><span class="font-code-sm text-code-sm text-on-surface-variant">Engine v4.12 Online</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">terminal</span></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-sm shrink-0"><div class="flex items-center gap-1.5"></div><div class="h-4 w-px bg-outline-variant/40 mx-1"></div><button aria-label="Notifications" class="relative text-on-surface-variant hover:text-on-surface p-1.5 rounded hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-error"></span></button><div class="flex items-center gap-space-xs pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida/AEtjO1VhAtuM_yfZmWjXIEsB5HMDQGiaZtrTt6V3-ANgbsO55J-hKc5iPh_bJSi-dd4SAQJf01eidKG58oWUbU8u43EmoEzZ5Eao5rJ0-j3rHcS4VH9SkLE_9FEmoB7vLgz2NVPsN2AS8hZzAUHJ0Zhd-9qeRWpOlO8Z-_jgWNxA1RFHUnet11XG1DEKhoTofg6CMAaqVEpq1rsvulvZRx-Zf3aqnHhvpG23AwxXvFS1B7k4"><div class="hidden 2xl:flex flex-col leading-tight"><span class="font-label-md text-label-md text-on-surface font-medium truncate">Jane Doe</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Marketing Lead</span></div></div></div></header><main class="relative pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Scannable Header Toolbar -->
+<header class="bg-surface-container-lowest px-margin-desktop py-space-sm border-b border-outline-variant/30 flex flex-wrap items-center justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-1 min-w-0">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          Approvals
+        </a>
+<span class="text-outline-variant">/</span>
+<span class="font-code-sm text-code-sm text-on-surface">REV-2024-884</span>
+<span class="text-outline-variant">/</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-code-sm text-code-sm font-semibold">Revision v2.3</span>
+</nav>
+<!-- Key Metadata Strips -->
+<div class="flex flex-wrap items-center gap-space-md pt-0.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Aura Sound ANC Launch</span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">public</span>
+<span class="">India (INR · ₹)</span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">photo_camera</span>
+<span class="">Instagram Carousel &amp; Story</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-amber-50 border border-amber-200 text-amber-900 font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+<span class="">Pending Reviewer Sign-off</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Toolbar -->
+<div class="flex items-center gap-2">
+<!-- Ledger Drawer Toggle Button -->
+
+<button class="h-9 px-3 rounded border border-outline-variant/40 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">difference</span>
+<span class="">Compare Diff (v2.2)</span>
+</button>
+<button class="h-9 px-3 rounded border border-outline-variant/40 bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span class="">Revisions (3)</span>
+</button>
+<button class="h-9 px-2.5 rounded border border-outline-variant/40 bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="">Audit Logs</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</header>
+<!-- Streamlined Document & Decision Layout with De-cluttered Right Rail -->
+<div class="px-margin-desktop py-space-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop pb-24 max-w-[1720px] mx-auto w-full">
+<!-- Primary Editorial Document & Assets Area (Widened for breathing room) -->
+<div class="lg:col-span-8 xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Document Paper Container -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded shadow-sm overflow-hidden flex flex-col">
+<!-- Paper Header & Reading Metrics -->
+<div class="px-6 py-4 bg-surface-container-lowest border-b border-outline-variant/30 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-code-sm text-code-sm font-medium border border-outline-variant/30">DRAFT · v2.3</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Asset ID: <strong class="text-on-surface font-semibold">CP-AURA-884-IG</strong></span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-code-sm text-code-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">short_text</span> 58 words</span>
+<span class="text-outline-variant">·</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> 18 sec read</span>
+<span class="text-outline-variant">·</span>
+<span class="flex items-center gap-1 text-tertiary font-medium"><span class="material-symbols-outlined text-[14px]">verified</span> 3 Claims Anchored</span>
+</div>
+</div>
+<!-- Editorial Document Body (Paper Sheet Styling) -->
+<div class="p-8 sm:p-10 flex flex-col gap-6 bg-white min-h-[380px]">
+<!-- Headline Segment -->
+<div class="border-b border-outline-variant/20 pb-5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium block mb-2">Campaign Lead &amp; Hook</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight leading-snug">
+          “Silence the noise. Elevate your everyday rhythm.”
+        </h1>
+</div>
+<!-- Core Copy with High-Contrast Inline Verification Chips -->
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Submitted Marketing Copy</span>
+<div class="font-body-lg text-body-lg text-on-surface leading-relaxed space-y-4">
+<p class="">
+            Experience acoustic immersion with Aura ANC True Wireless Earbuds. Engineered with bespoke 
+            <mark class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-300 font-code-sm text-code-sm align-baseline font-medium cursor-help" onclick="toggleLedgerPanel(true)" title="Hardware Spec Verified: Tech Sheet v3.1 (Click to inspect rule)">
+<span class="material-symbols-outlined text-[13px] text-tertiary">check_circle</span>
+              titanium diaphragm drivers
+            </mark>
+            delivering ultra-low latency spatial sound, paired with an industry-grade 
+            <mark class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-300 font-code-sm text-code-sm align-baseline font-medium cursor-help" onclick="toggleLedgerPanel(true)" title="Battery Longevity Verified: Battery Certification B-88 (Click to inspect rule)">
+<span class="material-symbols-outlined text-[13px] text-tertiary">check_circle</span>
+              40-hour hybrid battery life
+            </mark>.
+          </p>
+<p class="">
+            Grab yours exclusively at an introductory price of 
+            <mark class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-blue-50 text-blue-900 border border-blue-300 font-code-sm text-code-sm align-baseline font-semibold cursor-help" onclick="toggleLedgerPanel(true)" title="Updated in v2.3 to satisfy India Q3 MAP Baseline (Click to inspect rule)">
+<span class="material-symbols-outlined text-[14px] text-primary">price_check</span>
+              ₹999 (Corrected from ₹799 in v2.2)
+            </mark>
+            during our pre-monsoon flash drop. Valid while stocks last.
+          </p>
+<p class="font-code-sm text-code-sm text-secondary pt-2 select-all">
+            #AuraAudio #SilenceTheNoise #ANC #Launch #IndiaTech
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Horizontal Creator Changelog Diff Bar -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded p-4 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-code-sm text-code-sm font-semibold shrink-0">
+        RM
+      </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Rohan Mehta (Growth)</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">18m ago</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant truncate">
+<span class="">Diff Summary:</span>
+<span class="line-through font-code-sm text-code-sm text-error">₹799</span>
+<span class="material-symbols-outlined text-[13px] text-outline">arrow_forward</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">₹999</span>
+<span class="text-on-surface truncate">· MAP floor corrected, artwork relinked</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-code-sm text-code-sm border border-outline-variant/30">Changelog Clean</span>
+</div>
+</div>
+<!-- 2 Compact Asset Thumbnails with Badge Overlays -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Review Collateral &amp; Creative Assets</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">2 Linked Files</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Thumbnail 1 -->
+<div class="group border border-outline-variant/40 rounded overflow-hidden bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="relative h-44 w-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Close up dramatic studio product photography of matte black true wireless earbuds resting on an acoustic sound stage with soft cyan-blue rim lighting, premium consumer electronics marketing aesthetic, sharp macro focus, 8k resolution, minimalist commercial art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBye-RLHpX6kUqlbVy25QRM8q5xnJZW5LEyeWx8BYbk355ZrsH7iPpdSNATxDhimzQxKzdd8A1EGJ_jseH5mkri6u--mIQuYQS3GjMn-IzwsVGbUHRr1uaLpsgrKHvCyrcnRkGJf49U6bXsG__bGpM7StEio3G70Mq24Hm1knz41waHaYCm0QKLhYxP42G5DH_-KbF_SnEf9QaHOE-qmqWk2p-8DKl1wB9ftVpZ1fE">
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface font-code-sm text-code-sm font-medium">
+            Key Art · 1080×1080
+          </div>
+</div>
+<div class="p-3 flex items-center justify-between border-t border-outline-variant/30">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-label-md text-label-md font-medium text-on-surface truncate">Aura_ANC_KeyArt_1080x1080.png</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">2.4 MB · sRGB verified</span>
+</div>
+<button class="h-8 w-8 rounded border border-outline-variant/40 hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface shrink-0" title="Expand view" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Thumbnail 2 -->
+<div class="group border border-outline-variant/40 rounded overflow-hidden bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="relative h-44 w-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="High quality graphic design layout for Instagram carousel slide showing sleek black earbuds beside bold promotional typography reading introductory price ₹999 with genuine retail badge against a cool dark slate and subtle blue ambient gradient background, hyper-clean layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKozDWvSWuqflZmMe2pD_ihujHmyIDGNU9Yy2x2ZMfghOJhKo6KeB6u08mLO9q2j2wu0_9kr7cEQa_sIb1SfBKSuyULyThCWWyuO_iEqm7aNjEiu23T_LrUkUWd6gN5feRhm4tc1hAAYI8P9eN7nt_vg9kxFk-jVPLjsPHlf6aWG9AMyHUy6RkzCcDxly3VOFXG9U4eg1bj92M66UdqEMm7783AODjEWbdhsUyyaM">
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-primary text-on-primary font-code-sm text-code-sm font-semibold">
+            Price Badge Updated · ₹999
+          </div>
+</div>
+<div class="p-3 flex items-center justify-between border-t border-outline-variant/30">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-label-md text-label-md font-medium text-on-surface truncate">Aura_PriceDrop_Card_v2.3.png</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">3.1 MB · 1080×1350</span>
+</div>
+<button class="h-8 w-8 rounded border border-outline-variant/40 hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface shrink-0" title="Expand view" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Compact Discussion Accordion / Timeline -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded p-5 shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">forum</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Audit Thread &amp; Exchange</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">2 messages on record</span>
+</div>
+<div class="space-y-3">
+<!-- Comment 1 -->
+<div class="p-3 rounded bg-surface-container-low border border-outline-variant/30 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Priya Roy</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">· Legal Reviewer</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm">v2.2</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">2h ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+          “Draft listed <span class="font-code-sm text-code-sm text-error font-medium">₹799</span> which violates Q3 MAP agreement with retail partners. Please bump to mandated <span class="font-code-sm text-code-sm text-primary font-medium">₹999</span> baseline before sign-off.”
+        </p>
+</div>
+<!-- Comment 2 -->
+<div class="p-3 rounded bg-surface-container-lowest border border-outline-variant/30 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Rohan Mehta</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">· Creator</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-code-sm text-code-sm">v2.3</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">18m ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+          “Updated copy and graphic asset to ₹999. Engine rule re-checked clean. Ready for final approval.”
+        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side Rail: Streamlined Compact Overview & Decision Box -->
+<div class="lg:col-span-4 xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Compact Ledger Summary Card with Direct Drawer Access -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded shadow-sm overflow-hidden flex flex-col">
+<div class="p-4 bg-surface-container-low border-b border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">fact_check</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Audit Ledger</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-emerald-50 border border-emerald-300 text-emerald-900 font-label-sm text-label-sm font-semibold">
+          PASSED
+        </span>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+          3 of 3 Rules Satisfied
+        </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Repo v4.12</span>
+</div>
+<!-- Collapsible Dropdown Detail in Place -->
+<details class="group border border-outline-variant/30 rounded bg-surface-container-lowest transition-all">
+<summary class="p-2.5 font-label-md text-label-md text-on-surface font-medium cursor-pointer flex items-center justify-between hover:bg-surface-container-low list-none select-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+<span class="">Quick Rule Breakdown</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="p-3 border-t border-outline-variant/20 space-y-2 bg-surface">
+<div class="flex items-center justify-between text-xs py-1 border-b border-outline-variant/20">
+<span class="font-code-sm text-code-sm text-on-surface">#IND-MAP-09</span>
+<span class="text-emerald-800 font-medium font-code-sm text-code-sm">₹999 Match · Resolved</span>
+</div>
+<div class="flex items-center justify-between text-xs py-1 border-b border-outline-variant/20">
+<span class="font-code-sm text-code-sm text-on-surface">#SPEC-AUDIO-04</span>
+<span class="text-emerald-800 font-medium font-code-sm text-code-sm">Hardware Spec · Passed</span>
+</div>
+<div class="flex items-center justify-between text-xs py-1">
+<span class="font-code-sm text-code-sm text-on-surface">#REG-ASCI-11</span>
+<span class="text-amber-800 font-medium font-code-sm text-code-sm">Flash Drop · Advisory</span>
+</div>
+</div>
+</details>
+<button class="w-full h-9 px-3 rounded border border-outline-variant/40 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md font-medium flex items-center justify-center gap-2 transition-colors" onclick="toggleLedgerPanel(true)" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">side_navigation</span>
+<span class="">Open Detailed Audit Ledger Panel</span>
+</button>
+</div>
+</div>
+<!-- Dedicated Revision Decision Box -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded p-5 shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">gavel</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Revision Decision</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface font-medium border border-outline-variant/30">
+        REV-LOCK: #9d28a8
+      </span>
+</div>
+<!-- Legal Snapshot Scope Notice -->
+<div class="p-3 rounded bg-blue-50 border border-blue-200 font-body-sm text-body-sm text-blue-950 leading-relaxed">
+<strong class="font-semibold text-blue-900">Legally Binding Notice:</strong> Approval is legally binding and strictly limited to this snapshot (SHA-256 <span class="font-code-sm text-code-sm">9d28a..e8c</span>). Any subsequent author modifications invalidate sign-off.
+    </div>
+<!-- Required Comment Field for Change Requests / Notes -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium" for="decisionNotes">
+        Reviewer Notes &amp; Required Change Instructions
+      </label>
+<textarea class="w-full h-24 p-2.5 rounded border border-outline-variant/40 bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline focus:border-primary focus:outline-none resize-none" id="decisionNotes" placeholder="Required when requesting changes or adding compliance riders..."></textarea>
+</div>
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary border-outline-variant/40 focus:ring-0 cursor-pointer" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface">Dual sign-off dispatch to Brand Director (Priya Roy)</span>
+</label>
+<!-- Distinct Action Buttons (Unified 36px control heights) -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full h-9 px-4 rounded bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors shadow-sm" onclick="handleDecision('approve')" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="">Approve Revision v2.3</span>
+</button>
+<button class="w-full h-9 px-4 rounded border border-outline-variant/40 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md font-medium flex items-center justify-center gap-2 transition-colors" onclick="handleDecision('changes')" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">edit_document</span>
+<span class="">Request Changes</span>
+</button>
+<button class="w-full pt-2 text-center font-label-sm text-label-sm text-error hover:underline transition-all" onclick="handleDecision('reject')" type="button">
+        Reject Campaign
+      </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Verification & Audit Ledger Slide-Out Side Panel / Drawer -->
+<div aria-hidden="false" class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-xs z-50 transition-opacity duration-300 opacity-100" id="ledgerBackdrop" onclick="toggleLedgerPanel(false)"></div>
+<aside aria-label="Verification and Audit Ledger" class="fixed top-0 right-0 bottom-0 w-full sm:w-[460px] lg:w-[480px] bg-surface-container-lowest border-l border-outline-variant/40 shadow-2xl z-50 flex flex-col transform transition-transform duration-300 ease-in-out" id="ledgerDrawer">
+<!-- Drawer Header -->
+<div class="h-14 px-6 border-b border-outline-variant/30 flex items-center justify-between bg-surface-container-low shrink-0">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px] text-tertiary">fact_check</span>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Verification &amp; Audit Ledger</h2>
+<span class="px-2 py-0.5 rounded bg-emerald-50 border border-emerald-300 text-emerald-900 font-label-sm text-label-sm font-semibold">PASSED</span>
+</div>
+</div>
+<button aria-label="Close drawer" class="w-8 h-8 rounded border border-outline-variant/40 bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" onclick="toggleLedgerPanel(false)" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Drawer Sub-header & Engine Status -->
+<div class="px-6 py-3 bg-surface border-b border-outline-variant/30 flex items-center justify-between text-body-sm shrink-0">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+    3 of 3 Rules Satisfied • Ready for Sign-Off
+  </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Repo v4.12</span>
+</div>
+<!-- Drawer Scrollable Content with Ledger Items -->
+<div class="p-6 flex-1 overflow-y-auto space-y-4">
+<!-- Ledger Item 1: IND-MAP-09 -->
+<div class="border border-outline-variant/40 rounded p-4 bg-surface-container-lowest flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface font-medium border border-outline-variant/30">#IND-MAP-09</span>
+<span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-label-sm text-label-sm font-semibold">
+        Resolved (Was Blocker)
+      </span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Pricing &amp; MAP Baseline Compliance</h4>
+<div class="mt-2 grid grid-cols-2 gap-2 p-2.5 rounded bg-surface-container-low border border-outline-variant/20 font-code-sm text-code-sm">
+<div>
+<span class="text-on-surface-variant text-[10px] uppercase block">Submitted</span>
+<span class="font-semibold text-on-surface">₹999</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[10px] uppercase block">Mandated Baseline</span>
+<span class="font-semibold text-tertiary">₹999 (100% Match)</span>
+</div>
+</div>
+</div>
+<!-- Excerpt Blockquote -->
+<div class="p-3 rounded bg-surface border border-outline-variant/30 flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm">
+<span class="font-medium text-on-surface">Aura Commercial Guidelines 2024 · Appendix C</span>
+<a class="text-primary hover:underline flex items-center gap-0.5" href="#">
+<span class="">p.42</span>
+<span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</div>
+<blockquote class="font-body-sm text-body-sm text-on-surface-variant italic pl-2 border-l-2 border-primary">
+        “Any promotional launch campaigns within Indian territory cannot advertise True Wireless products below the INR 999 minimum advertised price without CMO written variance.”
+      </blockquote>
+<div class="font-code-sm text-code-sm text-on-surface-variant pt-1 truncate">
+        SHA-256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4...
+      </div>
+</div>
+</div>
+<!-- Ledger Item 2: SPEC-AUDIO-04 -->
+<div class="border border-outline-variant/40 rounded p-4 bg-surface-container-lowest flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface font-medium border border-outline-variant/30">#SPEC-AUDIO-04</span>
+<span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-label-sm text-label-sm font-semibold">
+        Passed
+      </span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Hardware Specification Verification</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        Titanium diaphragm drivers and 40h hybrid battery assertions precisely mirror verified specifications in <span class="font-code-sm text-code-sm font-medium text-on-surface">Aura Tech Spec Sheet v3.1</span>.
+      </p>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded bg-surface-container-low border border-outline-variant/20 font-code-sm text-code-sm">
+<span class="flex items-center gap-1 text-tertiary font-medium">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+        Lab Test Validated
+      </span>
+<span class="text-on-surface-variant">Ref #LAB-TWS-902</span>
+</div>
+</div>
+<!-- Ledger Item 3: REG-ASCI-11 -->
+<div class="border border-outline-variant/40 rounded p-4 bg-surface-container-lowest flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface font-medium border border-outline-variant/30">#REG-ASCI-11</span>
+<span class="px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 font-label-sm text-label-sm font-semibold">
+        Advisory
+      </span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Regulatory &amp; ASCI Disclaimers</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        “Introductory price” language requires qualifying asterisk if active over 14 days under ASCI advertising codes. Discretion permissible for &lt;7 day flash drops.
+      </p>
+</div>
+</div>
+</div>
+<!-- Drawer Footer -->
+<div class="p-4 bg-surface border-t border-outline-variant/30 flex items-center justify-between shrink-0">
+<span class="font-code-sm text-code-sm text-on-surface-variant">3 of 3 Rules Passed</span>
+<button class="h-8 px-3 rounded border border-outline-variant/40 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" onclick="toggleLedgerPanel(false)" type="button">
+    Close Inspector
+  </button>
+</div>
+</aside>
+<!-- Sticky Bottom Governance Status Bar -->
+<aside class="fixed bottom-0 left-64 right-0 h-14 bg-surface-container-lowest/95 backdrop-blur-md border-t border-outline-variant/30 z-30 flex items-center justify-between px-space-lg shadow-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">
+  Active Reviewer Session: REV-2024-884 (v2.3)
+</span>
+</div>
+<button class="hidden sm:inline-flex items-center gap-1 font-code-sm text-code-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer" onclick="toggleLedgerPanel(true)">
+
+
+</button>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+
+
+</div>
+</aside>
+<!-- Interactive Feedback Toast -->
+<div class="fixed top-16 right-6 z-50 transform transition-all duration-300 pointer-events-none p-space-md rounded bg-inverse-surface text-inverse-on-surface shadow-xl flex items-center gap-3 translate-y-[-100px] opacity-0" id="decisionToast">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed" id="toastIcon">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold" id="toastTitle">Revision v2.3 Approved</span>
+<span class="font-body-sm text-body-sm text-surface-variant" id="toastDesc">Signed by Reviewer. Dual-signoff dispatched to Priya Roy.</span>
+</div>
+</div>
+<script>
+    function toggleLedgerPanel(forceOpen) {
+      const drawer = document.getElementById('ledgerDrawer');
+      const backdrop = document.getElementById('ledgerBackdrop');
+      const isOpen = !drawer.classList.contains('translate-x-full');
+      const shouldOpen = forceOpen !== undefined ? forceOpen : !isOpen;
+
+      if (shouldOpen) {
+        drawer.classList.remove('translate-x-full');
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+        backdrop.classList.add('opacity-100');
+        backdrop.setAttribute('aria-hidden', 'false');
+      } else {
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        backdrop.classList.remove('opacity-100');
+        backdrop.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    function handleDecision(type) {
+      const toast = document.getElementById('decisionToast');
+      const icon = document.getElementById('toastIcon');
+      const title = document.getElementById('toastTitle');
+      const desc = document.getElementById('toastDesc');
+
+      if (type === 'approve') {
+        icon.innerText = 'check_circle';
+        icon.className = 'material-symbols-outlined text-[20px] text-tertiary-fixed';
+        title.innerText = 'Revision v2.3 Approved';
+        desc.innerText = 'Signed by Reviewer. Dual-signoff dispatched to Priya Roy.';
+      } else if (type === 'changes') {
+        const commentBox = document.getElementById('decisionNotes');
+        commentBox.focus();
+        commentBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        icon.innerText = 'assignment_return';
+        icon.className = 'material-symbols-outlined text-[20px] text-secondary-fixed';
+        title.innerText = 'Change Request Initiated';
+        desc.innerText = 'Please append specific policy notes in the comment box.';
+      } else {
+        icon.innerText = 'cancel';
+        icon.className = 'material-symbols-outlined text-[20px] text-error';
+        title.innerText = 'Campaign Terminated';
+        desc.innerText = 'Revision rejected and archived in compliance logs.';
+      }
+
+      toast.classList.remove('translate-y-[-100px]', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-[-100px]', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 4000);
+    }
+</script>
+</div></main></div>
+
+
+</body></html>

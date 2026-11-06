@@ -1,0 +1,290 @@
+{
+  "scope": "Reviewer Queue only; no Reviewer Detail or Revision Journey implementation",
+  "route": "/approvals",
+  "references": [
+    {
+      "path": "design_reference/html/reiviewerapprovalpage.html",
+      "sha256": "144038b41e15acfcd466f5e4ae60f917b9a88cbf47608fda9a9d9ace7f34cbcb"
+    },
+    {
+      "path": "design_reference/screenshots/reviwerqueue.png",
+      "sha256": "146825a184f38ce8de718ccc1af7fbc2e3ebb7fd50914258d8fb442cf603249f"
+    }
+  ],
+  "changedFiles": [
+    {
+      "path": "src/types/reviewer-queue.ts",
+      "change": "added",
+      "sha256": "c40926f13ec6e0755a1cdcc0c5076e93ad7a42a9f198b51b1187ed7fc8b437a6"
+    },
+    {
+      "path": "src/mocks/reviewer-queue.ts",
+      "change": "added",
+      "sha256": "0a31bbf7bae2718173744da18d968b1069c88a26b7bfd610d8912cbb3b3c123f"
+    },
+    {
+      "path": "src/services/mock-session-store.ts",
+      "change": "added",
+      "sha256": "01ad816f3751c48a8a796073b6da426aa7bde4bf28b6e618377a65cdfb93fd34"
+    },
+    {
+      "path": "src/services/mock-reviewer-queue-service.ts",
+      "change": "added",
+      "sha256": "935f6b7a7547f73a88a36a08c61de9678c894f46453c4752628140b560766793"
+    },
+    {
+      "path": "src/services/mock-reviewer-queue-service.test.ts",
+      "change": "added",
+      "sha256": "333e71a59ad1d77012f2c1db2de059ab332fbe05459bc8961b95d1551d0e66c1"
+    },
+    {
+      "path": "src/components/Modal.tsx",
+      "change": "added",
+      "sha256": "bd467e67100007dc46d2b2bc7e700d49f92b32040dae5304accc92a826ebbb75"
+    },
+    {
+      "path": "src/features/reviewer-queue/queue-query.test.ts",
+      "change": "added",
+      "sha256": "6e4785a384689652773ca7c914d79ee733840630501908a95f6c3b3be8c0ee74"
+    },
+    {
+      "path": "src/features/reviewer-queue/queue-query.ts",
+      "change": "added",
+      "sha256": "558998985cf722c4c16e0bc152ccc63818af53a716deef347af7ea3efaa5545e"
+    },
+    {
+      "path": "src/features/reviewer-queue/QueueTable.tsx",
+      "change": "added",
+      "sha256": "7a55eb76166e7596a27121c2fae91ebb2b416c64b52d0bbfc83bfc8fb77824e5"
+    },
+    {
+      "path": "src/features/reviewer-queue/reviewer-queue.css",
+      "change": "added",
+      "sha256": "b36f8120c18c06c13dc2c7d76a847d6d4ed8db58b9b705d1dc362f72bbb1edd0"
+    },
+    {
+      "path": "src/features/reviewer-queue/ReviewerQueuePage.test.tsx",
+      "change": "added",
+      "sha256": "e3ba5e3e5e34ce9ae137f5250049393fe41acc060f67ee746e5185a1adca19f6"
+    },
+    {
+      "path": "src/features/reviewer-queue/ReviewerQueuePage.tsx",
+      "change": "added",
+      "sha256": "18495921f42c6b05717ce3913c929c4e8f8034390c5de17dabad53b793f6a61f"
+    },
+    {
+      "path": "src/features/reviewer-queue/SubmissionPreview.tsx",
+      "change": "added",
+      "sha256": "d2812a16a1d82676af26b5f58cff336595f403b525528c49893d82934dcdf853"
+    },
+    {
+      "path": "src/features/reviewer-queue/useReviewerQueue.ts",
+      "change": "added",
+      "sha256": "65d10f2f85d35d1325e66220ff945b6c855067bcce0c32c15ada925202499198"
+    },
+    {
+      "path": "src/App.tsx",
+      "change": "modified",
+      "sha256": "e83c9cc78eb545558c5fd06bd73ebcf36c94fd7b91990929f7a8e0e99faffba5"
+    },
+    {
+      "path": "src/components/ApplicationShell.tsx",
+      "change": "modified",
+      "sha256": "02daa9c9be9ec5a029bfdd745b25232a7dc56314e27dcebd2961539257eb9701"
+    },
+    {
+      "path": "src/features/content-check/ContentCheckPage.tsx",
+      "change": "modified",
+      "sha256": "88cade3ee11361fb6cb500202c722d99c208d57337e11b050082a646504bc03e"
+    },
+    {
+      "path": "src/mocks/app-shell.ts",
+      "change": "modified",
+      "sha256": "fadcf2235cde1e586842201ea355df365ca3b90c798f3e6d4dd1a8d2a20dab97"
+    },
+    {
+      "path": "src/services/mock-content-check-service.ts",
+      "change": "modified",
+      "sha256": "cec017860805a2a3cf1f804a83b0d97d73943086c5530be64ad4ed85539e9300"
+    },
+    {
+      "path": "package.json",
+      "change": "modified",
+      "sha256": "b3f400d510c778b91603ac5bc1372dbb8bc233cb6d06b221385fc13956055d5a"
+    },
+    {
+      "path": "package-lock.json",
+      "change": "modified",
+      "sha256": "7054858f046af56975a27711f5657c34170bc4c15c855e3134952c1297926955"
+    },
+    {
+      "path": "vitest.config.ts",
+      "change": "modified",
+      "sha256": "0d367af12651abc39c0069e07e971ebacacd7576b2f10400057059a80e6b9dbf"
+    },
+    {
+      "path": "scripts/verify.mjs",
+      "change": "modified",
+      "sha256": "9a8f7a0392ef8fa4c9ac74ccc3ec1272a938f90a094589edf405726b9f350181"
+    },
+    {
+      "path": "README.md",
+      "change": "modified",
+      "sha256": "846c6aac87093c35412c4678a36b60edd0cf9eaed7c7f61e37c2ad0780f12eb0"
+    }
+  ],
+  "preservedOriginalFiles": {
+    "src/types/content-check.ts": true,
+    "src/services/mock-content-check-service.test.ts": true,
+    "src/features/content-check/useContentCheck.ts": true
+  },
+  "functionalFeatures": [
+    "Derived metrics and four status filters",
+    "Search by title, IDs and submitter; Ctrl/Cmd+K focus shortcut",
+    "Combined brand, channel and severity filters",
+    "Newest/oldest/severity sorting; pagination and page size",
+    "Row and page selection; labeled demo CSV export",
+    "URL-addressable read-only submission previews",
+    "Existing Content Check inspector reused for Findings & Evidence",
+    "Creator submission snapshot upsert and reactive sidebar count",
+    "Loading, no-records, no-matches, error and retry states",
+    "Sample policy and queue settings dialogs"
+  ],
+  "sessionBehavior": "In-memory only. Submitted snapshots survive route navigation; same draft updates its existing item. Full reload or a different tab resets the session. Empty/error preview modes do not delete session data.",
+  "designNotes": [
+    "Default All Submissions matches the reference mixed-status rows without misleading active Pending state.",
+    "Linked Aura row uses the Content Check creator rather than the screenshot author.",
+    "Counters and sample statuses are derived from typed fixtures; historical metrics arrive through the queue service.",
+    "Table scrolls horizontally at narrower widths; reference columns and compact rows retained."
+  ],
+  "validation": {
+    "typescript": "PASS",
+    "productionBuild": "PASS",
+    "tests": {
+      "status": "PASS",
+      "total": 18,
+      "originalContentCheck": 4,
+      "queueQuery": 6,
+      "queueService": 3,
+      "queueDOM": 5
+    },
+    "runs": [
+      {
+        "manifest": "reports/2026-11-06T15-51-22.198Z/manifest.json",
+        "checks": [
+          {
+            "name": "TypeScript",
+            "status": "FAIL"
+          },
+          {
+            "name": "Production build",
+            "status": "FAIL"
+          },
+          {
+            "name": "Mock unit tests",
+            "status": "FAIL"
+          }
+        ]
+      },
+      {
+        "manifest": "reports/2026-11-06T15-52-16.626Z/manifest.json",
+        "checks": [
+          {
+            "name": "TypeScript",
+            "status": "PASS"
+          },
+          {
+            "name": "Production build",
+            "status": "PASS"
+          },
+          {
+            "name": "Mock unit tests",
+            "status": "FAIL"
+          }
+        ]
+      },
+      {
+        "manifest": "reports/2026-11-06T15-53-40.219Z/manifest.json",
+        "checks": [
+          {
+            "name": "TypeScript",
+            "status": "PASS"
+          },
+          {
+            "name": "Production build",
+            "status": "PASS"
+          },
+          {
+            "name": "Mock unit tests",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "manifest": "reports/2026-11-06T15-56-07.137Z/manifest.json",
+        "checks": [
+          {
+            "name": "TypeScript",
+            "status": "PASS"
+          },
+          {
+            "name": "Production build",
+            "status": "PASS"
+          },
+          {
+            "name": "Mock unit tests",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "manifest": "reports/2026-11-06T15-57-36.946Z/manifest.json",
+        "checks": [
+          {
+            "name": "TypeScript",
+            "status": "PASS"
+          },
+          {
+            "name": "Production build",
+            "status": "PASS"
+          },
+          {
+            "name": "Mock unit tests",
+            "status": "PASS"
+          }
+        ]
+      }
+    ]
+  },
+  "liveValidation": {
+    "marker": "*.live.test.ts",
+    "status": "NOT_RUN",
+    "reason": "Frontend-only scope; no real services permitted."
+  },
+  "browserValidation": {
+    "status": "NOT_RUN",
+    "note": "Prior Windows browser URL-policy enforcement blocked Computer Use. jsdom tests do not validate rendering, native modal focus, or actual file downloads."
+  },
+  "costs": {
+    "externalServiceUsd": 0,
+    "agentCost": null,
+    "note": "Agent billing not exposed."
+  },
+  "callCounts": {
+    "backend": 0,
+    "ai": 0,
+    "database": 0,
+    "mockServiceCalls": null,
+    "note": "Mock invocation counts are not instrumented; tests exercise in-memory services only. Package installation was development setup."
+  },
+  "cache": {
+    "npm": "Workspace .npm-cache reused and updated for test dependency installation",
+    "typescript": "Existing incremental cache",
+    "application": "Shared in-memory session only; no persistent cache/database"
+  },
+  "limitations": [
+    "No review-decision or approval mutation in queue previews.",
+    "Full Reviewer Detail and Revision Journey remain deferred.",
+    "No browser visual or live-service validation performed."
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "scope": "Revision Journey only, with required navigation/model-contract additions",
+  "route": "/content/:contentId/history",
+  "fullyVerified": false,
+  "references": [
+    {
+      "path": "design_reference/html/revisionhistory.html",
+      "sha256": "ae8e959533dca458f83d1964eeb586c611bead2c1eeb96731c7b6cffeb7ef87d"
+    },
+    {
+      "path": "design_reference/screenshots/revishionhistory.png",
+      "sha256": "8742bf8c56dd17d2da6af84befd1a7254a8777f27b9f9753b436025315668d10"
+    }
+  ],
+  "changedFiles": [
+    {
+      "path": "src/types/revision-journey.ts",
+      "change": "added",
+      "sha256": "4a289b4e9fb22ce9f926da08094e4b53b5b6769f148f538ec596ff4abfb9e159"
+    },
+    {
+      "path": "src/services/revision-journey-service.ts",
+      "change": "added",
+      "sha256": "35c4d0410a9a4f82eb7061e6da9392feec999e72cdd3128925c636827b3edd88"
+    },
+    {
+      "path": "src/features/revision-journey/EventInspector.tsx",
+      "change": "added",
+      "sha256": "c57d11ae25979fa33edeb4b617e3ef0bc05f41f5dbbd174266e238356ae81e8a"
+    },
+    {
+      "path": "src/features/revision-journey/journey-model.test.ts",
+      "change": "added",
+      "sha256": "83c3785963c6842ff7f08eec6c90a3fb6ca0796cb4540eab5e9a9becae02806b"
+    },
+    {
+      "path": "src/features/revision-journey/journey-model.ts",
+      "change": "added",
+      "sha256": "c9a9518121ae1b49e1bd4ab009b8e28ed1c0bdfda744c13b15b3c24313cf8289"
+    },
+    {
+      "path": "src/features/revision-journey/revision-journey.css",
+      "change": "added",
+      "sha256": "f83c36f37672d365bcba694e68e72bf1782c6cb37deb7472ee66221c242e82be"
+    },
+    {
+      "path": "src/features/revision-journey/RevisionJourneyPage.test.tsx",
+      "change": "added",
+      "sha256": "b7fea69a98eed1e18da4b008349c19e113d6dcbab1f64ad910e41aa1a1f15de9"
+    },
+    {
+      "path": "src/features/revision-journey/RevisionJourneyPage.tsx",
+      "change": "added",
+      "sha256": "0825fc675cdd504f84444f1f9a1dd6cc92f0c86c857850468ec62e7a0a0b9e43"
+    },
+    {
+      "path": "src/features/revision-journey/RevisionRoadmap.tsx",
+      "change": "added",
+      "sha256": "7238547042cfd985bf38067b7f29eeec5ff0e0419a0570bbdcb7d5343902142b"
+    },
+    {
+      "path": "src/features/revision-journey/text-diff.ts",
+      "change": "added",
+      "sha256": "3d7b250d9f7e174e849dea4ee6e89e7d0173ea0cada800e9f92d1e87dffad94b"
+    },
+    {
+      "path": "src/features/revision-journey/useRevisionJourney.ts",
+      "change": "added",
+      "sha256": "60390fc2be345d823a46606290667818bf26e6ab85f3d77f735a2acd22075a8c"
+    },
+    {
+      "path": "src/features/revision-journey/VersionComparison.tsx",
+      "change": "added",
+      "sha256": "6c4762a67662cbf45818d5cc9c0f8d994d2b7b2afa8c0d2f227f2f8c85f13678"
+    },
+    {
+      "path": "src/App.tsx",
+      "change": "modified",
+      "sha256": "dc6c86f4608531e3c162ec3b8425f948983945394edb5cc086aacde0dfd33278"
+    },
+    {
+      "path": "src/components/ApplicationShell.tsx",
+      "change": "modified",
+      "sha256": "b147b5fe01450d35df81cc24730e66cf7e51531d0e135fb429df4b9950ae2c37"
+    },
+    {
+      "path": "src/features/content-check/ContentCheckPage.tsx",
+      "change": "modified",
+      "sha256": "85e6b2818caf4ec8e1b13b1685b2c61168358dd8101b852d258a97ea13dbbb92"
+    },
+    {
+      "path": "src/features/reviewer-detail/ReviewerDetailPage.tsx",
+      "change": "modified",
+      "sha256": "74bfe0f99680ffb957f004183b13762eb5e2f1c878e7ff9726c64b069a45a5c6"
+    },
+    {
+      "path": "src/types/reviewer-detail.ts",
+      "change": "modified",
+      "sha256": "e994d95d579efd2386253fff5ff6ce7096be1d5ad7305ca61072e16f74be4b57"
+    },
+    {
+      "path": "scripts/verify.mjs",
+      "change": "modified",
+      "sha256": "c1bfe68326f63f79e8cff0844a51a44284f1596c876e9d49e2e06c71f3b0c02d"
+    },
+    {
+      "path": "README.md",
+      "change": "modified",
+      "sha256": "53738cf5a9526c1246a23cc97d9dccdd8ad812ba5e7f6f8f6094540b0448c188"
+    }
+  ],
+  "preservedFiles": {
+    "src/services/mock-session-store.ts": true,
+    "src/services/mock-content-check-service.test.ts": true,
+    "src/services/mock-reviewer-queue-service.test.ts": true,
+    "src/services/mock-reviewer-detail-service.test.ts": true,
+    "src/features/reviewer-queue/queue-query.test.ts": true,
+    "src/features/reviewer-queue/ReviewerQueuePage.test.tsx": true,
+    "src/features/reviewer-detail/ReviewerDetailPage.test.tsx": true,
+    "package.json": true,
+    "package-lock.json": true
+  },
+  "features": [
+    "Horizontal data-driven roadmap and clickable, keyboard-accessible milestones",
+    "Event inspector with revision identity, actor/source, comments, timestamps and finding evidence",
+    "Support for draft creation, AI check, finding detection, revision creation, recheck, submission, approval and changes requested",
+    "V1/V2 and arbitrary preserved-version comparison with added/removed copy and targeting changes",
+    "Exact approved revision attribution independent of newer pending revisions",
+    "Navigation from Reviewer Detail and Content Check, plus links to exact full snapshots",
+    "Loading/error, empty journal, missing content/event/snapshot and unavailable/single/same-version states"
+  ],
+  "dataProvenance": {
+    "storage": "Existing immutable revisions and decision journal; no new history store or hardcoded timeline",
+    "recordedEvents": "IDs, revision IDs, actors, comments and timestamps are read from the existing journal",
+    "derivedMilestones": "Missing creation/check/finding steps are derived from revision numbers and stored simulated findings, explicitly labeled At submission; no independent timestamp is invented",
+    "emptyJournal": "No historical milestones are fabricated when the event journal is empty",
+    "ai": "All AI-related findings are simulated; no compliance or cryptographic guarantees"
+  },
+  "adapter": "Read-only RevisionJourneyService composes the existing queue adapter for content/submission ID resolution and reviewer-detail adapter for history reads/subscriptions. Real APIs can replace this contract without changing the UI.",
+  "comparison": "Word/whitespace LCS with a bounded middle fallback above 250,000 matrix cells; preserves source text and Unicode; rendering never mutates snapshots.",
+  "validation": {
+    "runs": 1,
+    "typescript": "PASS",
+    "productionBuild": "PASS",
+    "testFiles": 8,
+    "tests": 42,
+    "existingTests": 32,
+    "newJourneyTests": 10,
+    "manifest": "manifest.json",
+    "browserAutomation": "NOT_ATTEMPTED_PER_USER",
+    "visualEndToEnd": "UNVERIFIED"
+  },
+  "liveValidation": {
+    "marker": "*.live.test.ts",
+    "status": "NOT_RUN",
+    "reason": "Frontend-only task; no real services or browser automation requested."
+  },
+  "costs": {
+    "externalServiceUsd": 0,
+    "agentCost": null,
+    "note": "Agent billing is not exposed."
+  },
+  "callCounts": {
+    "backend": 0,
+    "ai": 0,
+    "database": 0,
+    "mockServiceCalls": null,
+    "note": "Mock invocation counts are not instrumented; tests use local adapters."
+  },
+  "cache": {
+    "dependencies": "Existing node_modules/npm cache reused; no dependencies added",
+    "typescript": "Existing incremental cache reused",
+    "application": "Existing in-memory session only; no persistent database/cache"
+  },
+  "limitations": [
+    "Creation/check times were not stored in existing records, so corresponding inferred milestones are labeled rather than independently timestamped.",
+    "Visual fidelity, actual browser keyboard/scroll behavior and backend integration have not been verified.",
+    "Login and other screens were not implemented."
+  ]
+}

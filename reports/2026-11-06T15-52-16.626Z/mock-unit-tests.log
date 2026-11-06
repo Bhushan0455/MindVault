@@ -1,0 +1,2190 @@
+
+ RUN  v3.2.7 C:/Users/HP/Downloads/MindVaultFrontend
+
+ ✓ src/features/reviewer-queue/queue-query.test.ts (6 tests) 11ms
+ ✓ src/services/mock-reviewer-queue-service.test.ts (3 tests) 20ms
+ ✓ src/services/mock-content-check-service.test.ts (4 tests) 2811ms
+   ✓ mock content check workflow (no real services) > returns independent fixture copies and a true empty state  1120ms
+   ✓ mock content check workflow (no real services) > keeps service failure as an error, never a compliance verdict  1681ms
+ ❯ src/features/reviewer-queue/ReviewerQueuePage.test.tsx (5 tests | 1 failed) 9499ms
+   × Reviewer Queue interactions (local DOM with mock services) > loads, searches, combines filters, resets, sorts and paginates 1728ms
+     → Unable to find an accessible element with the role "searchbox" and name "Search submissions"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "Skip to content":
+  [36m<a[39m
+    [33mclass[39m=[32m"skip-link"[39m
+    [33mhref[39m=[32m"#main-content"[39m
+  [36m/>[39m
+
+  Name "Overview":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/overview"[39m
+  [36m/>[39m
+
+  Name "Brand Knowledge":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/brand-knowledge"[39m
+  [36m/>[39m
+
+  Name "Content Checks":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/content-checks"[39m
+  [36m/>[39m
+
+  Name "Approvals 3 sample approvals":
+  [36m<a[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mclass[39m=[32m"nav-link active"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals"[39m
+  [36m/>[39m
+
+  Name "Audit Logs":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/audit-logs"[39m
+  [36m/>[39m
+
+  Name "Compliance Rules":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/compliance-rules"[39m
+  [36m/>[39m
+
+  Name "Settings":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/settings"[39m
+  [36m/>[39m
+
+  Name "Wireless Headphones Launch — Instagram Feed Post":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-884"[39m
+    [33mtitle[39m=[32m"Wireless Headphones Launch — Instagram Feed Post"[39m
+  [36m/>[39m
+
+  Name "Review & Fix: REV-2024-884":
+  [36m<a[39m
+    [33maria-label[39m=[32m"Review & Fix: REV-2024-884"[39m
+    [33mclass[39m=[32m"button button-primary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-884"[39m
+  [36m/>[39m
+
+  Name "Monsoon Soundfest Influencer Brief & Reel Script":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-885"[39m
+    [33mtitle[39m=[32m"Monsoon Soundfest Influencer Brief & Reel Script"[39m
+  [36m/>[39m
+
+  Name "Review Draft: REV-2024-885":
+  [36m<a[39m
+    [33maria-label[39m=[32m"Review Draft: REV-2024-885"[39m
+    [33mclass[39m=[32m"button button-primary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-885"[39m
+  [36m/>[39m
+
+  Name "Winter Sale Email — Tier-1 Flash Drop Newsletter":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-879"[39m
+    [33mtitle[39m=[32m"Winter Sale Email — Tier-1 Flash Drop Newsletter"[39m
+  [36m/>[39m
+
+  Name "View Feedback: REV-2024-879":
+  [36m<a[39m
+    [33maria-label[39m=[32m"View Feedback: REV-2024-879"[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-879"[39m
+  [36m/>[39m
+
+  Name "Product Announcement — Titanium Diaphragm Press Release":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-872"[39m
+    [33mtitle[39m=[32m"Product Announcement — Titanium Diaphragm Press Release"[39m
+  [36m/>[39m
+
+  Name "View Report: REV-2024-872":
+  [36m<a[39m
+    [33maria-label[39m=[32m"View Report: REV-2024-872"[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-872"[39m
+  [36m/>[39m
+
+  Name "Q3 Loyalty Rewards Retargeting Banner Set":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-869"[39m
+    [33mtitle[39m=[32m"Q3 Loyalty Rewards Retargeting Banner Set"[39m
+  [36m/>[39m
+
+  Name "View Report: REV-2024-869":
+  [36m<a[39m
+    [33maria-label[39m=[32m"View Report: REV-2024-869"[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-869"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  complementary:
+
+  Name "":
+  [36m<aside[39m
+    [33mclass[39m=[32m"desktop-sidebar"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  --------------------------------------------------
+  group:
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"shell-popover notifications-menu"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"shell-popover profile-menu"[39m
+  [36m/>[39m
+
+  Name "Submission status":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Submission status"[39m
+    [33mclass[39m=[32m"queue-segments"[39m
+    [33mrole[39m=[32m"group"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"nav-label"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"nav-label"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  --------------------------------------------------
+  navigation:
+
+  Name "Auditing":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Auditing"[39m
+  [36m/>[39m
+
+  Name "Governance":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Governance"[39m
+  [36m/>[39m
+
+  Name "Queue pages":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Queue pages"[39m
+    [33mclass[39m=[32m"queue-pagination"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  banner:
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"app-header"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Open navigation":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Open navigation"[39m
+    [33mclass[39m=[32m"button button-ghost menu-toggle"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Queue Settings":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Export Audit Log":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Pending 3":
+  [36m<button[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Changes Requested 2":
+  [36m<button[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approved 14":
+  [36m<button[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "All Submissions 19":
+  [36m<button[39m
+    [33maria-pressed[39m=[32m"true"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reset all filters":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Reset all filters"[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtitle[39m=[32m"Reset Filters"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Previous page":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Previous page"[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Page 1":
+  [36m<button[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33maria-label[39m=[32m"Page 1"[39m
+    [33mclass[39m=[32m"button button-primary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Page 2":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Page 2"[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Page 4":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Page 4"[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Next page":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Next page"[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "View Dual-Sign Policy":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  region:
+
+  Name "Queue demo controls":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Queue demo controls"[39m
+    [33mclass[39m=[32m"demo-toolbar"[39m
+  [36m/>[39m
+
+  Name "Approvals":
+  [36m<section[39m
+    [33maria-labelledby[39m=[32m"queue-title"[39m
+    [33mclass[39m=[32m"queue-overview"[39m
+  [36m/>[39m
+
+  Name "Filter submissions":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Filter submissions"[39m
+    [33mclass[39m=[32m"queue-filters"[39m
+  [36m/>[39m
+
+  Name "Submissions table — scroll horizontally for status and actions":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Submissions table — scroll horizontally for status and actions"[39m
+    [33mclass[39m=[32m"queue-table-scroll"[39m
+    [33mrole[39m=[32m"region"[39m
+    [33mtabindex[39m=[32m"0"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  combobox:
+
+  Name "Preview state":
+  [36m<select />[39m
+
+  Name "Brand":
+  [36m<select[39m
+    [33maria-label[39m=[32m"Brand"[39m
+  [36m/>[39m
+
+  Name "Channel":
+  [36m<select[39m
+    [33maria-label[39m=[32m"Channel"[39m
+  [36m/>[39m
+
+  Name "Severity":
+  [36m<select[39m
+    [33maria-label[39m=[32m"Severity"[39m
+  [36m/>[39m
+
+  Name "Sort submissions":
+  [36m<select[39m
+    [33maria-label[39m=[32m"Sort submissions"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  option:
+
+  Name "Default":
+  [36m<option[39m
+    [33mvalue[39m=[32m"default"[39m
+  [36m/>[39m
+
+  Name "Empty":
+  [36m<option[39m
+    [33mvalue[39m=[32m"empty"[39m
+  [36m/>[39m
+
+  Name "Error":
+  [36m<option[39m
+    [33mvalue[39m=[32m"error"[39m
+  [36m/>[39m
+
+  Name "All Brands":
+  [36m<option[39m
+    [33mvalue[39m=[32m""[39m
+  [36m/>[39m
+
+  Name "Aura Audio":
+  [36m<option />[39m
+
+  Name "Lumina Skincare":
+  [36m<option />[39m
+
+  Name "Solace Home":
+  [36m<option />[39m
+
+  Name "All Channels":
+  [36m<option[39m
+    [33mvalue[39m=[32m""[39m
+  [36m/>[39m
+
+  Name "Email Campaign":
+  [36m<option />[39m
+
+  Name "Google Display":
+  [36m<option />[39m
+
+  Name "Instagram Carousel & Story":
+  [36m<option />[39m
+
+  Name "Instagram Feed":
+  [36m<option />[39m
+
+  Name "PR / Press Wire":
+  [36m<option />[39m
+
+  Name "TikTok & Reels":
+  [36m<option />[39m
+
+  Name "Website":
+  [36m<option />[39m
+
+  Name "All Conflict Levels":
+  [36m<option[39m
+    [33mvalue[39m=[32m"all"[39m
+  [36m/>[39m
+
+  Name "Blockers":
+  [36m<option[39m
+    [33mvalue[39m=[32m"blocker"[39m
+  [36m/>[39m
+
+  Name "Warnings":
+  [36m<option[39m
+    [33mvalue[39m=[32m"warning"[39m
+  [36m/>[39m
+
+  Name "Advisories":
+  [36m<option[39m
+    [33mvalue[39m=[32m"advisory"[39m
+  [36m/>[39m
+
+  Name "No Conflicts":
+  [36m<option[39m
+    [33mvalue[39m=[32m"none"[39m
+  [36m/>[39m
+
+  Name "Newest First":
+  [36m<option[39m
+    [33mvalue[39m=[32m"newest"[39m
+  [36m/>[39m
+
+  Name "Oldest First":
+  [36m<option[39m
+    [33mvalue[39m=[32m"oldest"[39m
+  [36m/>[39m
+
+  Name "Conflict Level":
+  [36m<option[39m
+    [33mvalue[39m=[32m"severity"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  [36m<main[39m
+    [33mid[39m=[32m"main-content"[39m
+    [33mtabindex[39m=[32m"-1"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Approvals":
+  [36m<h1[39m
+    [33mid[39m=[32m"queue-title"[39m
+  [36m/>[39m
+
+  Name "Pending Review":
+  [36m<h2 />[39m
+
+  Name "Changes Requested":
+  [36m<h2 />[39m
+
+  Name "Approved Today":
+  [36m<h2 />[39m
+
+  Name "Total Reviewed":
+  [36m<h2 />[39m
+
+  Name "Need to override a high-risk MAP or ASCI blocker?":
+  [36m<h2 />[39m
+
+  --------------------------------------------------
+  code:
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  --------------------------------------------------
+  searchbox:
+
+  Name "Search submissions Ctrl/⌘ K":
+  [36m<input[39m
+    [33mplaceholder[39m=[32m"Search by content title, reference ID, or submitter..."[39m
+    [33mtype[39m=[32m"search"[39m
+    [33mvalue[39m=[32m""[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  status:
+
+  Name "":
+  [36m<div[39m
+    [33maria-live[39m=[32m"polite"[39m
+    [33mclass[39m=[32m"queue-feedback"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<span[39m
+    [33mclass[39m=[32m"queue-result-count"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  table:
+
+  Name "Simulated marketing submissions awaiting or completing review":
+  [36m<table[39m
+    [33mclass[39m=[32m"queue-table"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  caption:
+
+  Name "Simulated marketing submissions awaiting or completing review":
+  [36m<caption[39m
+    [33mclass[39m=[32m"sr-only"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  rowgroup:
+
+  Name "":
+  [36m<thead />[39m
+
+  Name "":
+  [36m<tbody />[39m
+
+  --------------------------------------------------
+  row:
+
+  Name "Select all submissions on this page Content Asset & ID Brand Submitted By Channel & Region Submitted Verification Status Action":
+  [36m<tr />[39m
+
+  Name "Select REV-2024-884 Wireless Headphones Launch — Instagram Feed Post REV-2024-884 • Aura Sound ANC Launch • 3 Assets Aura Audio PR Priyanshi Roy Growth Mktg Instagram Carousel & Story India (INR) 12 mins ago 09:10 PM Needs Review (1 Blocker) MAP Conflict: ₹799 vs ₹999 sample baseline Review & Fix: REV-2024-884":
+  [36m<tr[39m
+    [33mclass[39m=[32m"queue-blocker-row"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-885 Monsoon Soundfest Influencer Brief & Reel Script REV-2024-885 • Creator Partner Series • Script v2 Aura Audio AC Alex Chen Social & Influencer TikTok & Reels India (INR) 45 mins ago 08:37 PM Needs Review (2 Warnings) Sample ASCI disclosure tag missing on reel end-frame. Review Draft: REV-2024-885":
+  [36m<tr />[39m
+
+  Name "Select REV-2024-879 Winter Sale Email — Tier-1 Flash Drop Newsletter REV-2024-879 • Segment: High LTV Buyers • HTML Email Aura Audio PR Priyanshi Roy CRM Marketing Email Campaign Global (EN) 2 hours ago 07:22 PM Changes Requested Sample reviewer feedback: add the unsubscribe disclaimer and ASCI footnote. View Feedback: REV-2024-879":
+  [36m<tr />[39m
+
+  Name "Select REV-2024-872 Product Announcement — Titanium Diaphragm Press Release REV-2024-872 • Editorial Wire • Wire syndication Solace Home JD Jane Doe Communications PR / Press Wire US / CA Yesterday 09:22 PM Approved Sample claim checks complete; mock reviewer sign-off recorded. View Report: REV-2024-872":
+  [36m<tr />[39m
+
+  Name "Select REV-2024-869 Q3 Loyalty Rewards Retargeting Banner Set REV-2024-869 • Display Retargeting 300×250 • 8 Creatives Lumina Skincare MP Maya Patel Performance Mktg Google Display Tier 1 Markets 2 days ago 09:22 PM Approved Sample claim checks complete; mock reviewer sign-off recorded. View Report: REV-2024-869":
+  [36m<tr />[39m
+
+  --------------------------------------------------
+  columnheader:
+
+  Name "Select all submissions on this page":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Content Asset & ID":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Brand":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Submitted By":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Channel & Region":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Submitted":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Verification Status":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Action":
+  [36m<th[39m
+    [33mclass[39m=[32m"queue-action-cell"[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  checkbox:
+
+  Name "Select all submissions on this page":
+  [36m<input[39m
+    [33maria-label[39m=[32m"Select all submissions on this page"[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-884":
+  [36m<input[39m
+    [33maria-label[39m=[32m"Select REV-2024-884"[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-885":
+  [36m<input[39m
+    [33maria-label[39m=[32m"Select REV-2024-885"[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-879":
+  [36m<input[39m
+    [33maria-label[39m=[32m"Select REV-2024-879"[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-872":
+  [36m<input[39m
+    [33maria-label[39m=[32m"Select REV-2024-872"[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-869":
+  [36m<input[39m
+    [33maria-label[39m=[32m"Select REV-2024-869"[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  cell:
+
+  Name "Select REV-2024-884":
+  [36m<td />[39m
+
+  Name "Wireless Headphones Launch — Instagram Feed Post REV-2024-884 • Aura Sound ANC Launch • 3 Assets":
+  [36m<td />[39m
+
+  Name "Aura Audio":
+  [36m<td />[39m
+
+  Name "PR Priyanshi Roy Growth Mktg":
+  [36m<td />[39m
+
+  Name "Instagram Carousel & Story India (INR)":
+  [36m<td />[39m
+
+  Name "12 mins ago 09:10 PM":
+  [36m<td />[39m
+
+  Name "Needs Review (1 Blocker) MAP Conflict: ₹799 vs ₹999 sample baseline":
+  [36m<td />[39m
+
+  Name "Review & Fix: REV-2024-884":
+  [36m<td[39m
+    [33mclass[39m=[32m"queue-action-cell"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-885":
+  [36m<td />[39m
+
+  Name "Monsoon Soundfest Influencer Brief & Reel Script REV-2024-885 • Creator Partner Series • Script v2":
+  [36m<td />[39m
+
+  Name "Aura Audio":
+  [36m<td />[39m
+
+  Name "AC Alex Chen Social & Influencer":
+  [36m<td />[39m
+
+  Name "TikTok & Reels India (INR)":
+  [36m<td />[39m
+
+  Name "45 mins ago 08:37 PM":
+  [36m<td />[39m
+
+  Name "Needs Review (2 Warnings) Sample ASCI disclosure tag missing on reel end-frame.":
+  [36m<td />[39m
+
+  Name "Review Draft: REV-2024-885":
+  [36m<td[39m
+    [33mclass[39m=[32m"queue-action-cell"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-879":
+  [36m<td />[39m
+
+  Name "Winter Sale Email — Tier-1 Flash Drop Newsletter REV-2024-879 • Segment: High LTV Buyers • HTML Email":
+  [36m<td />[39m
+
+  Name "Aura Audio":
+  [36m<td />[39m
+
+  Name "PR Priyanshi Roy CRM Marketing":
+  [36m<td />[39m
+
+  Name "Email Campaign Global (EN)":
+  [36m<td />[39m
+
+  Name "2 hours ago 07:22 PM":
+  [36m<td />[39m
+
+  Name "Changes Requested Sample reviewer feedback: add the unsubscribe disclaimer and ASCI footnote.":
+  [36m<td />[39m
+
+  Name "View Feedback: REV-2024-879":
+  [36m<td[39m
+    [33mclass[39m=[32m"queue-action-cell"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-872":
+  [36m<td />[39m
+
+  Name "Product Announcement — Titanium Diaphragm Press Release REV-2024-872 • Editorial Wire • Wire syndication":
+  [36m<td />[39m
+
+  Name "Solace Home":
+  [36m<td />[39m
+
+  Name "JD Jane Doe Communications":
+  [36m<td />[39m
+
+  Name "PR / Press Wire US / CA":
+  [36m<td />[39m
+
+  Name "Yesterday 09:22 PM":
+  [36m<td />[39m
+
+  Name "Approved Sample claim checks complete; mock reviewer sign-off recorded.":
+  [36m<td />[39m
+
+  Name "View Report: REV-2024-872":
+  [36m<td[39m
+    [33mclass[39m=[32m"queue-action-cell"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-869":
+  [36m<td />[39m
+
+  Name "Q3 Loyalty Rewards Retargeting Banner Set REV-2024-869 • Display Retargeting 300×250 • 8 Creatives":
+  [36m<td />[39m
+
+  Name "Lumina Skincare":
+  [36m<td />[39m
+
+  Name "MP Maya Patel Performance Mktg":
+  [36m<td />[39m
+
+  Name "Google Display Tier 1 Markets":
+  [36m<td />[39m
+
+  Name "2 days ago 09:22 PM":
+  [36m<td />[39m
+
+  Name "Approved Sample claim checks complete; mock reviewer sign-off recorded.":
+  [36m<td />[39m
+
+  Name "View Report: REV-2024-869":
+  [36m<td[39m
+    [33mclass[39m=[32m"queue-action-cell"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  time:
+
+  Name "11/6/2026, 9:10:32 PM":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T15:40:32.234Z"[39m
+    [33mtitle[39m=[32m"11/6/2026, 9:10:32 PM"[39m
+  [36m/>[39m
+
+  Name "11/6/2026, 8:37:32 PM":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T15:07:32.234Z"[39m
+    [33mtitle[39m=[32m"11/6/2026, 8:37:32 PM"[39m
+  [36m/>[39m
+
+  Name "11/6/2026, 7:22:32 PM":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T13:52:32.234Z"[39m
+    [33mtitle[39m=[32m"11/6/2026, 7:22:32 PM"[39m
+  [36m/>[39m
+
+  Name "11/5/2026, 9:22:32 PM":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-05T15:52:32.234Z"[39m
+    [33mtitle[39m=[32m"11/5/2026, 9:22:32 PM"[39m
+  [36m/>[39m
+
+  Name "11/4/2026, 9:22:32 PM":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-04T15:52:32.234Z"[39m
+    [33mtitle[39m=[32m"11/4/2026, 9:22:32 PM"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"app-shell reviewer-queue-shell"[39m
+    [36m>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"skip-link"[39m
+        [33mhref[39m=[32m"#main-content"[39m
+      [36m>[39m
+        [0mSkip to content[0m
+      [36m</a>[39m
+      [36m<aside[39m
+        [33mclass[39m=[32m"desktop-sidebar"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"workspace-brand"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [0mM[0m
+          [36m</span>[39m
+          [36m<div>[39m
+            [36m<strong>[39m
+              [0mMindVault AI[0m
+            [36m</strong>[39m
+            [36m<span>[39m
+              [0mAcme Consumer Tech[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<details[39m
+            [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+          [36m>[39m
+            [36m<summary[39m
+              [33maria-label[39m=[32m"Workspace details"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"lucide lucide-chevrons-up-down"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"18"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"18"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 15 5 5 5-5"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 9 5-5 5 5"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+            [36m</summary>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"shell-popover-content"[39m
+            [36m>[39m
+              [36m<strong>[39m
+                [0mAcme Consumer Tech[0m
+              [36m</strong>[39m
+              [36m<p>[39m
+                [0mThis demo contains one sample workspace.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</details>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-groups"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"nav-label"[39m
+            [36m>[39m
+              [0mAuditing[0m
+            [36m</p>[39m
+            [36m<nav[39m
+              [33maria-label[39m=[32m"Auditing"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/overview"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-layout-dashboard"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"12"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"16"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mOverview[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/brand-knowledge"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-book-open"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M12 7v14"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mBrand Knowledge[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/content-checks"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-clipboard-check"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+              ...
+   ✓ Reviewer Queue interactions (local DOM with mock services) > opens an individual snapshot and closes it without losing filters  434ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > selects the current page, exports selected rows and applies queue settings  681ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > shows empty and error states without deleting the session queue  597ms
+   ✓ Reviewer Queue interactions (local DOM with mock services) > hands a corrected Creator submission to the queue and reuses existing Findings & Evidence  6057ms
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 17 passed (18)
+     Errors  1 error
+   Start at  21:22:28
+   Duration  13.40s (transform 537ms, setup 0ms, collect 1.65s, tests 12.34s, environment 1.87s, prepare 1.28s)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/features/reviewer-queue/ReviewerQueuePage.test.tsx > Reviewer Queue interactions (local DOM with mock services) > loads, searches, combines filters, resets, sorts and paginates
+TestingLibraryElementError: Unable to find an accessible element with the role "searchbox" and name "Search submissions"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "Skip to content":
+  [36m<a[39m
+    [33mclass[39m=[32m"skip-link"[39m
+    [33mhref[39m=[32m"#main-content"[39m
+  [36m/>[39m
+
+  Name "Overview":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/overview"[39m
+  [36m/>[39m
+
+  Name "Brand Knowledge":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/brand-knowledge"[39m
+  [36m/>[39m
+
+  Name "Content Checks":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/content-checks"[39m
+  [36m/>[39m
+
+  Name "Approvals 3 sample approvals":
+  [36m<a[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mclass[39m=[32m"nav-link active"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals"[39m
+  [36m/>[39m
+
+  Name "Audit Logs":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/audit-logs"[39m
+  [36m/>[39m
+
+  Name "Compliance Rules":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/compliance-rules"[39m
+  [36m/>[39m
+
+  Name "Settings":
+  [36m<a[39m
+    [33mclass[39m=[32m"nav-link "[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/settings"[39m
+  [36m/>[39m
+
+  Name "Wireless Headphones Launch — Instagram Feed Post":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-884"[39m
+    [33mtitle[39m=[32m"Wireless Headphones Launch — Instagram Feed Post"[39m
+  [36m/>[39m
+
+  Name "Review & Fix: REV-2024-884":
+  [36m<a[39m
+    [33maria-label[39m=[32m"Review & Fix: REV-2024-884"[39m
+    [33mclass[39m=[32m"button button-primary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-884"[39m
+  [36m/>[39m
+
+  Name "Monsoon Soundfest Influencer Brief & Reel Script":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-885"[39m
+    [33mtitle[39m=[32m"Monsoon Soundfest Influencer Brief & Reel Script"[39m
+  [36m/>[39m
+
+  Name "Review Draft: REV-2024-885":
+  [36m<a[39m
+    [33maria-label[39m=[32m"Review Draft: REV-2024-885"[39m
+    [33mclass[39m=[32m"button button-primary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-885"[39m
+  [36m/>[39m
+
+  Name "Winter Sale Email — Tier-1 Flash Drop Newsletter":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-879"[39m
+    [33mtitle[39m=[32m"Winter Sale Email — Tier-1 Flash Drop Newsletter"[39m
+  [36m/>[39m
+
+  Name "View Feedback: REV-2024-879":
+  [36m<a[39m
+    [33maria-label[39m=[32m"View Feedback: REV-2024-879"[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-879"[39m
+  [36m/>[39m
+
+  Name "Product Announcement — Titanium Diaphragm Press Release":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-872"[39m
+    [33mtitle[39m=[32m"Product Announcement — Titanium Diaphragm Press Release"[39m
+  [36m/>[39m
+
+  Name "View Report: REV-2024-872":
+  [36m<a[39m
+    [33maria-label[39m=[32m"View Report: REV-2024-872"[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-872"[39m
+  [36m/>[39m
+
+  Name "Q3 Loyalty Rewards Retargeting Banner Set":
+  [36m<a[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-869"[39m
+    [33mtitle[39m=[32m"Q3 Loyalty Rewards Retargeting Banner Set"[39m
+  [36m/>[39m
+
+  Name "View Report: REV-2024-869":
+  [36m<a[39m
+    [33maria-label[39m=[32m"View Report: REV-2024-869"[39m
+    [33mclass[39m=[32m"button button-secondary"[39m
+    [33mdata-discover[39m=[32m"true"[39m
+    [33mhref[39m=[32m"/approvals?submission=REV-2024-869"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  complementary:
+
+  Name "":
+  [36m<aside[39m
+    [33mclass[39m=[32m"desktop-sidebar"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  --------------------------------------------------
+  group:
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"shell-popover notifications-menu"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<details[39m
+    [33mclass[39m=[32m"shell-popover profile-menu"[39m
+  [36m/>[39m
+
+  Name "Submission status":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Submission status"[39m
+    [33mclass[39m=[32m"queue-segments"[39m
+    [33mrole[39m=[32m"group"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"nav-label"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"nav-label"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  --------------------------------------------------
+  navigation:
+
+  Name "Auditing":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Auditing"[39m
+  [36m/>[39m
+
+  Name "Governance":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Governance"[39m
+  [36m/>[39m
+
+  Name "Queue pages":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Queue pages"[39m
+    [33mclass[39m=[32m"queue-pagination"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  banner:
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"app-header"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Open navigation":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Open navigation"[39m
+    [33mclass[39m=[32m"button button-ghost menu-toggle"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Queue Settings":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Export Audit Log":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Pending 3":
+  [36m<button[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Changes Requested 2":
+  [36m<button[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Approved 14":
+  [36m<button[39m
+    [33maria-pressed[39m=[32m"false"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "All Submissions 19":
+  [36m<button[39m
+    [33maria-pressed[39m=[32m"true"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reset all filters":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Reset all filters"[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtitle[39m=[32m"Reset Filters"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Previous page":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Previous page"[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mdisabled[39m=[32m""[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Page 1":
+  [36m<button[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33maria-label[39m=[32m"Page 1"[39m
+    [33mclass[39m=[32m"button button-primary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Page 2":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Page 2"[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Page 4":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Page 4"[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Next page":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Next page"[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "View Dual-Sign Policy":
+  [36m<button[39m
+    [33mclass[39m=[32m"button button-secondary "[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  region:
+
+  Name "Queue demo controls":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Queue demo controls"[39m
+    [33mclass[39m=[32m"demo-toolbar"[39m
+  [36m/>[39m
+
+  Name "Approvals":
+  [36m<section[39m
+    [33maria-labelledby[39m=[32m"queue-title"[39m
+    [33mclass[39m=[32m"queue-overview"[39m
+  [36m/>[39m
+
+  Name "Filter submissions":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Filter submissions"[39m
+    [33mclass[39m=[32m"queue-filters"[39m
+  [36m/>[39m
+
+  Name "Submissions table — scroll horizontally for status and actions":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Submissions table — scroll horizontally for status and actions"[39m
+    [33mclass[39m=[32m"queue-table-scroll"[39m
+    [33mrole[39m=[32m"region"[39m
+    [33mtabindex[39m=[32m"0"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  combobox:
+
+  Name "Preview state":
+  [36m<select />[39m
+
+  Name "Brand":
+  [36m<select[39m
+    [33maria-label[39m=[32m"Brand"[39m
+  [36m/>[39m
+
+  Name "Channel":
+  [36m<select[39m
+    [33maria-label[39m=[32m"Channel"[39m
+  [36m/>[39m
+
+  Name "Severity":
+  [36m<select[39m
+    [33maria-label[39m=[32m"Severity"[39m
+  [36m/>[39m
+
+  Name "Sort submissions":
+  [36m<select[39m
+    [33maria-label[39m=[32m"Sort submissions"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  option:
+
+  Name "Default":
+  [36m<option[39m
+    [33mvalue[39m=[32m"default"[39m
+  [36m/>[39m
+
+  Name "Empty":
+  [36m<option[39m
+    [33mvalue[39m=[32m"empty"[39m
+  [36m/>[39m
+
+  Name "Error":
+  [36m<option[39m
+    [33mvalue[39m=[32m"error"[39m
+  [36m/>[39m
+
+  Name "All Brands":
+  [36m<option[39m
+    [33mvalue[39m=[32m""[39m
+  [36m/>[39m
+
+  Name "Aura Audio":
+  [36m<option />[39m
+
+  Name "Lumina Skincare":
+  [36m<option />[39m
+
+  Name "Solace Home":
+  [36m<option />[39m
+
+  Name "All Channels":
+  [36m<option[39m
+    [33mvalue[39m=[32m""[39m
+  [36m/>[39m
+
+  Name "Email Campaign":
+  [36m<option />[39m
+
+  Name "Google Display":
+  [36m<option />[39m
+
+  Name "Instagram Carousel & Story":
+  [36m<option />[39m
+
+  Name "Instagram Feed":
+  [36m<option />[39m
+
+  Name "PR / Press Wire":
+  [36m<option />[39m
+
+  Name "TikTok & Reels":
+  [36m<option />[39m
+
+  Name "Website":
+  [36m<option />[39m
+
+  Name "All Conflict Levels":
+  [36m<option[39m
+    [33mvalue[39m=[32m"all"[39m
+  [36m/>[39m
+
+  Name "Blockers":
+  [36m<option[39m
+    [33mvalue[39m=[32m"blocker"[39m
+  [36m/>[39m
+
+  Name "Warnings":
+  [36m<option[39m
+    [33mvalue[39m=[32m"warning"[39m
+  [36m/>[39m
+
+  Name "Advisories":
+  [36m<option[39m
+    [33mvalue[39m=[32m"advisory"[39m
+  [36m/>[39m
+
+  Name "No Conflicts":
+  [36m<option[39m
+    [33mvalue[39m=[32m"none"[39m
+  [36m/>[39m
+
+  Name "Newest First":
+  [36m<option[39m
+    [33mvalue[39m=[32m"newest"[39m
+  [36m/>[39m
+
+  Name "Oldest First":
+  [36m<option[39m
+    [33mvalue[39m=[32m"oldest"[39m
+  [36m/>[39m
+
+  Name "Conflict Level":
+  [36m<option[39m
+    [33mvalue[39m=[32m"severity"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  [36m<main[39m
+    [33mid[39m=[32m"main-content"[39m
+    [33mtabindex[39m=[32m"-1"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Approvals":
+  [36m<h1[39m
+    [33mid[39m=[32m"queue-title"[39m
+  [36m/>[39m
+
+  Name "Pending Review":
+  [36m<h2 />[39m
+
+  Name "Changes Requested":
+  [36m<h2 />[39m
+
+  Name "Approved Today":
+  [36m<h2 />[39m
+
+  Name "Total Reviewed":
+  [36m<h2 />[39m
+
+  Name "Need to override a high-risk MAP or ASCI blocker?":
+  [36m<h2 />[39m
+
+  --------------------------------------------------
+  code:
+
+  Name "":
+  [36m<code />[39m
+
+  Name "":
+  [36m<code />[39m
+
+  --------------------------------------------------
+  searchbox:
+
+  Name "Search submissions Ctrl/⌘ K":
+  [36m<input[39m
+    [33mplaceholder[39m=[32m"Search by content title, reference ID, or submitter..."[39m
+    [33mtype[39m=[32m"search"[39m
+    [33mvalue[39m=[32m""[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  status:
+
+  Name "":
+  [36m<div[39m
+    [33maria-live[39m=[32m"polite"[39m
+    [33mclass[39m=[32m"queue-feedback"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<span[39m
+    [33mclass[39m=[32m"queue-result-count"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  table:
+
+  Name "Simulated marketing submissions awaiting or completing review":
+  [36m<table[39m
+    [33mclass[39m=[32m"queue-table"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  caption:
+
+  Name "Simulated marketing submissions awaiting or completing review":
+  [36m<caption[39m
+    [33mclass[39m=[32m"sr-only"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  rowgroup:
+
+  Name "":
+  [36m<thead />[39m
+
+  Name "":
+  [36m<tbody />[39m
+
+  --------------------------------------------------
+  row:
+
+  Name "Select all submissions on this page Content Asset & ID Brand Submitted By Channel & Region Submitted Verification Status Action":
+  [36m<tr />[39m
+
+  Name "Select REV-2024-884 Wireless Headphones Launch — Instagram Feed Post REV-2024-884 • Aura Sound ANC Launch • 3 Assets Aura Audio PR Priyanshi Roy Growth Mktg Instagram Carousel & Story India (INR) 12 mins ago 09:10 PM Needs Review (1 Blocker) MAP Conflict: ₹799 vs ₹999 sample baseline Review & Fix: REV-2024-884":
+  [36m<tr[39m
+    [33mclass[39m=[32m"queue-blocker-row"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-885 Monsoon Soundfest Influencer Brief & Reel Script REV-2024-885 • Creator Partner Series • Script v2 Aura Audio AC Alex Chen Social & Influencer TikTok & Reels India (INR) 45 mins ago 08:37 PM Needs Review (2 Warnings) Sample ASCI disclosure tag missing on reel end-frame. Review Draft: REV-2024-885":
+  [36m<tr />[39m
+
+  Name "Select REV-2024-879 Winter Sale Email — Tier-1 Flash Drop Newsletter REV-2024-879 • Segment: High LTV Buyers • HTML Email Aura Audio PR Priyanshi Roy CRM Marketing Email Campaign Global (EN) 2 hours ago 07:22 PM Changes Requested Sample reviewer feedback: add the unsubscribe disclaimer and ASCI footnote. View Feedback: REV-2024-879":
+  [36m<tr />[39m
+
+  Name "Select REV-2024-872 Product Announcement — Titanium Diaphragm Press Release REV-2024-872 • Editorial Wire • Wire syndication Solace Home JD Jane Doe Communications PR / Press Wire US / CA Yesterday 09:22 PM Approved Sample claim checks complete; mock reviewer sign-off recorded. View Report: REV-2024-872":
+  [36m<tr />[39m
+
+  Name "Select REV-2024-869 Q3 Loyalty Rewards Retargeting Banner Set REV-2024-869 • Display Retargeting 300×250 • 8 Creatives Lumina Skincare MP Maya Patel Performance Mktg Google Display Tier 1 Markets 2 days ago 09:22 PM Approved Sample claim checks complete; mock reviewer sign-off recorded. View Report: REV-2024-869":
+  [36m<tr />[39m
+
+  --------------------------------------------------
+  columnheader:
+
+  Name "Select all submissions on this page":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Content Asset & ID":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Brand":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Submitted By":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Channel & Region":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Submitted":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Verification Status":
+  [36m<th[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  Name "Action":
+  [36m<th[39m
+    [33mclass[39m=[32m"queue-action-cell"[39m
+    [33mscope[39m=[32m"col"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  checkbox:
+
+  Name "Select all submissions on this page":
+  [36m<input[39m
+    [33maria-label[39m=[32m"Select all submissions on this page"[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-884":
+  [36m<input[39m
+    [33maria-label[39m=[32m"Select REV-2024-884"[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-885":
+  [36m<input[39m
+    [33maria-label[39m=[32m"Select REV-2024-885"[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-879":
+  [36m<input[39m
+    [33maria-label[39m=[32m"Select REV-2024-879"[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-872":
+  [36m<input[39m
+    [33maria-label[39m=[32m"Select REV-2024-872"[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-869":
+  [36m<input[39m
+    [33maria-label[39m=[32m"Select REV-2024-869"[39m
+    [33mtype[39m=[32m"checkbox"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  cell:
+
+  Name "Select REV-2024-884":
+  [36m<td />[39m
+
+  Name "Wireless Headphones Launch — Instagram Feed Post REV-2024-884 • Aura Sound ANC Launch • 3 Assets":
+  [36m<td />[39m
+
+  Name "Aura Audio":
+  [36m<td />[39m
+
+  Name "PR Priyanshi Roy Growth Mktg":
+  [36m<td />[39m
+
+  Name "Instagram Carousel & Story India (INR)":
+  [36m<td />[39m
+
+  Name "12 mins ago 09:10 PM":
+  [36m<td />[39m
+
+  Name "Needs Review (1 Blocker) MAP Conflict: ₹799 vs ₹999 sample baseline":
+  [36m<td />[39m
+
+  Name "Review & Fix: REV-2024-884":
+  [36m<td[39m
+    [33mclass[39m=[32m"queue-action-cell"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-885":
+  [36m<td />[39m
+
+  Name "Monsoon Soundfest Influencer Brief & Reel Script REV-2024-885 • Creator Partner Series • Script v2":
+  [36m<td />[39m
+
+  Name "Aura Audio":
+  [36m<td />[39m
+
+  Name "AC Alex Chen Social & Influencer":
+  [36m<td />[39m
+
+  Name "TikTok & Reels India (INR)":
+  [36m<td />[39m
+
+  Name "45 mins ago 08:37 PM":
+  [36m<td />[39m
+
+  Name "Needs Review (2 Warnings) Sample ASCI disclosure tag missing on reel end-frame.":
+  [36m<td />[39m
+
+  Name "Review Draft: REV-2024-885":
+  [36m<td[39m
+    [33mclass[39m=[32m"queue-action-cell"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-879":
+  [36m<td />[39m
+
+  Name "Winter Sale Email — Tier-1 Flash Drop Newsletter REV-2024-879 • Segment: High LTV Buyers • HTML Email":
+  [36m<td />[39m
+
+  Name "Aura Audio":
+  [36m<td />[39m
+
+  Name "PR Priyanshi Roy CRM Marketing":
+  [36m<td />[39m
+
+  Name "Email Campaign Global (EN)":
+  [36m<td />[39m
+
+  Name "2 hours ago 07:22 PM":
+  [36m<td />[39m
+
+  Name "Changes Requested Sample reviewer feedback: add the unsubscribe disclaimer and ASCI footnote.":
+  [36m<td />[39m
+
+  Name "View Feedback: REV-2024-879":
+  [36m<td[39m
+    [33mclass[39m=[32m"queue-action-cell"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-872":
+  [36m<td />[39m
+
+  Name "Product Announcement — Titanium Diaphragm Press Release REV-2024-872 • Editorial Wire • Wire syndication":
+  [36m<td />[39m
+
+  Name "Solace Home":
+  [36m<td />[39m
+
+  Name "JD Jane Doe Communications":
+  [36m<td />[39m
+
+  Name "PR / Press Wire US / CA":
+  [36m<td />[39m
+
+  Name "Yesterday 09:22 PM":
+  [36m<td />[39m
+
+  Name "Approved Sample claim checks complete; mock reviewer sign-off recorded.":
+  [36m<td />[39m
+
+  Name "View Report: REV-2024-872":
+  [36m<td[39m
+    [33mclass[39m=[32m"queue-action-cell"[39m
+  [36m/>[39m
+
+  Name "Select REV-2024-869":
+  [36m<td />[39m
+
+  Name "Q3 Loyalty Rewards Retargeting Banner Set REV-2024-869 • Display Retargeting 300×250 • 8 Creatives":
+  [36m<td />[39m
+
+  Name "Lumina Skincare":
+  [36m<td />[39m
+
+  Name "MP Maya Patel Performance Mktg":
+  [36m<td />[39m
+
+  Name "Google Display Tier 1 Markets":
+  [36m<td />[39m
+
+  Name "2 days ago 09:22 PM":
+  [36m<td />[39m
+
+  Name "Approved Sample claim checks complete; mock reviewer sign-off recorded.":
+  [36m<td />[39m
+
+  Name "View Report: REV-2024-869":
+  [36m<td[39m
+    [33mclass[39m=[32m"queue-action-cell"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  time:
+
+  Name "11/6/2026, 9:10:32 PM":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T15:40:32.234Z"[39m
+    [33mtitle[39m=[32m"11/6/2026, 9:10:32 PM"[39m
+  [36m/>[39m
+
+  Name "11/6/2026, 8:37:32 PM":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T15:07:32.234Z"[39m
+    [33mtitle[39m=[32m"11/6/2026, 8:37:32 PM"[39m
+  [36m/>[39m
+
+  Name "11/6/2026, 7:22:32 PM":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-06T13:52:32.234Z"[39m
+    [33mtitle[39m=[32m"11/6/2026, 7:22:32 PM"[39m
+  [36m/>[39m
+
+  Name "11/5/2026, 9:22:32 PM":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-05T15:52:32.234Z"[39m
+    [33mtitle[39m=[32m"11/5/2026, 9:22:32 PM"[39m
+  [36m/>[39m
+
+  Name "11/4/2026, 9:22:32 PM":
+  [36m<time[39m
+    [33mdatetime[39m=[32m"2026-11-04T15:52:32.234Z"[39m
+    [33mtitle[39m=[32m"11/4/2026, 9:22:32 PM"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"app-shell reviewer-queue-shell"[39m
+    [36m>[39m
+      [36m<a[39m
+        [33mclass[39m=[32m"skip-link"[39m
+        [33mhref[39m=[32m"#main-content"[39m
+      [36m>[39m
+        [0mSkip to content[0m
+      [36m</a>[39m
+      [36m<aside[39m
+        [33mclass[39m=[32m"desktop-sidebar"[39m
+      [36m>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"workspace-brand"[39m
+        [36m>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [0mM[0m
+          [36m</span>[39m
+          [36m<div>[39m
+            [36m<strong>[39m
+              [0mMindVault AI[0m
+            [36m</strong>[39m
+            [36m<span>[39m
+              [0mAcme Consumer Tech[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<details[39m
+            [33mclass[39m=[32m"workspace-switcher shell-popover"[39m
+          [36m>[39m
+            [36m<summary[39m
+              [33maria-label[39m=[32m"Workspace details"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"lucide lucide-chevrons-up-down"[39m
+                [33mfill[39m=[32m"none"[39m
+                [33mheight[39m=[32m"18"[39m
+                [33mstroke[39m=[32m"currentColor"[39m
+                [33mstroke-linecap[39m=[32m"round"[39m
+                [33mstroke-linejoin[39m=[32m"round"[39m
+                [33mstroke-width[39m=[32m"2"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [33mwidth[39m=[32m"18"[39m
+                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 15 5 5 5-5"[39m
+                [36m/>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"m7 9 5-5 5 5"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+            [36m</summary>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"shell-popover-content"[39m
+            [36m>[39m
+              [36m<strong>[39m
+                [0mAcme Consumer Tech[0m
+              [36m</strong>[39m
+              [36m<p>[39m
+                [0mThis demo contains one sample workspace.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+          [36m</details>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"nav-groups"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"nav-label"[39m
+            [36m>[39m
+              [0mAuditing[0m
+            [36m</p>[39m
+            [36m<nav[39m
+              [33maria-label[39m=[32m"Auditing"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/overview"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-layout-dashboard"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"3"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"9"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"14"[39m
+                    [33my[39m=[32m"12"[39m
+                  [36m/>[39m
+                  [36m<rect[39m
+                    [33mheight[39m=[32m"5"[39m
+                    [33mrx[39m=[32m"1"[39m
+                    [33mwidth[39m=[32m"7"[39m
+                    [33mx[39m=[32m"3"[39m
+                    [33my[39m=[32m"16"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mOverview[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/brand-knowledge"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-book-open"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"16"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M12 7v14"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [36m<span>[39m
+                  [0mBrand Knowledge[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"nav-link "[39m
+                [33mdata-discover[39m=[32m"true"[39m
+                [33mhref[39m=[32m"/content-checks"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-clipboard-check"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"16"[39m
+              ...
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/features/reviewer-queue/ReviewerQueuePage.test.tsx:33:27
+     31|     await screen.findByRole('table');
+     32|     expect(within(screen.getByRole('table')).getAllByRole('row')).toHa…
+     33|     const search = screen.getByRole('searchbox', { name: 'Search submi…
+       |                           ^
+     34|     await user.type(search, 'monsoon');
+     35|     expect(within(screen.getByRole('table')).getAllByRole('row')).toHa…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯ Uncaught Exception ⎯⎯⎯⎯⎯
+TypeError: URL.revokeObjectURL is not a function
+ ❯ Timeout._onTimeout src/features/reviewer-queue/ReviewerQueuePage.tsx:55:26
+     53|     const anchor = document.createElement('a');
+     54|     anchor.href = url; anchor.download = 'mindvault-demo-queue.csv'; d…
+     55|     setTimeout(() => URL.revokeObjectURL(url), 1000);
+       |                          ^
+     56|     setNotice(`Exported ${exported.length} simulated submissions${sele…
+     57|   }
+ ❯ listOnTimeout node:internal/timers:594:17
+ ❯ processTimers node:internal/timers:529:7
+
+This error originated in "src/features/reviewer-queue/ReviewerQueuePage.test.tsx" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.
+The latest test that might've caused the error is "hands a corrected Creator submission to the queue and reuses existing Findings & Evidence". It might mean one of the following:
+- The error was thrown, while Vitest was running this test.
+- If the error occurred after the test had been completed, this was the last documented test before it was thrown.
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
