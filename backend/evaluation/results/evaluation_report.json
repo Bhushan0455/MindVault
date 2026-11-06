@@ -1,0 +1,1252 @@
+{
+  "dataset_name": "MindVault synthetic deterministic evaluation v1",
+  "method": "deterministic_only",
+  "live_ai_tested": false,
+  "label_status": "Assistant-authored synthetic labels; independent human review still required.",
+  "scoring": "Exact category + verdict + quoted text multiset; supported/info findings excluded from issue scoring.",
+  "summary": {
+    "cases": 50,
+    "exact_cases": 47,
+    "tp": 30,
+    "fp": 1,
+    "fn": 3,
+    "precision": 0.967741935483871,
+    "recall": 0.9090909090909091
+  },
+  "groups": {
+    "baseline": {
+      "cases": 30,
+      "exact_cases": 30,
+      "tp": 21,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "challenge": {
+      "cases": 20,
+      "exact_cases": 17,
+      "tp": 9,
+      "fp": 1,
+      "fn": 3,
+      "precision": 0.9,
+      "recall": 0.75
+    }
+  },
+  "invalid_span_count": 0,
+  "missing_evidence_count": 0,
+  "cases": [
+    {
+      "id": "B01",
+      "group": "baseline",
+      "draft": "Veyra Beat 200 at ₹799.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹799"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹799"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B02",
+      "group": "baseline",
+      "draft": "Veyra Beat 200 at ₹999.",
+      "rationale": "",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B03",
+      "group": "baseline",
+      "draft": "Air 100 at ₹1499.",
+      "rationale": "",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B04",
+      "group": "baseline",
+      "draft": "Air 100 at ₹999.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹999"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹999"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B05",
+      "group": "baseline",
+      "draft": "Beat 200 at Rs. 799.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "Rs. 799"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "Rs. 799"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B06",
+      "group": "baseline",
+      "draft": "Beat 200 at INR 799.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "INR 799"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "INR 799"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B07",
+      "group": "baseline",
+      "draft": "Beat 200 battery life up to 50 hours.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "battery_life",
+          "verdict": "violation",
+          "quote": "up to 50 hours"
+        }
+      ],
+      "actual": [
+        {
+          "category": "battery_life",
+          "verdict": "violation",
+          "quote": "up to 50 hours"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B08",
+      "group": "baseline",
+      "draft": "Beat 200 battery life up to 40 hours.",
+      "rationale": "",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B09",
+      "group": "baseline",
+      "draft": "Beat 200 battery life is 40 hours.",
+      "rationale": "Upper-bound evidence does not establish a guaranteed exact duration.",
+      "expected": [
+        {
+          "category": "battery_life",
+          "verdict": "needs_review",
+          "quote": "40 hours"
+        }
+      ],
+      "actual": [
+        {
+          "category": "battery_life",
+          "verdict": "needs_review",
+          "quote": "40 hours"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B10",
+      "group": "baseline",
+      "draft": "Beat 200 battery life up to 20 hours.",
+      "rationale": "A different upper-bound claim needs verification; it is not automatically supported.",
+      "expected": [
+        {
+          "category": "battery_life",
+          "verdict": "needs_review",
+          "quote": "up to 20 hours"
+        }
+      ],
+      "actual": [
+        {
+          "category": "battery_life",
+          "verdict": "needs_review",
+          "quote": "up to 20 hours"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B11",
+      "group": "baseline",
+      "draft": "Beat 200 has a 2-year warranty.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "warranty",
+          "verdict": "violation",
+          "quote": "2-year"
+        }
+      ],
+      "actual": [
+        {
+          "category": "warranty",
+          "verdict": "violation",
+          "quote": "2-year"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B12",
+      "group": "baseline",
+      "draft": "Beat 200 has a 12-month warranty.",
+      "rationale": "",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B13",
+      "group": "baseline",
+      "draft": "Beat 200 has a 1-year warranty.",
+      "rationale": "",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B14",
+      "group": "baseline",
+      "draft": "Discover cheap headphones.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "terminology",
+          "verdict": "violation",
+          "quote": "cheap"
+        }
+      ],
+      "actual": [
+        {
+          "category": "terminology",
+          "verdict": "violation",
+          "quote": "cheap"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B15",
+      "group": "baseline",
+      "draft": "Discover CHEAP headphones.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "terminology",
+          "verdict": "violation",
+          "quote": "CHEAP"
+        }
+      ],
+      "actual": [
+        {
+          "category": "terminology",
+          "verdict": "violation",
+          "quote": "CHEAP"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B16",
+      "group": "baseline",
+      "draft": "The cheapest headphones.",
+      "rationale": "Cheapest is a comparative claim but is not a whole-word cheap terminology match.",
+      "expected": [
+        {
+          "category": "claims",
+          "verdict": "unsupported",
+          "quote": "cheapest"
+        }
+      ],
+      "actual": [
+        {
+          "category": "claims",
+          "verdict": "unsupported",
+          "quote": "cheapest"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B17",
+      "group": "baseline",
+      "draft": "This word is cheaply.",
+      "rationale": "",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B18",
+      "group": "baseline",
+      "draft": "Discover Veyra Audio.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "disclaimer",
+          "verdict": "violation",
+          "quote": ""
+        }
+      ],
+      "actual": [
+        {
+          "category": "disclaimer",
+          "verdict": "violation",
+          "quote": ""
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B19",
+      "group": "baseline",
+      "draft": "Discover Veyra Audio. T&C apply",
+      "rationale": "",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B20",
+      "group": "baseline",
+      "draft": "Discover Veyra Audio. t&c\n APPLY.",
+      "rationale": "",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B21",
+      "group": "baseline",
+      "draft": "Best headphones in India.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "claims",
+          "verdict": "unsupported",
+          "quote": "Best"
+        }
+      ],
+      "actual": [
+        {
+          "category": "claims",
+          "verdict": "unsupported",
+          "quote": "Best"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B22",
+      "group": "baseline",
+      "draft": "The fastest headphones.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "claims",
+          "verdict": "unsupported",
+          "quote": "fastest"
+        }
+      ],
+      "actual": [
+        {
+          "category": "claims",
+          "verdict": "unsupported",
+          "quote": "fastest"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B23",
+      "group": "baseline",
+      "draft": "The number one headphones.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "claims",
+          "verdict": "unsupported",
+          "quote": "number one"
+        }
+      ],
+      "actual": [
+        {
+          "category": "claims",
+          "verdict": "unsupported",
+          "quote": "number one"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B24",
+      "group": "baseline",
+      "draft": "Guaranteed satisfaction.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "claims",
+          "verdict": "unsupported",
+          "quote": "Guaranteed"
+        }
+      ],
+      "actual": [
+        {
+          "category": "claims",
+          "verdict": "unsupported",
+          "quote": "Guaranteed"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B25",
+      "group": "baseline",
+      "draft": "Best headphones in India.",
+      "rationale": "This exact fictional sentence has an approved claim-evidence record in this profile.",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B26",
+      "group": "baseline",
+      "draft": "Beat 200 at ₹799. Air 100 at ₹1499.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹799"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹799"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B27",
+      "group": "baseline",
+      "draft": "Beat 200 at ₹999.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "needs_review",
+          "quote": "₹999"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "needs_review",
+          "quote": "₹999"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B28",
+      "group": "baseline",
+      "draft": "Beat 200 at ₹999.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "needs_review",
+          "quote": "₹999"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "needs_review",
+          "quote": "₹999"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B29",
+      "group": "baseline",
+      "draft": "🎧 Beat 200 at ₹799!",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹799"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹799"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "B30",
+      "group": "baseline",
+      "draft": "Beat 200 at ₹999.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "needs_review",
+          "quote": "₹999"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "needs_review",
+          "quote": "₹999"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C01",
+      "group": "challenge",
+      "draft": "This is not the best option.",
+      "rationale": "Negation does not assert superiority; a best-keyword warning is a false positive for this labelled policy example.",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C02",
+      "group": "challenge",
+      "draft": "Only ₹999 for Beat 200.",
+      "rationale": "Only modifies the price and is not an exclusivity/superiority claim.",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C03",
+      "group": "challenge",
+      "draft": "Set headphone volume to 100%.",
+      "rationale": "An operating instruction is not a 100% performance guarantee.",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C04",
+      "group": "challenge",
+      "draft": "Beat 200 battery life is fifty hours.",
+      "rationale": "A human reads fifty as 50, above the approved 40-hour maximum; spelled numbers are unsupported by the parser.",
+      "expected": [
+        {
+          "category": "battery_life",
+          "verdict": "violation",
+          "quote": "fifty hours"
+        }
+      ],
+      "actual": [
+        {
+          "category": "battery_life",
+          "verdict": "violation",
+          "quote": "fifty hours"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C05",
+      "group": "challenge",
+      "draft": "Beat 200 at ₹799 and Air 100 at ₹1499.",
+      "rationale": "A human can associate each adjacent price; the conservative engine may abstain on this multi-product sentence.",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹799"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹799"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C06",
+      "group": "challenge",
+      "draft": "Beat 200 is totally awesome!",
+      "rationale": "The explicit formal/no-exclamation investor rule applies; deterministic services do not yet enforce tone.",
+      "expected": [
+        {
+          "category": "tone",
+          "verdict": "violation",
+          "quote": "totally awesome!"
+        }
+      ],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "missed": [
+        {
+          "category": "tone",
+          "verdict": "violation",
+          "quote": "totally awesome!",
+          "count": 1
+        }
+      ],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C07",
+      "group": "challenge",
+      "draft": "Beat 200 outperforms every competitor.",
+      "rationale": "A comparative meaning is present without an approved claim-evidence record; its phrasing is outside the lexicon.",
+      "expected": [
+        {
+          "category": "claims",
+          "verdict": "unsupported",
+          "quote": "outperforms every competitor"
+        }
+      ],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "missed": [
+        {
+          "category": "claims",
+          "verdict": "unsupported",
+          "quote": "outperforms every competitor",
+          "count": 1
+        }
+      ],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C08",
+      "group": "challenge",
+      "draft": "Beat 200 costs 799 rupees.",
+      "rationale": "Explicit INR meaning uses a suffix currency word unsupported by the first parser.",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "799 rupees"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "799 rupees"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C09",
+      "group": "challenge",
+      "draft": "Beat 200 has a two-year warranty.",
+      "rationale": "A human reads two years against approved one year; spelled numbers are unsupported.",
+      "expected": [
+        {
+          "category": "warranty",
+          "verdict": "violation",
+          "quote": "two-year"
+        }
+      ],
+      "actual": [
+        {
+          "category": "warranty",
+          "verdict": "violation",
+          "quote": "two-year"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C10",
+      "group": "challenge",
+      "draft": "Beat 200 has up to 2400 minutes of battery life.",
+      "rationale": "The duration equals 40 hours, but supported/info findings are not scored. An exact case here does not prove minutes conversion was performed.",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C11",
+      "group": "challenge",
+      "draft": "Beat 200 has a 24-month warranty.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "warranty",
+          "verdict": "violation",
+          "quote": "24-month"
+        }
+      ],
+      "actual": [
+        {
+          "category": "warranty",
+          "verdict": "violation",
+          "quote": "24-month"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C12",
+      "group": "challenge",
+      "draft": "Beat 200 battery up to 50 hrs.",
+      "rationale": "",
+      "expected": [
+        {
+          "category": "battery_life",
+          "verdict": "violation",
+          "quote": "up to 50 hrs"
+        }
+      ],
+      "actual": [
+        {
+          "category": "battery_life",
+          "verdict": "violation",
+          "quote": "up to 50 hrs"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C13",
+      "group": "challenge",
+      "draft": "Beat 200 has battery life up to 40 hours. It costs ₹799.",
+      "rationale": "The selected product and sole explicit product agree, permitting conservative price fallback.",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹799"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹799"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C14",
+      "group": "challenge",
+      "draft": "Air 100 at ₹1499. It has battery life up to 50 hours.",
+      "rationale": "A human reads it as Air 100, while the selected product is Beat 200. The engine deliberately does not resolve cross-sentence pronouns.",
+      "expected": [
+        {
+          "category": "battery_life",
+          "verdict": "violation",
+          "quote": "up to 50 hours"
+        }
+      ],
+      "actual": [
+        {
+          "category": "battery_life",
+          "verdict": "needs_review",
+          "quote": "up to 50 hours"
+        }
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "missed": [
+        {
+          "category": "battery_life",
+          "verdict": "violation",
+          "quote": "up to 50 hours",
+          "count": 1
+        }
+      ],
+      "unexpected": [
+        {
+          "category": "battery_life",
+          "verdict": "needs_review",
+          "quote": "up to 50 hours",
+          "count": 1
+        }
+      ],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C15",
+      "group": "challenge",
+      "draft": "The word 'cheap' is forbidden by our terminology guide.",
+      "rationale": "Mentioning a forbidden term in policy discussion differs from using it to describe the advertised product.",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C16",
+      "group": "challenge",
+      "draft": "Beat 200 ships in 40 hours with a battery included.",
+      "rationale": "40 hours describes shipping, not battery life; nearby subject heuristics can misattribute it.",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C17",
+      "group": "challenge",
+      "draft": "Beat 200 costs ₹1,49,999.",
+      "rationale": "Indian comma grouping is not supported by the first INR price regex.",
+      "expected": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹1,49,999"
+        }
+      ],
+      "actual": [
+        {
+          "category": "price",
+          "verdict": "violation",
+          "quote": "₹1,49,999"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C18",
+      "group": "challenge",
+      "draft": "Beat 200 is not guaranteed to outperform competitors.",
+      "rationale": "Negated guarantee does not assert guaranteed performance; the keyword alone can be a false positive.",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C19",
+      "group": "challenge",
+      "draft": "Beat 200 battery life up to 39 hours.",
+      "rationale": "Changed upper bound requires review under the conservative evidence policy.",
+      "expected": [
+        {
+          "category": "battery_life",
+          "verdict": "needs_review",
+          "quote": "up to 39 hours"
+        }
+      ],
+      "actual": [
+        {
+          "category": "battery_life",
+          "verdict": "needs_review",
+          "quote": "up to 39 hours"
+        }
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    },
+    {
+      "id": "C20",
+      "group": "challenge",
+      "draft": "Follow our best practices for headphone care.",
+      "rationale": "Best practices is instructional wording, not a product superiority claim.",
+      "expected": [],
+      "actual": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "missed": [],
+      "unexpected": [],
+      "invalid_spans": 0,
+      "missing_evidence": 0,
+      "ai_used": false
+    }
+  ]
+}
