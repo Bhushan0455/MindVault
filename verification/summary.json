@@ -1,0 +1,97 @@
+{
+  "generated_utc": "2026-11-06T18:20:36.380445+00:00",
+  "full_project_completion_estimate_percent": 90,
+  "role_b_completion_estimate_percent": 98,
+  "backend_postgres": {
+    "passed": 377,
+    "subtests_passed": 63,
+    "failed": 0,
+    "skipped": 0
+  },
+  "backend_sqlite": {
+    "passed": 374,
+    "subtests_passed": 63,
+    "failed": 0,
+    "postgres_only_skipped": 3
+  },
+  "frontend": {
+    "passed": 53,
+    "failed": 0,
+    "original_regression_tests": 42,
+    "new_integration_tests": 11,
+    "typecheck": true,
+    "production_build": true,
+    "dependency_audit_vulnerabilities": 0
+  },
+  "http": {
+    "passed": true,
+    "transport": "real loopback HTTP",
+    "database": "isolated PostgreSQL 16.15 schema",
+    "ai_live_tested": false,
+    "journey": [
+      "login",
+      "review",
+      "source lookup",
+      "decisions",
+      "safe fixes",
+      "recheck",
+      "submit",
+      "reviewer queue",
+      "exact revision/hash approval"
+    ],
+    "api_paths": 46,
+    "static_spa": true,
+    "deep_links": true,
+    "persisted_history_and_submissions": true,
+    "team_and_evaluation": true
+  },
+  "latest_live_ai": {
+    "timestamp_utc": "2026-11-06T18:12:33.002279+00:00",
+    "fixture_brand_id": "a3b79da9-64b0-40c0-88cf-9cbcffaaed1f",
+    "evidence_source": "real HTTP requests to configured local demo API",
+    "checks": {
+      "knowledge_extraction": {
+        "verified": false,
+        "status": "done",
+        "method": "deterministic_fallback",
+        "pending_candidates": 5,
+        "job_id": "0bd72b5a-0bd3-4c0b-aff9-4519fa097afa",
+        "provider_failure": {
+          "http_status": 503,
+          "attempts": 3,
+          "fallback_explicitly_reported": true
+        }
+      },
+      "content_review": {
+        "verified": true,
+        "status": "done",
+        "ai_used": true,
+        "ai_status": "completed",
+        "retained_ai_findings": 1,
+        "exact_spans_and_sources": true,
+        "deterministic_price_retained": true,
+        "run_id": "7dffd18a-482e-4fdb-bf89-a0e1e3e3f8a4"
+      },
+      "clarity_audit": {
+        "verified": true,
+        "ai_used": true,
+        "ai_status": "completed",
+        "retained_ai_proposals": 2,
+        "source_validated_pending_proposals": true,
+        "job_id": "8b90bfb7-3b8a-4242-b949-680098a9d8e2"
+      }
+    },
+    "all_services_verified": false
+  },
+  "browser": {
+    "completed": false,
+    "reason": "Computer Use was stopped with Escape; no browser automation was resumed."
+  },
+  "remaining": [
+    "Own-document acceptance and AI quality assessment",
+    "Manual browser walkthrough, layout, keyboard and mobile verification",
+    "Extraction retry after Google HTTP503",
+    "Hosted deployment and deployment smoke checks"
+  ],
+  "data_policy": "Clearly labelled fictional starter data retained per user clarification. Real uploads use a separate brand."
+}

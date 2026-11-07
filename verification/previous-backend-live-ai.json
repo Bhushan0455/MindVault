@@ -1,0 +1,34 @@
+{
+  "timestamp_utc": "2026-11-06T14:17:38.412373+00:00",
+  "fixture_brand_id": "dda04439-08c2-469b-a0ab-bbb81df6c215",
+  "evidence_source": "real HTTP requests to configured local demo API",
+  "checks": {
+    "knowledge_extraction": {
+      "verified": true,
+      "status": "done",
+      "method": "ai",
+      "pending_candidates": 7,
+      "job_id": "75ed59af-4042-4475-804f-5a17200b0e5d"
+    },
+    "content_review": {
+      "verified": true,
+      "status": "done",
+      "ai_used": true,
+      "ai_status": "completed",
+      "retained_ai_findings": 1,
+      "exact_spans_and_sources": true,
+      "deterministic_price_retained": true,
+      "run_id": "1be5b54a-fc4c-4098-8a68-17893a423b82"
+    },
+    "clarity_audit": {
+      "verified": true,
+      "ai_used": true,
+      "ai_status": "completed",
+      "retained_ai_proposals": 2,
+      "source_validated_pending_proposals": true,
+      "job_id": "d1b13c99-f558-4f48-9c3f-70aa9f5b72ff"
+    }
+  },
+  "all_services_verified": true,
+  "scope_note": "Historical integrated backend fixture, before final frontend integration. This is not the latest extraction result."
+}
