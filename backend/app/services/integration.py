@@ -59,6 +59,7 @@ def review_revision(rev, item, db):
     catalog = list(db.scalars(select(m.ProductCatalog).where(m.ProductCatalog.org_id==item.org_id,m.ProductCatalog.brand_id==item.brand_id)))
     products, numeric, claims = fact_contracts(facts, db, catalog)
     ctx = dict(rev.context)
+    ctx.pop('language',None)  # Persisted UI metadata; not a rule scope dimension.
     ctx['market'] = ctx.pop('region', ctx.pop('market', ''))
     ctx['publication_date'] = date.fromisoformat(ctx['publication_date'])
     generator = GeminiContentGenerator(org_id=item.org_id, brand_id=item.brand_id) if settings.enable_semantic else None
