@@ -33,7 +33,7 @@ function Sidebar({ onNavigate, approvalCount, historyRoute = false, workspace=mo
     </div>
     <div className="nav-groups">{navigation.map(({ group, items }) => <div key={group}>
       <p className="nav-label">{group}</p>
-      <nav aria-label={group}>{items.filter(item=>!live||role==='admin'||(!['/upload','/clarity','/evaluation'].includes(item.path)&&(role==='reviewer'?!['/content-checks'].includes(item.path):!['/approvals','/audit-logs'].includes(item.path)))).map(({ label, path, icon: Icon }) => <NavLink key={path} to={path} onClick={onNavigate} aria-current={historyRoute && path === '/approvals' ? 'page' : undefined} className={({ isActive }) => `nav-link ${isActive || (historyRoute && path === '/approvals') ? 'active' : ''}`}>
+      <nav aria-label={group}>{items.filter(item=>!live||role==='admin'||(!['/upload','/clarity','/evaluation'].includes(item.path)&&(role==='reviewer'?!['/content-checks'].includes(item.path):!['/approvals','/audit-logs'].includes(item.path)))).map(({ label, path, icon: Icon }) => <NavLink key={path} to={path} onClick={onNavigate} aria-current={historyRoute && path === '/approvals' ? 'page' : undefined} className={({ isActive }) => `nav-link ${isActive || (historyRoute && path === '/approvals') || (path === '/overview' && location.pathname === '/dashboard') ? 'active' : ''}`}>
         <Icon size={16} /><span>{label}</span>{path === '/content-checks' && <span className="nav-dot" />}{path === '/approvals' && <span className="nav-count" aria-label={`${approvalCount} ${live?'pending':'sample'} approvals`}>{approvalCount}</span>}
       </NavLink>)}</nav>
     </div>)}</div>
@@ -51,7 +51,7 @@ export function ApplicationShell({ queueService, profile, workspaceName, live=fa
   const approvalCount = submissions.filter((item) => item.status === 'pending').length;
   const detailRoute = location.pathname.startsWith('/approvals/');
   const historyRoute = /^\/content\/[^/]+\/history\/?$/.test(location.pathname);
-  const current = navigation.flatMap((group) => group.items).find((item) => item.path === location.pathname)?.label ?? (detailRoute ? 'Approvals' : historyRoute ? 'Revision History' : 'Page not found');
+  const current = (location.pathname === '/dashboard' ? 'Overview' : navigation.flatMap((group) => group.items).find((item) => item.path === location.pathname)?.label) ?? (detailRoute ? 'Approvals' : historyRoute ? 'Revision History' : 'Page not found');
   return <div className={`app-shell ${location.pathname === '/approvals' || detailRoute || historyRoute ? 'reviewer-queue-shell' : ''} ${detailRoute ? 'reviewer-detail-shell' : ''}`}>
     <a className="skip-link" href="#main-content">Skip to content</a>
     <aside className="desktop-sidebar"><Sidebar workspace={workspace} live={live} role={role} approvalCount={approvalCount} historyRoute={historyRoute} /></aside>
