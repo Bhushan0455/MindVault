@@ -93,7 +93,7 @@ def test_rejection_reason_and_risk_visible_to_reviewer(client,auth,brand):
     queued=client.get('/api/queue',headers=auth['reviewer']).json()[0]
     assert queued['risk_decisions'][0]['decision_note']
     assert client.post(url,json={'action':'accept'},headers=auth['creator']).status_code==409
-    r=client.post(f"/api/content/{item['id']}/request-changes",headers=auth['reviewer'],json={'revision_id':item['current_revision']['id']})
+    r=client.post(f"/api/content/{item['id']}/request-changes",headers=auth['reviewer'],json={'revision_id':item['current_revision']['id'],'comment':'Please revise the draft.'})
     assert r.json()['content']['status']=='changes_requested'
 
 

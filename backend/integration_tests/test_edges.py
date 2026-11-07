@@ -153,7 +153,7 @@ def test_parallel_approval_one_winner(client,auth,brand):
     item=new_content(client,auth,brand,'A friendly greeting.')
     review(client,auth,item)
     client.post('/api/content/'+item['id']+'/submit',headers=auth['creator'])
-    def approve(): return client.post('/api/content/'+item['id']+'/approve',headers=auth['reviewer'],json={'revision_id':item['current_revision']['id']}).status_code
+    def approve(): return client.post('/api/content/'+item['id']+'/approve',headers=auth['reviewer'],json={'revision_id':item['current_revision']['id'],'comment':'Please revise the draft.'}).status_code
     with ThreadPoolExecutor(max_workers=2) as pool: codes=list(pool.map(lambda _:approve(),range(2)))
     assert sorted(codes)==[200,409]
 
@@ -196,7 +196,7 @@ def test_knowledge_changes_block_old_approval_but_allow_request_changes(client,a
     item=new_content(client,auth,brand,'A friendly greeting.'); review(client,auth,item)
     client.post('/api/content/'+item['id']+'/submit',headers=auth['creator'])
     client.post('/api/rules',headers=auth['admin'],json={'brand_id':brand,'code':'UPDATE','instruction':'Be precise.'})
-    payload={'revision_id':item['current_revision']['id']}
+    payload={'revision_id':item['current_revision']['id'],'comment':'Please recheck the updated knowledge.'}
     response=client.post('/api/content/'+item['id']+'/approve',json=payload,headers=auth['reviewer'])
     assert response.status_code==409 and response.json()['code']=='knowledge_changed'
     assert client.post('/api/content/'+item['id']+'/request-changes',json=payload,headers=auth['reviewer']).status_code==200
