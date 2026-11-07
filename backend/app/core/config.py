@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     # Neon CLI writes service credentials to .env.local. Load normal local
     # settings first, then allow the Neon-generated values to override them.
     model_config = SettingsConfigDict(
-        env_file=(PROJECT_ROOT / ".env", PROJECT_ROOT / ".env.local"),
+        env_file=(PROJECT_ROOT / ".env", PROJECT_ROOT.parent / ".env", PROJECT_ROOT / ".env.local"),
         extra="ignore",
         case_sensitive=False,
     )
