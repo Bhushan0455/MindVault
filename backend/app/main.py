@@ -16,6 +16,7 @@ from app.services.seed import seed
 from app.services.integration import review_revision, json_data, stored_finding, knowledge_fingerprint, evidence_snapshot
 from app.services.fixes import apply_selected_fixes, FixDecision, FixError
 from app.routers.knowledge import router as knowledge_router
+from app.routers.workspace import router as workspace_router
 from app.services.audit import record
 from app.body_limit import BodyLimitMiddleware
 from app.services.job_status import expired
@@ -28,6 +29,7 @@ async def lifespan(app):
 
 app = FastAPI(title="MindVault AI API", version="2.0.0", description="Integrated Role A + Role B API", lifespan=lifespan)
 app.include_router(knowledge_router)
+app.include_router(workspace_router)
 app.add_middleware(BodyLimitMiddleware,upload_limit=settings.max_upload_mb*1024*1024)
 # Allowed browser origins are configured explicitly.
 app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origins, allow_credentials=False,
@@ -199,13 +201,13 @@ async def upload_document(file: UploadFile=File(...), brand_id: str=Form(...), k
 
 @app.get("/api/documents")
 def list_documents(user=Depends(current_user),db: Session=Depends(get_db)):
-    return [{"id":d.id,"title":d.title,"filename":d.filename,"kind":d.kind,"version":d.version,"created_at":d.created_at.isoformat()} for d in db.scalars(scoped(db,Document,user))]
+    return [{"id":d.id,"brand_id":d.brand_id,"title":d.title,"filename":d.filename,"kind":d.kind,"version":d.version,"uploaded_by_name":(db.get(User,d.uploaded_by).name if db.get(User,d.uploaded_by) else "Unavailable account"),"created_at":d.created_at.isoformat()} for d in db.scalars(scoped(db,Document,user))]
 
 @app.get("/api/documents/{document_id}")
 def get_document(document_id: str,user=Depends(current_user),db: Session=Depends(get_db)):
     d=db.scalar(scoped(db,Document,user).where(Document.id==document_id))
     if not d: not_found()
-    return {"id":d.id,"title":d.title,"filename":d.filename,"kind":d.kind,"text":d.text,"version":d.version,"content_hash":d.content_hash}
+    return {"id":d.id,"brand_id":d.brand_id,"title":d.title,"filename":d.filename,"kind":d.kind,"text":d.text,"version":d.version,"content_hash":d.content_hash,"created_at":d.created_at.isoformat()}
 
 @app.post("/api/content")
 def create_content(data: ContentIn, user=Depends(require_role("creator", "admin")), db: Session = Depends(get_db)):
@@ -213,7 +215,7 @@ def create_content(data: ContentIn, user=Depends(require_role("creator", "admin"
     if not brand: not_found()
     item = Content(org_id=user.org_id, brand_id=brand.id, title=data.title, created_by=user.id, status="draft")
     db.add(item); db.flush()
-    rev = Revision(content_id=item.id, number=1, body_text=data.body_text, body_hash=digest(data.body_text), created_by=user.id,
+    rev = Revision(content_id=item.id, title=data.title, number=1, body_text=data.body_text, body_hash=digest(data.body_text), created_by=user.id,
                    context=data.context.model_dump(mode="json"))
     db.add(rev); db.flush(); item.current_revision_id = rev.id
     record(db, user, "content_created", "content", item.id, {"revision_id": rev.id}); db.commit(); db.refresh(item)
@@ -240,7 +242,7 @@ def edit_content(content_id: str, data: ContentIn, user=Depends(require_role("cr
     if data.expected_revision_id and data.expected_revision_id != prev.id: raise HTTPException(409, detail="Revision changed; refresh first")
     c.title=data.title
     context=data.context.model_dump(mode="json") if 'context' in data.model_fields_set else prev.context
-    rev = Revision(content_id=c.id, number=prev.number+1, body_text=data.body_text, body_hash=digest(data.body_text), created_by=user.id, context=context)
+    rev = Revision(content_id=c.id, title=data.title, number=prev.number+1, body_text=data.body_text, body_hash=digest(data.body_text), created_by=user.id, context=context)
     db.add(rev); db.flush(); c.current_revision_id = rev.id; c.latest_run_id = None; c.status = "draft"
     record(db, user, "revision_created", "content", c.id, {"revision_id": rev.id}); db.commit(); db.refresh(c)
     return content_view(c, db)
@@ -316,7 +318,7 @@ def apply_fixes(content_id: str,tasks: BackgroundTasks,user=Depends(require_role
     except FixError as exc: raise HTTPException(409,detail={"detail":str(exc),"code":exc.code})
     if not result.changed: raise HTTPException(409,detail={"detail":"No changes are ready to apply","code":"no_fixes"})
     body=result.body_text
-    rev=Revision(content_id=c.id,number=prev.number+1,body_text=body,body_hash=digest(body),created_by=user.id,context=prev.context)
+    rev=Revision(content_id=c.id,title=prev.title,number=prev.number+1,body_text=body,body_hash=digest(body),created_by=user.id,context=prev.context)
     db.add(rev); db.flush(); c.current_revision_id=rev.id; c.status="draft"
     newrun=ReviewRun(revision_id=rev.id,status="queued",progress_step="intake"); db.add(newrun); db.flush(); c.latest_run_id=newrun.id
     record(db,user,"fixes_applied","content",c.id,{"revision_id":rev.id,"run_id":newrun.id}); db.commit(); tasks.add_task(run_review,newrun.id)
@@ -348,6 +350,8 @@ def queue(user=Depends(require_role("reviewer","admin")),db: Session=Depends(get
     return result
 
 def reviewer_decision(content_id,data,user,db,decision):
+    if decision=='changes_requested' and not (data.comment and data.comment.strip()):
+        raise HTTPException(422,detail={"detail":"A reviewer comment is required when requesting changes","code":"comment_required"})
     c=content_for(db,content_id,user); current=revision_for(db,c)
     if data.revision_id!=current.id:
         raise HTTPException(409,detail={"detail":"The content changed after this revision was reviewed","code":"stale_revision"})
@@ -372,7 +376,7 @@ def request_changes(content_id: str,data: ApprovalIn,user=Depends(require_role("
 def get_comments(content_id: str,user=Depends(current_user),db: Session=Depends(get_db)):
     from app.models import Comment
     c=content_for(db,content_id,user)
-    return [{"id":x.id,"revision_id":x.revision_id,"finding_id":x.finding_id,"user_id":x.user_id,"body":x.body,"created_at":x.created_at.isoformat()} for x in db.scalars(select(Comment).where(Comment.content_id==c.id))]
+    return [{"id":x.id,"revision_id":x.revision_id,"finding_id":x.finding_id,"user_id":x.user_id,"user_name":(db.get(User,x.user_id).name if db.get(User,x.user_id) and db.get(User,x.user_id).org_id==user.org_id else "Unavailable account"),"body":x.body,"created_at":x.created_at.isoformat()} for x in db.scalars(select(Comment).where(Comment.content_id==c.id))]
 
 @app.post("/api/content/{content_id}/comments")
 def add_comment(content_id: str,data: CommentIn,user=Depends(current_user),db: Session=Depends(get_db)):
@@ -397,3 +401,19 @@ def audit(entity: str | None=None,user=Depends(require_role("admin","reviewer"))
 def insights(user=Depends(require_role("admin")),db: Session=Depends(get_db)):
     contents=list(db.scalars(scoped(db,Content,user))); findings=list(db.scalars(select(Finding).join(ReviewRun,Finding.review_run_id==ReviewRun.id).join(Revision,Finding.revision_id==Revision.id).join(Content,Revision.content_id==Content.id).where(Content.org_id==user.org_id)))
     return {"content_by_status":{s:sum(c.status==s for c in contents) for s in ["draft","checked","in_review","approved","changes_requested"]},"findings_by_category":{k:sum(f.category==k for f in findings) for k in sorted({f.category for f in findings})}}
+
+# Serve the shipped React build on the same address as the API.
+from pathlib import Path
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+_frontend_dist = Path(__file__).resolve().parents[2] / "frontend" / "dist"
+if (_frontend_dist / "assets").is_dir():
+    app.mount("/assets", StaticFiles(directory=_frontend_dist / "assets"), name="frontend-assets")
+
+@app.get("/{path:path}", include_in_schema=False)
+def frontend_page(path: str):
+    if path == "api" or path.startswith("api/"):
+        raise HTTPException(404, "API endpoint not found")
+    if not (_frontend_dist / "index.html").is_file():
+        raise HTTPException(404, "Frontend build missing. Build the frontend before starting the website.")
+    return FileResponse(_frontend_dist / "index.html", headers={"Cache-Control": "no-cache"})

@@ -108,6 +108,7 @@ class Content(Base):
     latest_run_id: Mapped[str | None] = mapped_column(String(36), nullable=True)
 
 class Revision(Base):
+    title: Mapped[str | None] = mapped_column(String(255),nullable=True)
     __tablename__ = "content_revisions"
     __table_args__ = (UniqueConstraint("content_id", "number", name="uq_revision_number"),)
     id: Mapped[str] = mapped_column(String(36), primary_key=True, default=uid)

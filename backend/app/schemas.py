@@ -16,6 +16,7 @@ class ContextIn(BaseModel):
     region: str = "IN"
     content_type: str = "paid_ad"
     campaign: str | None = None
+    language: str | None = Field(default=None,max_length=80)
     publication_date: date = Field(default_factory=date.today)
 
 

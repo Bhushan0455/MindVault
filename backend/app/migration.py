@@ -8,6 +8,7 @@ from app.db import Base
 from app import models  # register tables
 
 ADDITIONS = {
+    'content_revisions': {'title':'VARCHAR(255)'},
     'rules': {'requires_claim_evidence':'BOOLEAN NOT NULL DEFAULT FALSE', 'supersedes_id':'VARCHAR(36)'},
     'facts': {'qualifier':"VARCHAR(20) NOT NULL DEFAULT 'exact'", 'source_excerpt':'TEXT', 'supersedes_id':'VARCHAR(36)'},
     'findings': {'snapshot':"JSON NOT NULL DEFAULT '{}'"},
