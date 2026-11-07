@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MindVault AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--fd:'Space Grotesk','Plus Jakarta Sans',Inter,system-ui,sans-serif;--bg:#080B14;--side:#0D1220;--card:#121A2B;--s2:#182238;--ac:#7867F7;--ac2:#36B9D8;--tx:#F4F6FC;--mu:#98A3B8;--ok:#38B879;--wn:#E6AD52;--er:#E36B78;--bd:rgba(152,163,184,.16);--sw:236px;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+html,body,#root{height:100%;margin:0}
+body{background:var(--bg);color:var(--tx);font:400 14px/1.6 'Plus Jakarta Sans',Inter,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;letter-spacing:-.003em}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2{margin:0;font:600 20px/1.25 var(--fd);letter-spacing:-.02em}
+h3{margin:0;font-size:15px;line-height:1.4;font-weight:600;letter-spacing:-.005em}
+.app{display:grid;grid-template-columns:var(--sw) minmax(0,1fr);height:100%;transition:grid-template-columns .25s}
+.app.col{--sw:68px}
+aside{background:var(--side);border-right:1px solid var(--bd);display:flex;flex-direction:column;padding:14px 10px;overflow-y:auto;min-height:0}
+.brand{display:flex;align-items:center;gap:10px;padding:4px 8px 16px;font-family:var(--fd);font-weight:700;font-size:18px;letter-spacing:-.02em;white-space:nowrap}
+.brand b{color:var(--ac2);font-weight:600;margin-left:3px}
+.col .lbl{display:none}
+.nav{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:9px;color:var(--mu);cursor:pointer;border:0;background:none;width:100%;text-align:left;position:relative;white-space:nowrap;transition:background .15s,color .15s}
+.nav:hover{background:var(--s2);color:var(--tx)}
+.nav.on{background:linear-gradient(90deg,rgba(120,103,247,.28),rgba(120,103,247,.06));color:var(--tx);box-shadow:inset 2px 0 var(--ac)}
+.col .nav:hover::after{content:attr(data-t);position:fixed;left:72px;background:var(--s2);border:1px solid var(--bd);padding:4px 10px;border-radius:6px;font-size:12px;z-index:60;color:var(--tx)}
+.sep{height:1px;background:var(--bd);margin:12px 6px}
+main{display:flex;flex-direction:column;min-width:0;min-height:0}
+.top{display:flex;align-items:center;gap:12px;padding:12px 22px;border-bottom:1px solid var(--bd);background:rgba(8,11,20,.85);backdrop-filter:blur(8px)}
+.crumb{color:var(--mu);font-size:12px}
+.search{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--bd);border-radius:9px;padding:6px 10px;width:230px;max-width:30vw}
+.search input{background:none;border:0;outline:0;width:100%}
+.ib{background:none;border:0;color:var(--mu);cursor:pointer;padding:6px;border-radius:8px;display:grid;place-items:center;position:relative}
+.ib:hover{background:var(--s2);color:var(--tx)}
+.dot{position:absolute;top:4px;right:4px;width:8px;height:8px;border-radius:50%;background:var(--ac)}
+.av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));display:grid;place-items:center;font-weight:600;font-size:13px;color:#fff;flex:none}
+.who{display:flex;align-items:center;gap:9px;cursor:pointer;background:none;border:0;text-align:left}
+.who small{display:block;color:var(--mu);font-size:11px;line-height:1.2}
+.pop{position:absolute;right:0;top:calc(100% + 8px);background:var(--card);border:1px solid var(--bd);border-radius:12px;min-width:230px;padding:6px;z-index:70;box-shadow:0 18px 40px rgba(0,0,0,.5);animation:pi .15s}
+.pop button{display:block;width:100%;text-align:left;background:none;border:0;padding:8px 10px;border-radius:7px;cursor:pointer}
+.pop button:hover{background:var(--s2)}
+.rel{position:relative}
+.page{padding:22px;overflow:auto;flex:1;min-height:0;animation:pi .28s ease-out}
+@keyframes pi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.ph{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.ph p{margin:4px 0 0;color:var(--mu);max-width:620px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.tilt:hover{transform:perspective(800px) rotateX(2.5deg) translateY(-3px);box-shadow:0 18px 34px rgba(0,0,0,.45),0 0 0 1px rgba(120,103,247,.3)}
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.met{font-family:var(--fd);font-size:30px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-top:4px;font-variant-numeric:tabular-nums}
+.mu{color:var(--mu)}.sm{font-size:12px}
+.btn{background:var(--ac);border:0;color:#fff;padding:8px 14px;border-radius:9px;cursor:pointer;font-weight:500;transition:transform .1s,filter .15s}
+.btn:hover{filter:brightness(1.12)}.btn:active{transform:scale(.97)}
+.btn.g{background:var(--s2);border:1px solid var(--bd);color:var(--tx)}
+.btn.ok{background:rgba(56,184,121,.18);color:var(--ok);border:1px solid rgba(56,184,121,.4)}
+.btn.no{background:rgba(227,107,120,.15);color:var(--er);border:1px solid rgba(227,107,120,.4)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.bd{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:500;border:1px solid}
+.approved{color:var(--ok);border-color:rgba(56,184,121,.4);background:rgba(56,184,121,.1)}
+.pending{color:var(--wn);border-color:rgba(230,173,82,.45);background:rgba(230,173,82,.1)}
+.rejected{color:var(--er);border-color:rgba(227,107,120,.4);background:rgba(227,107,120,.1)}
+.info{color:var(--ac2);border-color:rgba(54,185,216,.4);background:rgba(54,185,216,.1)}
+.sim{color:#fff;border-color:var(--wn);background:rgba(230,173,82,.25);letter-spacing:.04em}
+.ban{display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:10px;margin-bottom:16px;border:1px dashed rgba(230,173,82,.5);background:rgba(230,173,82,.07);color:#f1d6a4;font-size:13px}
+.tw{overflow-x:auto;border:1px solid var(--bd);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:1000px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--bd);vertical-align:top}
+th{color:var(--mu);font-weight:600;letter-spacing:.01em;font-size:12px;background:var(--s2);cursor:pointer;white-space:nowrap}
+tr.pend td{background:repeating-linear-gradient(135deg,rgba(230,173,82,.05) 0 8px,transparent 8px 16px)}
+tr.rej td{opacity:.6}
+tr.hv:hover td{background:rgba(120,103,247,.07);cursor:pointer}
+.f{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--mu)}
+input,select,textarea{background:var(--bg);border:1px solid var(--bd);border-radius:9px;padding:8px 10px;outline:0;width:100%}
+input:focus,select:focus,textarea:focus,.btn:focus-visible,.nav:focus-visible{border-color:var(--ac);box-shadow:0 0 0 2px rgba(120,103,247,.35)}
+textarea{min-height:84px;resize:vertical}
+.ov{position:fixed;inset:0;background:rgba(4,6,12,.72);display:grid;place-items:center;z-index:80;padding:16px;animation:pi .18s}
+.md{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px;width:100%;max-width:680px;max-height:88vh;overflow:auto;box-shadow:0 30px 70px rgba(0,0,0,.6)}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--bd);margin-bottom:16px;overflow-x:auto}
+.tab{background:none;border:0;padding:9px 14px;color:var(--mu);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+.tab.on{color:var(--tx);border-color:var(--ac)}
+.drop{border:1.5px dashed rgba(152,163,184,.4);border-radius:16px;padding:38px 20px;text-align:center;background:var(--s2);transition:.2s;cursor:pointer}
+.drop.over{border-color:var(--ac2);background:rgba(54,185,216,.08);box-shadow:0 0 0 3px rgba(54,185,216,.15),inset 0 0 40px rgba(120,103,247,.12)}
+.bar{height:8px;border-radius:5px;background:var(--s2);overflow:hidden;display:flex}
+.bar i{display:block;height:100%}
+.ex{background:var(--bg);border-left:3px solid var(--ac);padding:10px 12px;border-radius:0 8px 8px 0;font-size:13px;color:#c9d1e3}
+.st{display:flex;gap:10px;align-items:flex-start;padding:7px 0}
+.sd{width:20px;height:20px;border-radius:50%;border:2px solid var(--bd);flex:none;display:grid;place-items:center;font-size:11px}
+.sd.d{background:var(--ok);border-color:var(--ok);color:#06140d}.sd.x{border-color:var(--wn);color:var(--wn)}
+.toast{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--card);border:1px solid var(--bd);border-left:3px solid var(--ac);padding:11px 15px;border-radius:10px;z-index:99;max-width:360px;animation:pi .2s;box-shadow:0 14px 30px rgba(0,0,0,.5)}
+.toast.warn{border-left-color:var(--wn)}.toast.err{border-left-color:var(--er)}
+.auth{min-height:100vh;min-height:100dvh;width:100%;display:grid;place-items:center;padding:20px;background:radial-gradient(900px 500px at 20% 0%,rgba(120,103,247,.2),transparent),radial-gradient(700px 500px at 90% 100%,rgba(54,185,216,.14),transparent),var(--bg)}
+.auth .card{width:100%;max-width:420px;padding:26px;margin:auto}
+.pw{position:relative;width:100%}.pw input{padding-right:44px}
+.eye{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:32px;height:32px;display:grid;place-items:center;background:none;border:0;border-radius:8px;color:var(--mu);cursor:pointer;padding:0}
+.eye:hover{background:var(--s2);color:var(--tx)}.eye:focus-visible{outline:0;box-shadow:0 0 0 2px rgba(120,103,247,.5);color:var(--tx)}
+.err{color:var(--er);font-size:12px}
+.del{color:var(--er);text-decoration:line-through}.add{color:var(--ok)}
+.mbtn{display:none}
+.scrim{display:none}
+.nav{font-size:13.5px;font-weight:500}
+.btn{font-size:13px;font-weight:600}
+.tab,.who{font-weight:500}.who small{font-weight:400}
+.f>span{font-weight:500;letter-spacing:.005em}
+.bd{letter-spacing:.01em}
+.toast{font-size:13px;font-weight:500}
+.sm{line-height:1.5;font-weight:400}.mu{font-weight:400}
+.pt{font-size:19px}
+@media(max-width:820px){.pt{font-size:16px}.met{font-size:26px}h3{font-size:14px}}
+@media(max-width:820px){.app{grid-template-columns:1fr}aside{position:fixed;z-index:90;left:0;top:0;bottom:0;width:250px;transform:translateX(-102%);transition:transform .25s}.app.open aside{transform:none}.app.open .scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:85}.mbtn{display:grid}.search{display:none}.who span{display:none}.page{padding:14px}.app.col aside .lbl{display:inline}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script>
+const {useState,useEffect,useMemo,useRef}=React;
+const html=htm.bind(React.createElement);
+const API_BASE=''; // VITE_API_BASE_URL equivalent: not reachable from a published preview page
+const TODAY='2026-11-06';
+const I={dash:'M3 3h7v9H3zM14 3h7v5h-7zM14 12h7v9h-7zM3 16h7v5H3z',lib:'M4 19.5V5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2zM4 19.5A2.5 2.5 0 0 0 6.5 22H20',up:'M12 16V4m0 0L7 9m5-5 5 5M4 20h16',ext:'M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zM14 3v6h6M8 13h8M8 17h5',rules:'M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11',aud:'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM21 21l-5-5',src:'M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5',eval:'M9 3h6M10 3v6L4 20a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1l-6-11V3',user:'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z',set:'M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0M14 4v4M8 10v4M16 16v4',out:'M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9',bell:'M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0',menu:'M3 6h18M3 12h18M3 18h18',x:'M18 6 6 18M6 6l12 12',chev:'M15 18l-6-6 6-6',find:'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM21 21l-5-5',eye:'M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z',eyeoff:'M17.9 17.9A10.1 10.1 0 0 1 12 19c-6.5 0-10-7-10-7a18 18 0 0 1 5.1-5.9M9.9 4.2A9 9 0 0 1 12 4c6.5 0 10 7 10 7a18 18 0 0 1-2.2 3.2M1 1l22 22M14.1 14.1a3 3 0 1 1-4.2-4.2'};
+const Icon=({n,s=18})=>html`<svg width=${s} height=${s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d=${I[n]}/></svg>`;
+const Logo=({s=30})=>html`<svg width=${s} height=${s} viewBox="0 0 32 32" fill="none"><defs><linearGradient id="lg" x1="0" y1="0" x2="32" y2="32"><stop offset="0" stopColor="#7867F7"/><stop offset="1" stopColor="#36B9D8"/></linearGradient></defs><path d="M16 2l12 7v14l-12 7L4 23V9z" stroke="url(#lg)" strokeWidth="2" strokeLinejoin="round"/><circle cx="16" cy="16" r="5.5" stroke="url(#lg)" strokeWidth="1.6"/><path d="M16 10.5V6M20.8 18.8 24.5 21M11.2 18.8 7.5 21" stroke="url(#lg)" strokeWidth="1.6" strokeLinecap="round"/><circle cx="16" cy="16" r="2" fill="url(#lg)"/><circle cx="16" cy="5.5" r="1.4" fill="#36B9D8"/><circle cx="25" cy="21.3" r="1.4" fill="#7867F7"/><circle cx="7" cy="21.3" r="1.4" fill="#7867F7"/></svg>`;
+const Wordmark=()=>html`<span className="brand"><${Logo}/><span className="lbl">MindVault<b>AI</b></span></span>`;
+
+const KB0=[
+{id:'r1',type:'rule',text:'Do not use the word ‘cheapest’ in marketing advertisements.',cat:'Terminology',channel:'All',audience:'All',region:'India',ctype:'Advertisement',campaign:'All',priority:'Critical',status:'approved',doc:'Veyra_Brand_Guidelines.pdf',ref:'p. 4',ex:'“Veyra never positions products as ‘cheapest’; use ‘great value’ instead.”',upd:'2026-11-04',ver:1,by:'Aarav (Admin)'},
+{id:'f1',type:'fact',text:'Veyra Beat 200 has an approved selling price of ₹999.',cat:'Pricing',channel:'All',audience:'All',region:'India',ctype:'Advertisement',campaign:'All',priority:'Critical',status:'approved',doc:'Veyra_Price_List.pdf',ref:'p. 12, price table',ex:'“Beat 200 — MRP ₹999 (India), valid from 1 Oct 2026.”',upd:'2026-11-04',ver:1,by:'Aarav (Admin)'},
+{id:'r2',type:'rule',text:'Absolute claims such as ‘100% guaranteed’ require approved evidence.',cat:'Claims',channel:'All',audience:'All',region:'All',ctype:'All',campaign:'All',priority:'High',status:'approved',doc:'Veyra_Brand_Guidelines.pdf',ref:'p. 7',ex:'“Guarantees must be backed by documented evidence approved by Legal.”',upd:'2026-11-04',ver:1,by:'Aarav (Admin)'},
+{id:'r3',type:'rule',text:'Use a friendly, simple tone on Instagram; emojis are permitted.',cat:'Tone',channel:'Instagram',audience:'Consumers',region:'All',ctype:'Social post',campaign:'All',priority:'Medium',status:'approved',doc:'Veyra_Brand_Guidelines.pdf',ref:'p. 9',ex:'“Social voice: warm, short sentences. Emojis welcome.”',upd:'2026-11-04',ver:1,by:'Aarav (Admin)'},
+{id:'r4',type:'rule',text:'Investor decks must avoid emojis and slang.',cat:'Tone',channel:'Investor deck',audience:'Investors',region:'All',ctype:'Presentation',campaign:'All',priority:'Medium',status:'approved',doc:'Veyra_Brand_Guidelines.pdf',ref:'p. 10',ex:'“Investor material uses formal language. No emojis.”',upd:'2026-11-04',ver:1,by:'Aarav (Admin)'},
+{id:'f4',type:'fact',text:'Veyra Beat 200 ships with a 12-month warranty.',cat:'Specifications',channel:'All',audience:'All',region:'India',ctype:'All',campaign:'All',priority:'Medium',status:'approved',doc:'Product_Spec_Sheet.pdf',ref:'p. 3',ex:'“Warranty: 12 months from date of purchase.”',upd:'2026-11-04',ver:1,by:'Aarav (Admin)'},
+{id:'r8',type:'rule',text:'Do not compare Veyra products with named competitors.',cat:'Compliance',channel:'All',audience:'All',region:'All',ctype:'Advertisement',campaign:'All',priority:'High',status:'approved',doc:'Veyra_Brand_Guidelines.pdf',ref:'p. 8',ex:'“Comparative advertising naming competitors is not permitted.”',upd:'2026-11-04',ver:1,by:'Aarav (Admin)'},
+{id:'r5',type:'rule',text:'Every price advertisement must include the disclaimer ‘Terms apply’.',cat:'Disclaimers',channel:'All',audience:'Consumers',region:'India',ctype:'Advertisement',campaign:'Diwali Launch',priority:'High',status:'pending',doc:'Veyra_Campaign_Playbook.docx',ref:'Section 3, ¶2',ex:'“All price-led ads in the Diwali Launch must carry ‘Terms apply’.”',upd:'2026-11-05',ver:1},
+{id:'r6',type:'rule',text:'Avoid exaggerated superlatives such as ‘best in the world’.',cat:'Claims',channel:'All',audience:'All',region:'All',ctype:'All',campaign:'All',priority:'High',status:'pending',doc:'Veyra_Campaign_Playbook.docx',ref:'Section 3, ¶5',ex:'“Superlatives need proof. ‘Best in the world’ is not acceptable.”',upd:'2026-11-05',ver:1},
+{id:'f2',type:'fact',text:'Veyra Beat 200 battery life is 30 hours.',cat:'Specifications',channel:'All',audience:'All',region:'All',ctype:'All',campaign:'All',priority:'Medium',status:'pending',doc:'Product_Spec_Sheet.pdf',ref:'p. 2',ex:'“Battery: up to 30 hours playback (ANC off).”',upd:'2026-11-05',ver:1},
+{id:'f3',type:'fact',text:'Veyra Beat 200 was priced at ₹899 until 30 Sep 2026.',cat:'Pricing',channel:'All',audience:'All',region:'India',ctype:'All',campaign:'All',priority:'Low',status:'rejected',doc:'Veyra_Price_List.pdf',ref:'p. 13',ex:'“Previous price ₹899 (expired).”',upd:'2026-11-05',ver:1},
+{id:'r7',type:'rule',text:'Always mention free shipping in every channel.',cat:'Offers',channel:'All',audience:'All',region:'All',ctype:'All',campaign:'All',priority:'Low',status:'rejected',doc:'Veyra_Campaign_Playbook.docx',ref:'Section 5, ¶1',ex:'“Free shipping should be highlighted.” (conflicts with investor tone rules)',upd:'2026-11-05',ver:1}];
+const CL0=[
+{id:'c1',orig:'Use appropriate language in advertisements.',cat:'Vague term',why:'It does not explain which language is appropriate or which words must be avoided.',rw:'Use simple and professional language. Avoid exaggerated claims such as ‘best in the world’ unless supported by approved evidence.',doc:'Veyra_Brand_Guidelines.pdf',ref:'p. 6',st:'pending',v:1},
+{id:'c2',orig:'Mention offers where relevant.',cat:'Missing scope',why:'“Where relevant” has no channel, audience or campaign scope, so checkers cannot tell when it applies.',rw:'Mention the active offer in Diwali Launch advertisements for Indian consumers; omit it in investor decks.',doc:'Veyra_Campaign_Playbook.docx',ref:'Section 5, ¶3',st:'pending',v:1},
+{id:'c3',orig:'Keep the tone upbeat but serious.',cat:'Contradictory wording',why:'“Upbeat” and “serious” pull in opposite directions without an example of each.',rw:'Use an upbeat tone on Instagram (example: “Meet Beat 200 🎧”). Use a formal tone in investor decks (example: “Beat 200 expands our audio range.”).',doc:'Veyra_Brand_Guidelines.pdf',ref:'p. 9',st:'pending',v:1}];
+const UP0=[
+{id:'u1',item:'Veyra Beat 200 selling price',from:'₹999',to:'₹1,099',src:'Simulated feed: Veyra_Price_Update_Nov.xlsx',date:'2026-11-06',st:'pending',nums:[999,1099]},
+{id:'u2',item:'Veyra Beat 200 battery life',from:'30 hours',to:'32 hours',src:'Simulated feed: Product_Spec_Revision_B.pdf',date:'2026-11-06',st:'pending',nums:[30,32]}];
+const EV0=[
+{id:'T01',d:'Incorrect price',draft:'Get Veyra Beat 200 today for just ₹799!',exp:'Incorrect price violation (approved ₹999)'},
+{id:'T02',d:'Correct price',draft:'Get Veyra Beat 200 today for just ₹999. Terms apply.',exp:'No price violation'},
+{id:'T03',d:'Prohibited word',draft:'The cheapest earbuds in India — Veyra Beat 200.',exp:'Terminology violation (‘cheapest’)'},
+{id:'T04',d:'Unsupported claim',draft:'Veyra Beat 200: 100% guaranteed to improve your sound.',exp:'Unsupported claim requiring verification'},
+{id:'T05',d:'Fully compliant draft',draft:'Meet Veyra Beat 200 — great value at ₹999. Terms apply.',exp:'No violation'}];
+const DOCS0=[
+{n:'Veyra_Brand_Guidelines.pdf',t:'Brand guidelines',d:'2026-11-04',s:'Extracted',id:'doc-1a2b'},
+{n:'Veyra_Price_List.pdf',t:'Price list',d:'2026-11-04',s:'Extracted',id:'doc-3c4d'},
+{n:'Veyra_Campaign_Playbook.docx',t:'Campaign playbook',d:'2026-11-05',s:'Candidates pending approval',id:'doc-5e6f'},
+{n:'Old_Scan_2019.pdf',t:'Legacy scan',d:'2026-11-05',s:'Failed: no text layer',id:'doc-7a8b'}];
+const NAV=[['dashboard','Dashboard','dash'],['library','Knowledge Library','lib'],['upload','Document Upload','up'],['extraction','Extraction Results','ext'],['rules','Rule & Fact Management','rules'],['clarity','Guideline Clarity Auditor','aud'],['sources','Source Updates','src'],['evaluation','Evaluation & Testing','eval']];
+const ACC=[['profile','Profile','user'],['settings','Settings','set']];
+const TITLES={...Object.fromEntries([...NAV,...ACC].map(n=>[n[0],n[1]]))};
+const PR={Critical:0,High:1,Medium:2,Low:3};
+const SC={channel:['All','Instagram','Investor deck','Email','Print'],audience:['All','Consumers','Investors'],region:['All','India','Global'],ctype:['All','Advertisement','Social post','Presentation'],campaign:['All','Diwali Launch']};
+const CATS=['Terminology','Pricing','Claims','Tone','Disclaimers','Specifications','Compliance','Offers'];
+const Bd=({s})=>html`<span className=${'bd '+s}>${s[0].toUpperCase()+s.slice(1)}</span>`;
+const Sim=()=>html`<span className="bd sim">SIMULATION</span>`;
+const Demo=({t})=>html`<div className="ban"><span className="bd sim">DEMO DATA</span><span>${t||'Sample fixtures. No backend is connected, so nothing here is saved to the MindVault server.'}</span></div>`;
+const F=({l,children})=>html`<label className="f"><span>${l}</span>${children}</label>`;
+const Sel=({v,o,on})=>html`<select value=${v} onChange=${e=>on(e.target.value)}>${o.map(x=>html`<option key=${x} value=${x}>${x}</option>`)}</select>`;
+const Modal=({close,children})=>html`<div className="ov" onClick=${close}><div className="md" onClick=${e=>e.stopPropagation()}>${children}</div></div>`;
+const initials=n=>n.split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase();
+
+/* ---------- Item detail / edit modal ---------- */
+function ItemModal({it,c,close}){
+  const [ed,setEd]=useState(false);const [d,setD]=useState(it);
+  const set=(k,v)=>setD(x=>({...x,[k]:v}));
+  const save=()=>{if(!d.text.trim())return c.notify('Rule or fact text cannot be empty.','err');
+    const wasApproved=it.status==='approved';
+    c.upd(it.id,{...d,status:wasApproved?'pending':d.status,ver:it.ver+(wasApproved?1:0),upd:TODAY});
+    c.notify(wasApproved?'Edit creates version '+(it.ver+1)+' as Pending until re-approved (local demo, not saved to backend).':'Edit applied locally (demo, not saved to backend).');setEd(false)};
+  return html`<${Modal} close=${close}>
+    <div className="row" style=${{justifyContent:'space-between'}}><div className="row"><${Bd} s=${it.status}/><span className="bd info">${it.type==='rule'?'Rule':'Fact'}</span><span className="mu sm">v${it.ver}</span></div><button className="ib" onClick=${close} aria-label="Close"><${Icon} n="x"/></button></div>
+    ${ed?html`<div className="grid" style=${{marginTop:12}}>
+      <${F} l="Rule / fact text"><textarea value=${d.text} onChange=${e=>set('text',e.target.value)}/></${F}>
+      <div className="grid g4"><${F} l="Category"><${Sel} v=${d.cat} o=${CATS} on=${v=>set('cat',v)}/></${F}><${F} l="Priority"><${Sel} v=${d.priority} o=${Object.keys(PR)} on=${v=>set('priority',v)}/></${F}>
+      ${Object.keys(SC).map(k=>html`<${F} key=${k} l=${k==='ctype'?'Content type':k[0].toUpperCase()+k.slice(1)}><${Sel} v=${d[k]} o=${SC[k]} on=${v=>set(k,v)}/></${F}>`)}</div>
+      <div className="row"><button className="btn" onClick=${save}>Save changes</button><button className="btn g" onClick=${()=>{setD(it);setEd(false)}}>Cancel</button></div></div>`
+    :html`<h3 style=${{margin:'12px 0 10px',lineHeight:1.4}}>${it.text}</h3>
+      <div className="grid g4" style=${{marginBottom:12}}>${[['Category',it.cat],['Priority',it.priority],['Brand','Veyra'],['Channel',it.channel],['Audience',it.audience],['Region',it.region],['Content type',it.ctype],['Campaign',it.campaign]].map(([a,b])=>html`<div key=${a}><div className="mu sm">${a}</div>${b}</div>`)}</div>
+      <div className="mu sm" style=${{marginBottom:4}}>Original source excerpt · ${it.doc} · ${it.ref}</div><div className="ex">${it.ex}</div>
+      ${it.by&&html`<p className="mu sm">Approved by ${it.by} · ${it.upd} · version ${it.ver} (local demo record)</p>`}
+      <div className="row" style=${{marginTop:14}}>
+        <button className="btn ok" disabled=${it.status==='approved'} onClick=${()=>{c.approve(it);close()}}>Approve</button>
+        <button className="btn no" disabled=${it.status==='rejected'} onClick=${()=>c.confirm('Reject “'+it.text+'”? Rejected knowledge never influences compliance checks.',()=>{c.reject(it);close()})}>Reject</button>
+        <button className="btn g" onClick=${()=>setEd(true)}>Edit</button></div>`}
+  </${Modal}>`;
+}
+
+/* ---------- Dashboard ---------- */
+function Dashboard({c}){
+  const k=c.kb,n=s=>k.filter(x=>x.status===s).length;
+  const rules=k.filter(x=>x.type==='rule'),facts=k.filter(x=>x.type==='fact');
+  const M=[['Uploaded documents',DOCS0.length],['Approved rules',rules.filter(x=>x.status==='approved').length],['Pending approvals',n('pending')],['Rejected',n('rejected')],['Approved facts',facts.filter(x=>x.status==='approved').length]];
+  const tot=k.length||1,cats=CATS.map(x=>[x,k.filter(y=>y.cat===x).length]).filter(x=>x[1]).sort((a,b)=>b[1]-a[1]);
+  const act=[3,5,4,8,6,9,7,11];
+  if(!k.length)return html`<div className="card" style=${{textAlign:'center',padding:40}}><${Logo} s=${44}/><h2 style=${{marginTop:12}}>Your vault is empty</h2><p className="mu">Upload your first brand guideline to start extracting rules and facts.</p><button className="btn" onClick=${()=>c.go('upload')}>Upload a document</button></div>`;
+  return html`<div>
+    <${Demo}/>
+    <div className="grid g4">${M.map(([a,b])=>html`<div key=${a} className="card tilt"><div className="mu sm">${a}</div><div className="met">${b}</div></div>`)}</div>
+    <div className="grid g2" style=${{marginTop:14}}>
+      <div className="card"><h3>Rules and facts by status</h3><div className="bar" style=${{margin:'14px 0 10px',height:14}}>${[['approved','var(--ok)'],['pending','var(--wn)'],['rejected','var(--er)']].map(([s,col])=>html`<i key=${s} style=${{width:n(s)/tot*100+'%',background:col}}/>`)}</div><div className="row"><${Bd} s="approved"/> ${n('approved')} <${Bd} s="pending"/> ${n('pending')} <${Bd} s="rejected"/> ${n('rejected')}</div></div>
+      <div className="card"><h3>Governance activity (weekly)</h3><div style=${{display:'flex',alignItems:'flex-end',gap:8,height:90,marginTop:12}}>${act.map((v,i)=>html`<div key=${i} style=${{flex:1,height:v*8,borderRadius:'5px 5px 0 0',background:'linear-gradient(var(--ac),rgba(120,103,247,.25))'}} title=${v+' events'}/>`)}</div></div>
+      <div className="card"><h3>Document processing</h3>${DOCS0.map(d=>html`<div key=${d.id} className="row" style=${{justifyContent:'space-between',padding:'7px 0',borderBottom:'1px solid var(--bd)'}}><span>${d.n}</span><span className=${'bd '+(d.s.startsWith('Failed')?'rejected':d.s==='Extracted'?'approved':'pending')}>${d.s}</span></div>`)}</div>
+      <div className="card"><h3>Most common guideline categories</h3>${cats.slice(0,5).map(([a,b])=>html`<div key=${a} style=${{margin:'9px 0'}}><div className="row sm" style=${{justifyContent:'space-between'}}><span>${a}</span><span className="mu">${b}</span></div><div className="bar"><i style=${{width:b/cats[0][1]*100+'%',background:'var(--ac2)'}}/></div></div>`)}</div>
+      <div className="card"><h3>Pending knowledge approvals</h3>${k.filter(x=>x.status==='pending').map(x=>html`<div key=${x.id} className="row" style=${{justifyContent:'space-between',padding:'7px 0'}}><span style=${{flex:1,minWidth:200}}>${x.text}</span><button className="btn g" onClick=${()=>c.open(x.id)}>Review</button></div>`)||''}${n('pending')===0&&html`<p className="mu">Nothing waiting for approval.</p>`}</div>
+      <div className="card"><h3>Recent activity</h3>${[['Approved rule: ‘cheapest’ is prohibited','Aarav · 4 Nov'],['Uploaded Veyra_Campaign_Playbook.docx','Aarav · 5 Nov'],['Clarity issue found: “Use appropriate language…”','System · 5 Nov'],['Source update proposed: Beat 200 price','Simulation · 6 Nov']].map(([a,b])=>html`<div key=${a} style=${{padding:'7px 0',borderBottom:'1px solid var(--bd)'}}>${a}<div className="mu sm">${b}</div></div>`)}</div>
+    </div></div>`;
+}
+
+/* ---------- Knowledge Library ---------- */
+function Library({c}){
+  const [q,setQ]=useState(c.q||'');const [f,setF]=useState({status:'All',cat:'All',channel:'All',region:'All',priority:'All'});const [so,setSo]=useState(['upd',-1]);
+  useEffect(()=>{if(c.q!==undefined)setQ(c.q)},[c.q]);
+  const rows=useMemo(()=>{let r=c.kb.filter(x=>(f.status==='All'||x.status===f.status)&&(f.cat==='All'||x.cat===f.cat)&&(f.channel==='All'||x.channel===f.channel)&&(f.region==='All'||x.region===f.region)&&(f.priority==='All'||x.priority===f.priority)&&(x.text+x.doc+x.cat).toLowerCase().includes(q.toLowerCase()));
+    const [k,d]=so;return [...r].sort((a,b)=>(k==='priority'?PR[a[k]]-PR[b[k]]:String(a[k]).localeCompare(String(b[k])))*d)},[c.kb,f,q,so]);
+  const th=(k,l)=>html`<th onClick=${()=>setSo([k,so[0]===k?-so[1]:1])}>${l}${so[0]===k?(so[1]>0?' ▲':' ▼'):''}</th>`;
+  const fs=(k,l,o)=>html`<${F} l=${l}><${Sel} v=${f[k]} o=${['All',...o]} on=${v=>setF({...f,[k]:v})}/></${F}>`;
+  return html`<div>
+    <${Demo} t="Approved, pending and rejected knowledge shown here is demo data. Only approved items may influence compliance checks."/>
+    <div className="card grid g4" style=${{marginBottom:14,alignItems:'end'}}><${F} l="Search"><input value=${q} onChange=${e=>setQ(e.target.value)} placeholder="Rule, fact, document…"/></${F}>${fs('status','Status',['approved','pending','rejected'])}${fs('cat','Category',CATS)}${fs('channel','Channel',SC.channel.slice(1))}${fs('region','Region',SC.region.slice(1))}${fs('priority','Priority',Object.keys(PR))}</div>
+    ${rows.length===0?html`<div className="card" style=${{textAlign:'center'}}><p className="mu">No knowledge matches these filters.</p><button className="btn g" onClick=${()=>{setQ('');setF({status:'All',cat:'All',channel:'All',region:'All',priority:'All'})}}>Clear filters</button></div>`:
+    html`<div className="tw"><table><thead><tr>${th('text','Rule / fact')}${th('cat','Category')}<th>Brand</th>${th('channel','Channel')}<th>Audience</th>${th('region','Region')}<th>Content type</th><th>Campaign</th>${th('priority','Priority')}${th('status','Status')}${th('doc','Source')}<th>Ref.</th>${th('upd','Updated')}</tr></thead><tbody>
+    ${rows.map(x=>html`<tr key=${x.id} className=${'hv '+(x.status==='pending'?'pend':x.status==='rejected'?'rej':'')} onClick=${()=>c.open(x.id)}><td style=${{minWidth:260}}><span className="mu sm">${x.type==='rule'?'Rule':'Fact'} · v${x.ver}</span><br/>${x.text}</td><td>${x.cat}</td><td>Veyra</td><td>${x.channel}</td><td>${x.audience}</td><td>${x.region}</td><td>${x.ctype}</td><td>${x.campaign}</td><td>${x.priority}</td><td><${Bd} s=${x.status}/></td><td>${x.doc}</td><td>${x.ref}</td><td>${x.upd}</td></tr>`)}</tbody></table></div>`}</div>`;
+}
+
+/* ---------- Upload ---------- */
+function Upload({c}){
+  const [file,setFile]=useState(null),[err,setErr]=useState(''),[over,setOver]=useState(false),[prev,setPrev]=useState(''),[tried,setTried]=useState(false);
+  const [m,setM]=useState({name:'',brand:'Veyra',type:'Brand guidelines',desc:''});const ref=useRef();
+  const pick=f=>{setErr('');setPrev('');setTried(false);if(!f)return;const ext=f.name.split('.').pop().toLowerCase();
+    if(ext==='xlsx')return setErr('XLSX is not supported by the extraction backend yet. Upload a PDF, DOCX or TXT file.');
+    if(!['pdf','docx','txt'].includes(ext))return setErr('Unsupported file type “.'+ext+'”. Upload a PDF, DOCX or TXT file.');
+    if(f.size>5*1024*1024)return setErr('File is '+(f.size/1048576).toFixed(1)+' MB. The limit is 5 MB.');
+    if(f.size===0)return setErr('This file is empty. Choose a document that contains text.');
+    setFile(f);setM(x=>({...x,name:x.name||f.name.replace(/\.[^.]+$/,'')}));
+    if(ext==='txt'){const r=new FileReader();r.onload=()=>setPrev(String(r.result).slice(0,1500));r.readAsText(f)}};
+  const sz=b=>b>1048576?(b/1048576).toFixed(2)+' MB':(b/1024).toFixed(1)+' KB';
+  const stages=[['File selected and validated locally',file?'d':''],['Upload to backend (POST /documents)',tried?'x':''],['Text extraction (POST /documents/{id}/extract)',''],['Extraction completed or failed','']];
+  return html`<div className="grid g2" style=${{alignItems:'start'}}>
+    <div className="grid">
+      <div className=${'drop'+(over?' over':'')} onClick=${()=>ref.current.click()} onDragOver=${e=>{e.preventDefault();setOver(true)}} onDragLeave=${()=>setOver(false)} onDrop=${e=>{e.preventDefault();setOver(false);pick(e.dataTransfer.files[0])}}>
+        <div style=${{color:'var(--ac2)'}}><${Icon} n="up" s=${34}/></div><h3 style=${{margin:'8px 0 4px'}}>Drop a brand document here</h3><div className="mu">or click to browse · PDF, DOCX or TXT · up to 5 MB</div>
+        <input ref=${ref} type="file" accept=".pdf,.docx,.txt" hidden onChange=${e=>{pick(e.target.files[0]);e.target.value=''}}/></div>
+      ${err&&html`<div className="ban" style=${{borderColor:'var(--er)',color:'#f3b3ba',background:'rgba(227,107,120,.08)',margin:0}}>${err}</div>`}
+      ${file&&html`<div className="card"><div className="row" style=${{justifyContent:'space-between'}}><div><b>${file.name}</b><div className="mu sm">${file.name.split('.').pop().toUpperCase()} · ${sz(file.size)}</div></div><div className="row"><button className="btn g" onClick=${()=>ref.current.click()}>Replace</button><button className="btn no" onClick=${()=>{setFile(null);setPrev('');setTried(false)}}>Remove</button></div></div></div>`}
+      <div className="card grid"><h3>Document details</h3>
+        <${F} l="Document name"><input value=${m.name} onChange=${e=>setM({...m,name:e.target.value})}/></${F}>
+        <div className="grid g2"><${F} l="Brand"><${Sel} v=${m.brand} o=${['Veyra']} on=${v=>setM({...m,brand:v})}/></${F}><${F} l="Document type"><${Sel} v=${m.type} o=${['Brand guidelines','Price list','Campaign playbook','Product specification']} on=${v=>setM({...m,type:v})}/></${F}></div>
+        <${F} l="Description (optional)"><textarea value=${m.desc} onChange=${e=>setM({...m,desc:e.target.value})}/></${F}>
+        <button className="btn" disabled=${!file||!m.name.trim()} onClick=${()=>{setTried(true);c.notify('Upload not sent: the MindVault backend is not connected in this preview.','warn')}}>Upload and extract</button>
+        ${!file&&html`<span className="mu sm">Choose a file and name it to enable upload.</span>`}</div></div>
+    <div className="grid">
+      <div className="card"><h3>Extraction progress</h3><p className="mu sm">Stages complete only when the backend confirms them. None are simulated.</p>
+        ${stages.map(([s,st],i)=>html`<div key=${i} className="st"><span className=${'sd '+st}>${st==='d'?'✓':st==='x'?'!':''}</span><div>${s}${st==='x'&&html`<div className="sm" style=${{color:'var(--wn)'}}>Unavailable: no backend connected. Nothing was uploaded or saved.</div>`}</div></div>`)}</div>
+      <div className="card"><h3>Extracted text preview</h3>${prev?html`<div className="ban" style=${{margin:'10px 0'}}>Local TXT preview only. It was not extracted by the backend and has no page references.</div><pre className="ex" style=${{whiteSpace:'pre-wrap',maxHeight:220,overflow:'auto'}}>${prev}</pre>`:html`<p className="mu">${file?'PDF and DOCX text is extracted by the backend (PyMuPDF / python-docx). PDFs get page numbers; DOCX gets section and paragraph references. Scanned PDFs return a limitation notice with a manual-entry option (no OCR in v1).':'Select a document to see its preview here.'}</p>`}</div>
+      <div className="card"><h3>Documents</h3><${Demo} t="Demo documents."/>${DOCS0.map(d=>html`<div key=${d.id} style=${{padding:'8px 0',borderBottom:'1px solid var(--bd)'}}><b>${d.n}</b><div className="mu sm">${d.t} · ${d.d} · ${d.id}</div><span className=${'bd '+(d.s.startsWith('Failed')?'rejected':d.s==='Extracted'?'approved':'pending')}>${d.s}</span></div>`)}</div></div></div>`;
+}
+
+/* ---------- Extraction Results ---------- */
+function Extraction({c}){
+  const cand=c.kb.filter(x=>x.doc==='Veyra_Campaign_Playbook.docx'&&x.status==='pending');
+  return html`<div className="grid">
+    <${Demo} t="Demo extraction job. Live jobs will load from GET /extraction-jobs/{id} (endpoint still to be confirmed with the backend team)."/>
+    <div className="card"><div className="row" style=${{justifyContent:'space-between'}}><div><h3>Veyra_Campaign_Playbook.docx</h3><div className="mu sm">doc-5e6f · uploaded 2026-11-05 · DOCX</div></div><span className="bd approved">Extraction done</span></div>
+      <p className="mu sm">DOCX has no reliable rendered pages, so references use section and paragraph numbers.</p>
+      <div className="ex" style=${{margin:'8px 0'}}><b>Section 3 ¶2:</b> All price-led ads in the Diwali Launch must carry ‘Terms apply’.<br/><b>Section 3 ¶5:</b> Superlatives need proof. ‘Best in the world’ is not acceptable.</div></div>
+    <div className="card"><h3>Candidate rules and facts <span className="bd pending">Pending: not approved</span></h3>${cand.length?cand.map(x=>html`<div key=${x.id} className="row" style=${{justifyContent:'space-between',padding:'10px 0',borderBottom:'1px solid var(--bd)'}}><div style=${{flex:1,minWidth:220}}>${x.text}<div className="mu sm">${x.ref} · ${x.priority} priority</div></div><button className="btn g" onClick=${()=>c.open(x.id)}>Inspect and approve</button></div>`):html`<p className="mu">All candidates from this document have been reviewed.</p>`}</div>
+    <div className="card" style=${{borderColor:'rgba(230,173,82,.45)'}}><h3>Old_Scan_2019.pdf <span className="bd rejected">Extraction failed</span></h3><p className="mu">No text layer was found. This looks like a scanned PDF and OCR is not supported in this version. Add its rules by hand instead.</p><button className="btn g" onClick=${()=>c.go('rules')}>Add rules manually</button></div></div>`;
+}
+
+/* ---------- Rule & Fact Management ---------- */
+const CTX={ig:{t:'Instagram · Consumers · India · Social post · Diwali Launch',ap:[['Use a friendly, simple tone on Instagram; emojis are permitted.','Matches channel, audience and content type'],['Absolute claims such as ‘100% guaranteed’ require approved evidence.','Applies to every context (mandatory)'],['Do not use the word ‘cheapest’ in marketing advertisements.','Applies to every context (mandatory, Critical)']],sk:[['Investor decks must avoid emojis and slang.','Channel is Investor deck, not Instagram'],['Every price advertisement must include ‘Terms apply’.','Pending: not approved, so it cannot be used']]},
+ inv:{t:'Investor deck · Investors · Global · Presentation · no campaign',ap:[['Investor decks must avoid emojis and slang.','Matches channel and audience'],['Absolute claims such as ‘100% guaranteed’ require approved evidence.','Evidence requirements remain in every context']],sk:[['Use a friendly, simple tone on Instagram; emojis are permitted.','Channel is Instagram, not Investor deck'],['Do not use the word ‘cheapest’ in marketing advertisements.','Scope is Advertisement in India; this deck is a Presentation']]}};
+function Rules({c}){
+  const [tab,setTab]=useState('rules'),[cx,setCx]=useState('ig');
+  const [n,setN]=useState({type:'rule',text:'',cat:'Terminology',priority:'Medium',channel:'All',audience:'All',region:'All',ctype:'All',campaign:'All'});
+  const list=t=>c.kb.filter(x=>x.type===t);
+  const add=()=>{if(n.text.trim().length<8)return c.notify('Enter the full rule or fact text (at least 8 characters).','err');
+    c.setKb(k=>[{...n,id:'m'+Date.now(),status:'pending',doc:'Manual entry',ref:'n/a',ex:'Entered manually by '+c.user.name,upd:TODAY,ver:1},...k]);setN({...n,text:''});c.notify('Added locally as Pending. Approval is still required (demo, not saved to backend).')};
+  const L=t=>list(t).map(x=>html`<div key=${x.id} className="card row" style=${{justifyContent:'space-between',marginBottom:10,opacity:x.status==='rejected'?.6:1}}><div style=${{flex:1,minWidth:240}}>${x.text}<div className="mu sm">${x.cat} · ${x.channel} · ${x.region} · ${x.priority}</div></div><${Bd} s=${x.status}/><button className="btn ok" disabled=${x.status==='approved'} onClick=${()=>c.approve(x)}>Approve</button><button className="btn g" onClick=${()=>c.open(x.id)}>Inspect / edit</button></div>`);
+  const cur=CTX[cx];
+  return html`<div><div className="tabs">${[['rules','Rules'],['facts','Facts'],['create','Add manually'],['ctx','Context inspector']].map(([k,l])=>html`<button key=${k} className=${'tab'+(tab===k?' on':'')} onClick=${()=>setTab(k)}>${l}</button>`)}</div>
+    ${tab==='rules'&&L('rule')}${tab==='facts'&&L('fact')}
+    ${tab==='create'&&html`<div className="card grid" style=${{maxWidth:680}}><h3>Add a rule or product fact</h3>
+      <div className="row">${['rule','fact'].map(t=>html`<button key=${t} className=${'btn '+(n.type===t?'':'g')} onClick=${()=>setN({...n,type:t})}>${t==='rule'?'Rule':'Product fact'}</button>`)}</div>
+      <${F} l=${n.type==='rule'?'Rule text':'Fact text'}><textarea value=${n.text} onChange=${e=>setN({...n,text:e.target.value})} placeholder=${n.type==='rule'?'Do not use the word ‘cheapest’ in marketing advertisements.':'Veyra Beat 200 has an approved selling price of ₹999.'}/></${F}>
+      <div className="grid g4"><${F} l="Category"><${Sel} v=${n.cat} o=${CATS} on=${v=>setN({...n,cat:v})}/></${F}><${F} l="Priority"><${Sel} v=${n.priority} o=${Object.keys(PR)} on=${v=>setN({...n,priority:v})}/></${F}>${Object.keys(SC).map(k=>html`<${F} key=${k} l=${k==='ctype'?'Content type':k[0].toUpperCase()+k.slice(1)}><${Sel} v=${n[k]} o=${SC[k]} on=${v=>setN({...n,[k]:v})}/></${F}>`)}</div>
+      <div><button className="btn" onClick=${add}>Add as pending</button></div></div>`}
+    ${tab==='ctx'&&html`<div><${Demo} t="DEMO FIXTURE shaped like the backend’s applied/skipped response. Rule selection runs on the server, never in this frontend."/>
+      <div className="row" style=${{marginBottom:12}}><button className=${'btn '+(cx==='ig'?'':'g')} onClick=${()=>setCx('ig')}>Instagram post</button><button className=${'btn '+(cx==='inv'?'':'g')} onClick=${()=>setCx('inv')}>Investor deck</button></div>
+      <p className="mu">Context: ${cur.t}</p><div className="grid g2"><div className="card"><h3><span className="bd approved">Applied</span></h3>${cur.ap.map(([a,b])=>html`<div key=${a} style=${{padding:'8px 0',borderBottom:'1px solid var(--bd)'}}>${a}<div className="mu sm">${b}</div></div>`)}</div><div className="card"><h3><span className="bd pending">Skipped</span></h3>${cur.sk.map(([a,b])=>html`<div key=${a} style=${{padding:'8px 0',borderBottom:'1px solid var(--bd)'}}>${a}<div className="mu sm">${b}</div></div>`)}</div></div>
+      <div className="ban" style=${{marginTop:14}}>If a context field is missing or two rules conflict, the backend flags it as needing human review instead of guessing.</div></div>`}</div>`;
+}
+
+/* ---------- Clarity Auditor ---------- */
+function Clarity({c}){
+  const [items,setItems]=useState(CL0),[view,setView]=useState({});
+  const up=(id,p)=>setItems(a=>a.map(x=>x.id===id?{...x,...p}:x));
+  return html`<div className="grid"><${Demo} t="AI-proposed rewrites are demo fixtures. Accepted rewrites will be saved as new rule versions through the backend."/>
+  ${items.map(x=>html`<div key=${x.id} className="card"><div className="row" style=${{justifyContent:'space-between'}}><span className="bd info">${x.cat}</span><${Bd} s=${x.st==='accepted'?'approved':x.st}/></div>
+    <div className="mu sm" style=${{marginTop:10}}>Original guideline · ${x.doc} · ${x.ref} · v${x.v}</div><div className="ex">${x.orig}</div>
+    <div className="mu sm" style=${{marginTop:10}}>Problem</div><div>${x.why}</div>
+    <div className="row" style=${{marginTop:10}}><span className="mu sm">AI proposal (not yet a rule)</span><button className="btn g" style=${{padding:'3px 10px'}} onClick=${()=>setView({...view,[x.id]:!view[x.id]})}>${view[x.id]?'Show proposal':'Compare versions'}</button></div>
+    ${view[x.id]?html`<div className="grid g2" style=${{marginTop:6}}><div><div className="mu sm">Previous version (v${x.v})</div><div className="ex">${x.orig}</div></div><div><div className="mu sm">Revised version (v${x.v+1}) ${x.st==='accepted'?'· admin approved':'· proposed'}</div><div className="ex" style=${{borderColor:'var(--ok)'}}>${x.rw}</div></div></div>`:html`<textarea style=${{marginTop:6}} value=${x.rw} disabled=${x.st!=='pending'} onChange=${e=>up(x.id,{rw:e.target.value})}/>`}
+    ${x.st==='pending'&&html`<div className="row" style=${{marginTop:10}}><button className="btn ok" onClick=${()=>{if(!c.isAdmin)return c.notify('Only an Administrator can approve a rewrite.','warn');up(x.id,{st:'accepted'});c.notify('Approved locally as version '+(x.v+1)+' (demo, not saved to backend).')}}>Approve rewrite</button><button className="btn no" onClick=${()=>c.confirm('Reject this proposal? The original guideline stays unchanged.',()=>up(x.id,{st:'rejected'}))}>Reject</button></div>`}</div>`)}</div>`;
+}
+
+/* ---------- Source Updates ---------- */
+function Sources({c}){
+  const [u,setU]=useState(UP0),[vw,setVw]=useState(null),[hist,setHist]=useState([]);
+  const set=(id,st)=>setU(a=>a.map(x=>x.id===id?{...x,st}:x));
+  return html`<div className="grid"><div className="ban"><${Sim}/><span>Source updates are simulated. No real Drive or external connection exists. Approval creates a new knowledge version and keeps the old one.</span></div>
+  ${u.map(x=>{const diff=x.nums[1]-x.nums[0];return html`<div key=${x.id} className="card"><div className="row" style=${{justifyContent:'space-between'}}><div><b>${x.item}</b> <${Sim}/><div className="mu sm">${x.src} · proposed ${x.date}</div></div><${Bd} s=${x.st==='accepted'?'approved':x.st}/></div>
+    <div className="grid g4" style=${{margin:'12px 0'}}><div><div className="mu sm">Original value</div><div className="met del" style=${{fontSize:22}}>${x.from}</div></div><div><div className="mu sm">Proposed value</div><div className="met add" style=${{fontSize:22}}>${x.to}</div></div><div><div className="mu sm">Difference</div><div className="met" style=${{fontSize:22}}>${diff>0?'+':''}${diff}${x.from.startsWith('₹')?' ₹':' h'}</div></div></div>
+    ${vw===x.id&&html`<div className="ex" style=${{marginBottom:10}}>v1 (active): ${x.item} = ${x.from}<br/>v2 (proposed): ${x.item} = ${x.to}<br/><span className="mu">Approving keeps v1 in history as superseded.</span></div>`}
+    <div className="row"><button className="btn g" onClick=${()=>setVw(vw===x.id?null:x.id)}>View changes</button>
+    ${x.st==='pending'&&html`<button className="btn ok" onClick=${()=>{if(!c.isAdmin)return c.notify('Only an Administrator can approve updates.','warn');set(x.id,'accepted');setHist(h=>[...h,x.item+': v1 '+x.from+' superseded by v2 '+x.to]);c.notify('Simulation: version 2 created locally; version 1 retained.')}}>Approve update</button><button className="btn no" onClick=${()=>c.confirm('Reject this simulated update?',()=>set(x.id,'rejected'))}>Reject</button>`}</div></div>`})}
+  ${hist.length>0&&html`<div className="card"><h3>Version history (simulation)</h3>${hist.map(h=>html`<div key=${h} className="mu" style=${{padding:'5px 0'}}>${h}</div>`)}</div>`}</div>`;
+}
+
+/* ---------- Evaluation ---------- */
+function Evaluation({c}){
+  const [notes,setNotes]=useState({}),[log,setLog]=useState([]),[fb,setFb]=useState({t:'T01',k:'Incorrect warning (false positive)',n:''});
+  return html`<div className="grid"><${Demo} t="Test cases are fictional. Actual results will come from the backend review run (POST /content/{id}/review). No accuracy figures are shown."/>
+  <div className="tw"><table style=${{minWidth:900}}><thead><tr><th>ID</th><th>Test</th><th>Sample draft</th><th>Expected</th><th>Actual (backend)</th><th>Result</th><th>Reviewer notes</th></tr></thead><tbody>
+  ${EV0.map(t=>html`<tr key=${t.id}><td>${t.id}</td><td>${t.d}</td><td style=${{minWidth:200}}>${t.draft}</td><td style=${{minWidth:170}}>${t.exp}</td><td className="mu">Not run: backend not connected<div className="sm">Detected violations and evidence references appear here.</div></td><td><span className="bd">Not evaluated</span></td><td><input value=${notes[t.id]||''} onChange=${e=>setNotes({...notes,[t.id]:e.target.value})} placeholder="Add a note"/></td></tr>`)}</tbody></table></div>
+  <div className="card grid" style=${{maxWidth:680}}><h3>Record an AI checker problem</h3><div className="grid g2"><${F} l="Test"><${Sel} v=${fb.t} o=${EV0.map(x=>x.id)} on=${v=>setFb({...fb,t:v})}/></${F}><${F} l="Problem type"><${Sel} v=${fb.k} o=${['Incorrect warning (false positive)','Missed issue (false negative)','Incorrect source reference','AI output error']} on=${v=>setFb({...fb,k:v})}/></${F}></div>
+  <${F} l="What happened?"><textarea value=${fb.n} onChange=${e=>setFb({...fb,n:e.target.value})}/></${F}>
+  <div><button className="btn" onClick=${()=>{if(!fb.n.trim())return c.notify('Describe what happened first.','err');setLog([{...fb,id:Date.now()},...log]);setFb({...fb,n:''});c.notify('Recorded in this session only (demo, not saved to backend).')}}>Record problem</button></div>
+  ${log.map(l=>html`<div key=${l.id} style=${{padding:'8px 0',borderTop:'1px solid var(--bd)'}}><span className="bd rejected">${l.k}</span> <b>${l.t}</b><div className="mu">${l.n}</div></div>`)}</div></div>`;
+}
+
+/* ---------- Profile & Settings ---------- */
+function Profile({c}){
+  const [e,setE]=useState(false),[d,setD]=useState(c.user);
+  return html`<div className="card grid" style=${{maxWidth:560}}><div className="row"><div className="av" style=${{width:64,height:64,fontSize:22}}>${initials(c.user.name)}</div><div><h3>${c.user.name}</h3><span className="bd info">${c.user.role}</span></div></div>
+  ${e?['name','email','org'].map(k=>html`<${F} key=${k} l=${{name:'Full name',email:'Email',org:'Organisation'}[k]}><input value=${d[k]} onChange=${ev=>setD({...d,[k]:ev.target.value})}/></${F}>`):[['Email',c.user.email],['Organisation',c.user.org],['Role',c.user.role],['Account created','Not available in demo mode']].map(([a,b])=>html`<div key=${a}><div className="mu sm">${a}</div>${b}</div>`)}
+  <div className="row">${e?html`<button className="btn" onClick=${()=>{c.setUser(d);setE(false);c.notify('Profile updated locally (demo, not saved to backend).')}}>Save profile</button>`:html`<button className="btn g" onClick=${()=>setE(true)}>Edit profile</button>`}<button className="btn g" disabled title="No password-change endpoint has been confirmed by the backend team">Change password (unavailable)</button><button className="btn no" onClick=${c.logout}>Log out</button></div></div>`;
+}
+function Settings({c}){
+  return html`<div className="grid" style=${{maxWidth:640}}><div className="card grid"><h3>API connection</h3><${F} l="VITE_API_BASE_URL"><input disabled value=${API_BASE||'(not set: running in demo mode)'}/></${F}><p className="mu sm">In your React project, set this env variable to the FastAPI URL and route all calls through one API service sending <code>Authorization: Bearer</code>. Keep Gemini keys on the server only.</p></div>
+  <div className="card grid"><h3>Interface</h3><label className="row"><input type="checkbox" style=${{width:'auto'}} checked=${c.col} onChange=${()=>c.setCol(!c.col)}/> Collapse sidebar</label></div>
+  <div className="card"><h3>Backend integration still needed</h3><ul className="mu" style=${{paddingLeft:18,margin:'8px 0'}}><li>POST /auth/demo, GET /me</li><li>POST /documents, POST /documents/{id}/extract</li><li>GET /extraction-jobs/{id} (to confirm)</li><li>GET /rules, GET /facts, approve and reject actions</li><li>Clarity proposals and source-update proposals</li></ul></div></div>`;
+}
+
+/* ---------- Auth ---------- */
+function Auth({mode,c}){
+  const [f,setF]=useState({name:'',email:'',pw:'',pw2:'',org:'',terms:false}),[show,setShow]=useState(false),[er,setEr]=useState({}),[msg,setMsg]=useState('');
+  const set=(k,v)=>setF(x=>({...x,[k]:v}));const su=mode==='signup';
+  const go=ev=>{ev.preventDefault();const e={};
+    if(su&&!f.name.trim())e.name='Enter your full name.';
+    if(!/^\S+@\S+\.\S+$/.test(f.email))e.email='Enter a valid work email.';
+    if(su?!/(?=.*\d)(?=.*[A-Za-z]).{8,}/.test(f.pw):!f.pw)e.pw=su?'Use 8+ characters with letters and numbers.':'Enter your password.';
+    if(su&&f.pw!==f.pw2)e.pw2='Passwords do not match.';if(su&&!f.org.trim())e.org='Enter your organisation.';if(su&&!f.terms)e.terms='Accept the terms to continue.';
+    setEr(e);if(Object.keys(e).length)return;
+    setMsg(su?'Signup is pending integration: the backend has no registration endpoint yet, so no account was created.':'The authentication backend is not reachable from this preview, so you were not signed in. Use a demo identity below.')};
+  const E=k=>er[k]&&html`<span className="err">${er[k]}</span>`;
+  return html`<div className="auth"><div className="card" style=${{animation:'pi .4s'}}><div style=${{display:'flex',justifyContent:'center',marginBottom:6}}><${Wordmark}/></div><p className="mu" style=${{textAlign:'center',marginTop:0}}>${su?'Create your organisation’s vault':'Sign in to govern your brand knowledge'}</p>
+  <form onSubmit=${go} className="grid" noValidate>
+    ${su&&html`<${F} l="Full name"><input value=${f.name} onChange=${e=>set('name',e.target.value)}/>${E('name')}</${F}>`}
+    <${F} l=${su?'Work email':'Email'}><input type="email" value=${f.email} onChange=${e=>set('email',e.target.value)}/>${E('email')}</${F}>
+    <${F} l="Password"><div className="pw"><input type=${show?'text':'password'} value=${f.pw} autoComplete=${su?'new-password':'current-password'} onChange=${e=>set('pw',e.target.value)}/><button type="button" className="eye" aria-label=${show?'Hide password':'Show password'} aria-pressed=${show} title=${show?'Hide password':'Show password'} onClick=${()=>setShow(!show)}><${Icon} n=${show?'eyeoff':'eye'} s=${18}/></button></div>${E('pw')}</${F}>
+    ${su&&html`<${F} l="Confirm password"><input type="password" value=${f.pw2} onChange=${e=>set('pw2',e.target.value)}/>${E('pw2')}</${F}><${F} l="Organisation name"><input value=${f.org} onChange=${e=>set('org',e.target.value)}/>${E('org')}</${F}><label className="row sm"><input type="checkbox" style=${{width:'auto'}} checked=${f.terms} onChange=${e=>set('terms',e.target.checked)}/> I accept the terms and privacy notice</label>${E('terms')}`}
+    ${!su&&html`<div className="row sm" style=${{justifyContent:'space-between'}}><label className="row"><input type="checkbox" style=${{width:'auto'}}/> Remember me</label><a href="#login" onClick=${e=>{e.preventDefault();c.notify('Password reset is not available yet. Ask your administrator.','warn')}}>Forgot password?</a></div>`}
+    ${msg&&html`<div className="ban" style=${{margin:0}}>${msg}</div>`}
+    <button className="btn" type="submit">${su?'Create account':'Log in'}</button></form>
+  <p className="sm mu" style=${{textAlign:'center'}}>${su?'Have an account? ':'New here? '}<a href=${su?'#login':'#signup'}>${su?'Log in':'Create an account'}</a></p>
+  <div className="sep"/><div className="mu sm" style=${{marginBottom:8}}>Demo mode (local identity, not a real session)</div><div className="row">${['Administrator','Creator','Reviewer'].map(r=>html`<button key=${r} className="btn g" onClick=${()=>c.login(r)}>${r}</button>`)}</div></div></div>`;
+}
+
+/* ---------- App shell ---------- */
+function App(){
+  const rt=()=>location.hash.slice(1)||'dashboard';
+  const [route,setRoute]=useState(rt()),[user,setUser]=useState(null),[kb,setKb]=useState(KB0),[col,setCol]=useState(false),[open,setOpen]=useState(false),[pop,setPop]=useState(null),[toast,setToast]=useState(null),[item,setItem]=useState(null),[cf,setCf]=useState(null),[q,setQ]=useState(undefined);
+  useEffect(()=>{const h=()=>{setRoute(rt());setOpen(false);setPop(null)};addEventListener('hashchange',h);return()=>removeEventListener('hashchange',h)},[]);
+  const tm=useRef();
+  const notify=(m,k)=>{setToast({m,k});clearTimeout(tm.current);tm.current=setTimeout(()=>setToast(null),3800)};
+  const go=r=>{location.hash=r};
+  const isAdmin=user&&user.role==='Administrator';
+  const upd=(id,p)=>setKb(k=>k.map(x=>x.id===id?{...x,...p}:x));
+  const approve=x=>{if(!isAdmin)return notify('Only an Administrator can approve knowledge. The backend enforces this as well.','warn');upd(x.id,{status:'approved',by:user.name,upd:TODAY});notify('Approved locally with your name, date and version (demo, not saved to backend).')};
+  const reject=x=>{if(!isAdmin)return notify('Only an Administrator can reject knowledge.','warn');upd(x.id,{status:'rejected',upd:TODAY});notify('Rejected locally (demo, not saved to backend).')};
+  const login=r=>{setUser({name:{Administrator:'Aarav Mehta',Creator:'Diya Shah',Reviewer:'Kabir Rao'}[r],email:r.toLowerCase()+'@veyra.example',org:'Veyra Audio (demo)',role:r});go('dashboard')};
+  const logout=()=>{setUser(null);go('login')};
+  const c={kb,setKb,upd,approve,reject,notify,go,isAdmin,user,setUser,logout,login,col,setCol,q,open:id=>setItem(id),confirm:(m,fn)=>setCf({m,fn})};
+  if(!user)return html`<div><${Auth} mode=${route==='signup'?'signup':'login'} c=${c}/>${toast&&html`<div className=${'toast '+(toast.k||'')}>${toast.m}</div>`}</div>`;
+  const cur=route in TITLES?route:'dashboard';
+  const Pg={dashboard:Dashboard,library:Library,upload:Upload,extraction:Extraction,rules:Rules,clarity:Clarity,sources:Sources,evaluation:Evaluation,profile:Profile,settings:Settings}[cur];
+  const it=item&&kb.find(x=>x.id===item);
+  const Nv=([r,l,i])=>html`<button key=${r} className=${'nav'+(cur===r?' on':'')} data-t=${l} onClick=${()=>go(r)}><${Icon} n=${i}/><span className="lbl">${l}</span></button>`;
+  return html`<div className=${'app'+(col?' col':'')+(open?' open':'')}>
+    <aside><${Wordmark}/>${NAV.map(Nv)}<div className="sep"/>${ACC.map(Nv)}<button className="nav" data-t="Logout" onClick=${logout}><${Icon} n="out"/><span className="lbl">Logout</span></button>
+      <button className="nav" style=${{marginTop:'auto'}} data-t="Collapse" onClick=${()=>setCol(!col)}><span style=${{display:'inline-block',transform:col?'rotate(180deg)':'none',transition:'.25s'}}><${Icon} n="chev"/></span><span className="lbl">Collapse</span></button></aside>
+    <div className="scrim" onClick=${()=>setOpen(false)}/>
+    <main><div className="top"><button className="ib mbtn" onClick=${()=>setOpen(true)} aria-label="Open menu"><${Icon} n="menu"/></button><div><div className="crumb">MindVault AI / ${TITLES[cur]}</div><h2 className="pt">${TITLES[cur]}</h2></div>
+      <div className="search"><${Icon} n="find" s=${15}/><input placeholder="Search knowledge…" onKeyDown=${e=>{if(e.key==='Enter'){setQ(e.target.value);go('library')}}}/></div>
+      <div className="rel"><button className="ib" aria-label="Notifications" onClick=${()=>setPop(pop==='n'?null:'n')}><${Icon} n="bell"/><span className="dot"/></button>${pop==='n'&&html`<div className="pop"><button onClick=${()=>go('library')}>${kb.filter(x=>x.status==='pending').length} knowledge items await approval</button><button onClick=${()=>go('sources')}>2 simulated source updates to review</button></div>`}</div>
+      <div className="rel"><button className="who" onClick=${()=>setPop(pop==='u'?null:'u')}><div className="av">${initials(user.name)}</div><span>${user.name}<small>${user.role}</small></span></button>${pop==='u'&&html`<div className="pop"><button onClick=${()=>go('profile')}>Profile</button><button onClick=${()=>go('settings')}>Settings</button><button onClick=${logout}>Log out</button></div>`}</div></div>
+      <div className="page" key=${cur}>${user.role!=='Administrator'&&html`<div className="ban">You are in the ${user.role} demo role. Knowledge approval needs the Administrator role. Creator and Reviewer screens are built separately and connect to the same backend.</div>`}<${Pg} c=${c}/></div></main>
+    ${it&&html`<${ItemModal} key=${it.id+it.ver} it=${it} c=${c} close=${()=>setItem(null)}/>`}
+    ${cf&&html`<${Modal} close=${()=>setCf(null)}><h3>Please confirm</h3><p className="mu">${cf.m}</p><div className="row"><button className="btn no" onClick=${()=>{cf.fn();setCf(null)}}>Confirm</button><button className="btn g" onClick=${()=>setCf(null)}>Cancel</button></div></${Modal}>`}
+    ${toast&&html`<div className=${'toast '+(toast.k||'')} role="status">${toast.m}</div>`}</div>`;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(html`<${App}/>`);
+</script>
+</body>
+</html>
