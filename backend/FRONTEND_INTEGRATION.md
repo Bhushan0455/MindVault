@@ -1,3 +1,5 @@
+> Historical backend handoff reference. For the final connected website, current test results and launch instructions, use ../README.md and ../PROJECT_STATUS.md.
+
 # Connect the frontend to the integrated API
 
 Base URL: `http://localhost:8000/api`. Send `Authorization: Bearer <token>` on protected requests. `POST /auth/demo?role=creator|admin|reviewer` returns `{token,user}` in demo mode. `POST /auth/login` accepts `{email,password}`. `GET /me` returns identity. Health flags describe configuration; ai_verification_scope="per_service_result" means review/job responses describe whether AI actually ran. The former hardcoded live_ai_verified=false field has been removed; do not use health as an AI certification.

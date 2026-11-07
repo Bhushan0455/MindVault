@@ -1,3 +1,5 @@
+> Historical backend handoff reference. For the final connected website, current test results and launch instructions, use ../README.md and ../PROJECT_STATUS.md.
+
 # Role B progress: approximately 98%
 
 Updated 6 November 2026 after integration with the supplied Role A backend. This is a rough milestone estimate, not measured accuracy or an exact share of time.

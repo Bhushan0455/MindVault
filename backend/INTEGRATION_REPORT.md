@@ -1,3 +1,5 @@
+> Historical backend handoff reference. For the final connected website, current test results and launch instructions, use ../README.md and ../PROJECT_STATUS.md.
+
 # MindVault backend integration and verification
 
 **Delivery:** Role A's supplied FastAPI backend integrated with Role B Step 19 services, 6 November 2026. **Role B progress: approximately 98%**, an engineering milestone estimate. This is a working combined backend with verified local API/database workflows. The user verified all three standalone services with gemini-3.6-flash, including the successful extraction retry. All three were then verified through actual local API calls using fictional fixtures and the server's private configuration. The actual frontend and hosted deployment remain unverified. See AI_VERIFICATION_UPDATE.md.

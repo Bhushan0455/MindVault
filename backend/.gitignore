@@ -1,17 +1,13 @@
-# Local credentials and generated files
 .env
-.env.*
-!.env.example
 .venv/
-venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+uploads/
+.neon
+node_modules/
+.env.local
 *.sqlite
 *.sqlite-*
 *.db
-*.log
-node_modules/
-uploads/
-.neon/
-.mindvault-ai-*
+verification/*.log

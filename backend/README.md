@@ -1,3 +1,5 @@
+> Historical backend handoff reference. For the final connected website, current test results and launch instructions, use ../README.md and ../PROJECT_STATUS.md.
+
 # MindVault: integrated Role A + Role B backend
 
 This is the combined backend. Role A's authentication, database, revisions, approvals, comments and audit routes now call Role B's tested analysis services. Work from **this folder**, which contains `app/`, `requirements-lock.txt` and this README. There is no additional `backend/` directory inside it.
