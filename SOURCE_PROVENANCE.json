@@ -1,0 +1,8 @@
+{
+  "frontend_source": "C:\\Users\\Likhit Rane\\Downloads\\MindVault-feature-creator-reviewer-frontend\\MindVault-feature-creator-reviewer-frontend",
+  "backend_source": "C:\\Users\\Likhit Rane\\Documents\\Codex\\2026-11-05\\this-is-the-context-of-the-15\\outputs\\MindVault_Integrated_Backend",
+  "html_reference": "C:\\Users\\Likhit Rane\\Downloads\\MindVault AI 2.0.html",
+  "html_sha256": "c722181e5514f6a95757d9c1dd1680434075e4c8bd219588413ce9b261c45cc5",
+  "data_preference": "User clarified: retain clearly labelled demo data for now; real documents will be uploaded for acceptance testing.",
+  "remote_repository_not_assumed": "The supplied frontend is an extracted archive, without Git metadata."
+}
