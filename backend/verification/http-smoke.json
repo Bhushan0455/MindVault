@@ -14,5 +14,9 @@
     "reviewer queue",
     "exact revision/hash approval"
   ],
-  "api_paths": 41
+  "api_paths": 46,
+  "static_spa": true,
+  "deep_links": true,
+  "persisted_history_and_submissions": true,
+  "team_and_evaluation": true
 }

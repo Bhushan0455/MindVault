@@ -1,14 +1,19 @@
 {
-  "timestamp_utc": "2026-11-06T14:17:38.412373+00:00",
-  "fixture_brand_id": "dda04439-08c2-469b-a0ab-bbb81df6c215",
+  "timestamp_utc": "2026-11-06T18:12:33.002279+00:00",
+  "fixture_brand_id": "a3b79da9-64b0-40c0-88cf-9cbcffaaed1f",
   "evidence_source": "real HTTP requests to configured local demo API",
   "checks": {
     "knowledge_extraction": {
-      "verified": true,
+      "verified": false,
       "status": "done",
-      "method": "ai",
-      "pending_candidates": 7,
-      "job_id": "75ed59af-4042-4475-804f-5a17200b0e5d"
+      "method": "deterministic_fallback",
+      "pending_candidates": 5,
+      "job_id": "0bd72b5a-0bd3-4c0b-aff9-4519fa097afa",
+      "provider_failure": {
+        "http_status": 503,
+        "attempts": 3,
+        "fallback_explicitly_reported": true
+      }
     },
     "content_review": {
       "verified": true,
@@ -18,7 +23,7 @@
       "retained_ai_findings": 1,
       "exact_spans_and_sources": true,
       "deterministic_price_retained": true,
-      "run_id": "1be5b54a-fc4c-4098-8a68-17893a423b82"
+      "run_id": "7dffd18a-482e-4fdb-bf89-a0e1e3e3f8a4"
     },
     "clarity_audit": {
       "verified": true,
@@ -26,8 +31,8 @@
       "ai_status": "completed",
       "retained_ai_proposals": 2,
       "source_validated_pending_proposals": true,
-      "job_id": "d1b13c99-f558-4f48-9c3f-70aa9f5b72ff"
+      "job_id": "8b90bfb7-3b8a-4242-b949-680098a9d8e2"
     }
   },
-  "all_services_verified": true
+  "all_services_verified": false
 }
